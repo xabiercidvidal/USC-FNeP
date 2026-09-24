@@ -1,53 +1,53 @@
-# Introducción
+# Introdución
 
-Apuntes de la asignatura **Física Nuclear y de Partículas** (sección de Partículas) del grado de Física de la **Universidade de Santiago de Compostela**
+Apuntamentos da materia **Física Nuclear e de Partículas** (sección de Partículas) do grao en Física da **Universidade de Santiago de Compostela**
 
 Autor: José Ángel Hernando Morata
 
 Correo electrónico: jose.hernando@usc.es
 
-Versión: Julio 2026
+Versión: xullo 2026
 
 -----
 
-## Sobre la asignatura
+## Sobre a materia
 
-Esta asignatura es una introducción a la Física de Partículas, cuyo objetivo es presentar una visión actual de las partículas fundamentales, las fuerzas que median entre ellas y sus características principales.
+Esta materia é unha introdución á Física de Partículas, cuxo obxectivo é presentar unha visión actual das partículas fundamentais, das forzas que median entre elas e das súas características principais.
 
-Los apuntes se organizan en cinco temas: una introducción a la temática de la Física de Partículas; la exposición de los observables relevantes, desde una perspectiva experimental y teórica; el desarrollo de las características de los leptones, y de los quarks y los hadrones; y, finalmente, una introducción a la teoría electrodébil y al bosón de Higgs.
+Os apuntamentos organízanse en cinco temas: unha introdución á temática da Física de Partículas; a exposición dos observables relevantes, desde unha perspectiva experimental e teórica; o desenvolvemento das características dos leptóns, e dos quarks e os hadróns; e, finalmente, unha introdución á teoría electrofeble e ao bosón de Higgs.
 
-Se precisa un conocimiento previo de la cinemática relativista y de los conceptos básicos de Física Nuclear. También es conveniente conocer la ecuación de Dirac y una introducción a la Teoría Cuántica de Campos.
+Precísase un coñecemento previo da cinemática relativista e dos conceptos básicos de Física Nuclear. Tamén é conveniente coñecer a ecuación de Dirac e unha introdución á Teoría Cuántica de Campos.
 
-Los apuntes se complementan con **extensiones**, que desarrollan con más detalle algunos puntos de los capítulos y presentan de forma breve algunos fundamentos matemáticos, y con **boletines** de ejercicios resueltos.
+Os apuntamentos compleméntanse con **extensións**, que desenvolven con máis detalle algúns puntos dos capítulos e presentan de forma breve algúns fundamentos matemáticos, e con **boletíns** de exercicios resoltos.
 
-Estos apuntes son una recopilación de muy diversas fuentes, pero principalmente de los libros de M. Thomson y A. Bettini.
+Estes apuntamentos son unha recompilación de moi diversas fontes, pero principalmente dos libros de M. Thomson e A. Bettini.
 
 -------
 
-## Contenido
+## Contido
 
-El libro se organiza en tres secciones:
+O libro organízase en tres seccións:
 
-1. **Capítulos**: los cinco temas de la asignatura.
-2. **Extensiones**: complementos de los capítulos (deducciones completas, analogías,
-   simulaciones) y algunos fundamentos matemáticos.
-3. **Boletines**: los ejercicios de cada capítulo, resueltos en notebooks.
+1. **Capítulos**: os cinco temas da materia.
+2. **Extensións**: complementos dos capítulos (deducións completas, analoxías,
+   simulacións) e algúns fundamentos matemáticos.
+3. **Boletíns**: os exercicios de cada capítulo, resoltos en notebooks.
 
-**De momento se publica solo el primer capítulo**, que es el que está revisado; el resto,
-las extensiones y los boletines se irán incorporando conforme se curen.
+**De momento publícase só o primeiro capítulo**, que é o que está revisado; o resto,
+as extensións e os boletíns iranse incorporando conforme se revisen.
 
 **Publicado**
 
-* Capítulo 1: Introducción a la Física de Partículas
+* Capítulo 1: Introdución á Física de Partículas
 
 **En preparación**
 
-* Capítulos 2–5: Observables; Los leptones; Los quarks y los hadrones; El Modelo Estándar
-* Extensiones: Introducción; Fundamentos
-* Boletines: Desintegración del protón en Super-Kamiokande
+* Capítulos 2–5: Observables; Os leptóns; Os quarks e os hadróns; O Modelo Estándar
+* Extensións: Introdución; Fundamentos
+* Boletíns: Desintegración do protón en Super-Kamiokande
 
-Los capítulos, extensiones y boletines en preparación se mencionan en el Capítulo 1; esas
-referencias aparecen como texto sin enlace hasta que se publiquen.
+Os capítulos, extensións e boletíns en preparación menciónanse no Capítulo 1; esas
+referencias aparecen como texto sen ligazón ata que se publiquen.
 
 ```{tableofcontents}
 ```

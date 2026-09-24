@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Introducción a la Física de Partículas - USC
+title: Introdución á Física de Partículas - USC
 author: J. Ángel Hernando Morata
 logo: logo.jpg
 copyright: USC 2026
@@ -59,7 +59,7 @@ sphinx:
   config:
     html_show_copyright: false
     show_authors: false
-    language: es
+    language: gl
 
 # Botones para abrir cada notebook de forma ejecutable desde la web.
 # Binder clona el repositorio entero (funcionan el paquete fnyp/ y las imágenes).

@@ -1,27 +1,27 @@
 # Universidade de Santiago de Compostela
 ## Facultade de Física
-## Curso Física Nuclear y de Partículas
-### author: J. A. Hernando
-### date  : September 2021
+## Curso Física Nuclear e de Partículas
+### autor: J. A. Hernando
+### data : setembro 2021
 
 
-This repository contains Python-Notebooks and Python code for the lectures
-on "Introduction to Particle Physics" of the "Nuclear and Particle Physics" introductory course of the University of Santiago de Compostela.
+Este repositorio contén Python-Notebooks e código Python para as clases
+de "Introdución á Física de Partículas" da materia introdutoria "Física Nuclear e de Partículas" da Universidade de Santiago de Compostela.
 
-Index and links to the material of the course at *indice.ipynb*
+Índice e ligazóns ao material do curso en *indice.ipynb*
 
-Clich here to start your interactive session (be patient!):
+Preme aquí para iniciar a túa sesión interactiva (ten paciencia!):
 
 Google: 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jahernando/USC-FNyP/blob/main/notebooks/introduccion.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/xabiercidvidal/USC-FNeP/blob/main/notebooks/introduccion.ipynb)
 
 Binder:
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jahernando/USC-FNyP/main)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/xabiercidvidal/USC-FNeP/main)
 
 
-## Entorno
+## Contorno
 
-Para **ejecutar los notebooks y compilar el Book** (entorno del autor):
+Para **executar os notebooks e compilar o Book** (contorno do autor):
 
 ```bash
 conda env create -f environment.yml
@@ -29,43 +29,43 @@ conda activate fnyp
 jupyter-book build .
 ```
 
-Para que los notebooks se abran con este entorno desde cualquier Jupyter, sin depender
-de cuál estuviera activo al arrancarlo, conviene registrar el kernel una vez:
+Para que os notebooks se abran con este contorno desde calquera Jupyter, sen depender
+de cal estivese activo ao arrincalo, convén rexistrar o kernel unha vez:
 
 ```bash
 conda activate fnyp
 python -m ipykernel install --user --name fnyp --display-name "Python (fnyp)"
 ```
 
-Aparece entonces como **Python (fnyp)** en el selector de kernel.
+Aparece entón como **Python (fnyp)** no selector de kernel.
 
-Para **solo ejecutar los notebooks** basta con `requirements.txt`, que es lo que usa
+Para **só executar os notebooks** abonda con `requirements.txt`, que é o que usa
 Binder:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Las versiones están acotadas a propósito en los dos ficheros, y deben mantenerse en
-paralelo: sin cotas, Binder resuelve lo último de cada día y las figuras que ve el
-alumno pueden no coincidir con las que se compilan en local.
+As versións están acoutadas a propósito nos dous ficheiros, e deben manterse en
+paralelo: sen cotas, Binder resolve o último de cada día e as figuras que ve o
+alumnado poden non coincidir coas que se compilan en local.
 
-> **jupyter-book está fijado a la serie 0.15.** La 2.x es una reescritura sobre el
-> motor MyST y no lee este `_config.yml` ni este `_toc.yml`. Actualizar exige migrar
-> los dos ficheros y las directivas `admonition` de los talleres.
+> **jupyter-book está fixado na serie 0.15.** A 2.x é unha reescritura sobre o
+> motor MyST e non le este `_config.yml` nin este `_toc.yml`. Actualizar esixe migrar
+> os dous ficheiros e as directivas `admonition` dos obradoiros.
 
-## Publicación del Book
+## Publicación do Book
 
-La web del curso, <https://jahernando.github.io/USC-FNyP/>, la sirve GitHub Pages desde
-la rama `gh-pages`. **No hay que tocar esa rama a mano**: el flujo de trabajo
-`.github/workflows/deploy-book.yml` compila el Book y la actualiza en cada `push` a
-`main` que toque los notebooks, `_config.yml`, `_toc.yml`, `intro.md` o
-`environment.yml`. También puede lanzarse a mano desde la pestaña *Actions*.
+A web do curso, <https://jahernando.github.io/USC-FNyP/>, sérvea GitHub Pages desde
+a rama `gh-pages`. **Non hai que tocar esa rama a man**: o fluxo de traballo
+`.github/workflows/deploy-book.yml` compila o Book e actualízaa en cada `push` a
+`main` que toque os notebooks, `_config.yml`, `_toc.yml`, `intro.md` ou
+`environment.yml`. Tamén pode lanzarse a man desde a lapela *Actions*.
 
-El servidor crea el entorno a partir de `environment.yml`, de modo que compila con las
-mismas versiones acotadas que en local y las figuras coinciden.
+O servidor crea o contorno a partir de `environment.yml`, de modo que compila coas
+mesmas versións acoutadas que en local e as figuras coinciden.
 
-Si el flujo falla y hace falta publicar de inmediato, el despliegue manual sigue siendo
+Se o fluxo falla e cómpre publicar de inmediato, o despregamento manual segue sendo
 válido:
 
 ```bash
@@ -74,5 +74,5 @@ jupyter-book build .
 ghp-import -n -p _build/html
 ```
 
-GitHub Pages tarda unos minutos en servir la versión nueva, y la cabecera de caché es de
-diez minutos: para comprobarlo, recarga forzando.
+GitHub Pages tarda uns minutos en servir a versión nova, e a cabeceira de caché é de
+dez minutos: para comprobalo, recarga forzando.
