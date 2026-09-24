@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Introdución á Física de Partículas - USC
-author: J. Ángel Hernando Morata
+author: J. Ángel Hernando Morata, Xabier Cid Vidal
 logo: logo.jpg
 copyright: USC 2026
 
@@ -45,7 +45,7 @@ parse:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/jahernando/USC-FNyP  # Online location of your book
+  url: https://github.com/xabiercidvidal/USC-FNeP  # Online location of your book
   path_to_book: .  # Path to the book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links
 

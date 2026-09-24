@@ -56,7 +56,7 @@ alumnado poden non coincidir coas que se compilan en local.
 
 ## Publicación do Book
 
-A web do curso, <https://jahernando.github.io/USC-FNyP/>, sérvea GitHub Pages desde
+A web do curso, <https://xabiercidvidal.github.io/USC-FNeP/>, sérvea GitHub Pages desde
 a rama `gh-pages`. **Non hai que tocar esa rama a man**: o fluxo de traballo
 `.github/workflows/deploy-book.yml` compila o Book e actualízaa en cada `push` a
 `main` que toque os notebooks, `_config.yml`, `_toc.yml`, `intro.md` ou

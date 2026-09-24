@@ -2,7 +2,7 @@
 
 Apuntamentos da materia **Física Nuclear e de Partículas** (sección de Partículas) do grao en Física da **Universidade de Santiago de Compostela**
 
-Autor: José Ángel Hernando Morata
+Autores: José Ángel Hernando Morata e Xabier Cid Vidal
 
 Correo electrónico: jose.hernando@usc.es
 

@@ -1,5 +1,5 @@
 # Compila el Book y lo publica en la rama gh-pages, que es la que sirve
-# GitHub Pages en https://jahernando.github.io/USC-FNyP/
+# GitHub Pages en https://xabiercidvidal.github.io/USC-FNeP/
 #
 # Sustituye al despliegue manual, que era:
 #     conda activate fnyp && jupyter-book build . && ghp-import -n -p _build/html
