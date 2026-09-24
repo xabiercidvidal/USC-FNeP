@@ -1,8 +1,8 @@
 # Universidade de Santiago de Compostela
 ## Facultade de Física
 ## Curso Física Nuclear e de Partículas
-### autor: J. A. Hernando
-### data : setembro 2021
+### autor: J. A. Hernando, X. Cid Vidal
+### data : setembro 2026
 
 
 Este repositorio contén Python-Notebooks e código Python para as clases
