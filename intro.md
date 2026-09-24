@@ -4,7 +4,7 @@ Apuntamentos da materia **Física Nuclear e de Partículas** (sección de Partí
 
 Autores: José Ángel Hernando Morata e Xabier Cid Vidal
 
-Correo electrónico: jose.hernando@usc.es
+Correo electrónico: jose.hernando@usc.es, xabier.cid@usc.gal
 
 Versión: xullo 2026
 
