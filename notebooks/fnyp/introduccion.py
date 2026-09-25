@@ -165,7 +165,7 @@ def plot_dilatacion_temporal(particulas=None, p_min=10., p_max=1e6,
         ax1.axhline(tau0, ls=':', lw=1, color=linea.get_color(), alpha=0.6)
         ax1.axvline(masa / 1000., ls=':', lw=1, color=linea.get_color(), alpha=0.6)
         if len(particulas) == 1:
-            ax1.text(p_min / 1000. * 1.4, tau0 * 1.25, r'$\tau_0$ (en reposo)',
+            ax1.text(p_min / 1000. * 1.4, tau0 * 1.25, r'$\tau_0$ (en repouso)',
                      fontsize=8, color=linea.get_color())
             ax1.text(masa / 1000. * 1.3, tau0 * 4.0, r'$p = mc$',
                      fontsize=8, color=linea.get_color())
@@ -177,7 +177,7 @@ def plot_dilatacion_temporal(particulas=None, p_min=10., p_max=1e6,
         lam_c = (P_MUON_COSMICO / M_MU) * units.c * TAU_MU
         ax2.axhline(H_ATMOSFERA, ls='--', lw=1.2, color='0.4')
         ax2.text(p_min / 1000. * 1.4, H_ATMOSFERA * 0.30,
-                 'espesor de la atmósfera, 15 km', fontsize=8, color='0.3')
+                 'espesor da atmosfera, 15 km', fontsize=8, color='0.3')
         ax2.plot(P_MUON_COSMICO / 1000., lam_c, 'o', ms=7, color='crimson', zorder=5)
         ax2.annotate(f'muón cósmico\n$p$ = 4 GeV, $\\gamma$ = {gamma_c:.0f}\n'
                      f'$L$ = {lam_c/1000.:.0f} km',
@@ -189,15 +189,15 @@ def plot_dilatacion_temporal(particulas=None, p_min=10., p_max=1e6,
             beta_c = P_MUON_COSMICO / (M_MU * gamma_c)
             print(f' muón cósmico típico:  p = {P_MUON_COSMICO/1000:.0f} GeV')
             print(f'   gamma = {gamma_c:6.1f},  beta = {beta_c:.6f}')
-            print(f'   vida media en el laboratorio  = {gamma_c*TAU_MU*1e6:8.1f} us'
-                  f'   (en reposo, {TAU_MU*1e6:.2f} us)')
-            print(f'   longitud de desintegración    = {lam_c/1000.:8.1f} km'
-                  f'   (sin dilatación, {units.c*TAU_MU/1000.:.3f} km)')
+            print(f'   vida media no laboratorio    = {gamma_c*TAU_MU*1e6:8.1f} us'
+                  f'   (en repouso, {TAU_MU*1e6:.2f} us)')
+            print(f'   lonxitude de desintegración  = {lam_c/1000.:8.1f} km'
+                  f'   (sen dilatación, {units.c*TAU_MU/1000.:.3f} km)')
 
     for ax, ylab, tit in ((ax1, r'vida media $\tau$ (s)',
-                           r'la vida media que mide el laboratorio'),
-                          (ax2, r'longitud de desintegración $L$ (m)',
-                           r'cuánto vuela antes de desintegrarse')):
+                           r'a vida media que mide o laboratorio'),
+                          (ax2, r'lonxitude de desintegración $L$ (m)',
+                           r'canto voa antes de desintegrarse')):
         ax.set_xscale('log'); ax.set_yscale('log')
         ax.set_xlabel(r'momento $p$ (GeV/c)')
         ax.set_ylabel(ylab)

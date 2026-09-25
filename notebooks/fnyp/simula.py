@@ -98,10 +98,10 @@ def atenuacion(n=20000, lambda_real=12., espesor=50., seed=None, verbose=True):
         plt.errorbar(xs, n_sup, yerr=np.sqrt(n_sup), fmt='o', ms=4,
                      label='simulación')
         plt.plot(xs, np.exp(ordenada + pendiente * xs), '-',
-                 label=r'ajuste $\phi_0 e^{-x/\lambda}$')
+                 label=r'axuste $\phi_0 e^{-x/\lambda}$')
         plt.yscale('log')
-        plt.xlabel('espesor recorrido $x$ (cm)')
-        plt.ylabel('partículas que no han interaccionado')
+        plt.xlabel('espesor percorrido $x$ (cm)')
+        plt.ylabel('partículas que non interaccionaron')
         plt.grid(alpha=0.3)
         plt.legend()
         print(f' lambda de entrada = {lambda_real:6.2f} cm')
@@ -164,7 +164,7 @@ def supervivientes(n=10000, tau_real=2.197, n_semividas=5, seed=None, verbose=Tr
         fig, axes = plt.subplots(1, 2, figsize=(9.5, 3.6))
         for ax, escala in zip(axes, ('linear', 'log')):
             y0 = 0.5 * n / 2**n_semividas if escala == 'log' else 0.
-            ax.plot(tiempos, vivos, lw=1.8, label=f'muestra simulada (N = {n})')
+            ax.plot(tiempos, vivos, lw=1.8, label=f'mostra simulada (N = {n})')
             ax.plot(tiempos, n * np.exp(-tiempos / tau_real), 'k--', lw=1,
                     label=r'$N \, e^{-t/\tau}$')
             for tk, nk in marcas:                # la escalera de las semividas
@@ -176,14 +176,14 @@ def supervivientes(n=10000, tau_real=2.197, n_semividas=5, seed=None, verbose=Tr
             ax.set_xticks([k * t_semivida for k in range(n_semividas + 1)])
             ax.set_xticklabels(['0'] + ['$T$'] +
                                [f'${k}T$' for k in range(2, n_semividas + 1)])
-            ax.set_xlabel(r'tiempo $t$')
+            ax.set_xlabel(r'tempo $t$')
             ax.grid(alpha=0.3)
-        axes[0].set_ylabel('muones que quedan')
+        axes[0].set_ylabel('muóns que quedan')
         axes[0].legend(fontsize=8)
-        axes[1].set_title('en escala logarítmica es una recta', fontsize=10)
+        axes[1].set_title('en escala logarítmica é unha recta', fontsize=10)
         fig.tight_layout()
 
-        print(f' muestra inicial  N = {n}')
+        print(f' mostra inicial   N = {n}')
         print(f' vida media       tau = {tau_real:6.3f}')
         print(f' semidesintegración T = tau ln2 = {t_semivida:6.3f}\n')
         print('          quedan   N/2^k')
@@ -228,13 +228,13 @@ def vida_media(n=2000, tau_real=2.197, seed=None, verbose=True):
     if verbose:
         plt.hist(t, bins=40, range=(0, 6 * tau_real), histtype='step', lw=1.5)
         plt.yscale('log')
-        plt.xlabel(r'tiempo de desintegración $t$ ($\mu$s)')
+        plt.xlabel(r'tempo de desintegración $t$ ($\mu$s)')
         plt.ylabel('sucesos')
         plt.grid(alpha=0.3)
         desv = abs(tau_medida - tau_real) / error
         print(f' tau de entrada = {tau_real:6.4f}')
         print(f' tau medida     = {tau_medida:6.4f} +- {error:6.4f}'
-              f'   ({desv:.1f} sigmas de la de entrada, con n = {n})')
+              f'   ({desv:.1f} sigmas da de entrada, con n = {n})')
 
     return dict(tau_medida=tau_medida, error=error, tau_real=tau_real, tiempos=t)
 
@@ -300,7 +300,7 @@ def vida_media_evolucion(ns=(10, 100, 1000, 10000), tau_real=2.197, seed=None,
         fig2, ax2 = plt.subplots(figsize=(5, 3.2))
         ax2.errorbar(ns, taus, yerr=errores, fmt='o-', capsize=4)
         ax2.axhline(tau_real, color='crimson', ls='--',
-                    label=r'$\tau$ verdadera')
+                    label=r'$\tau$ verdadeira')
         ax2.set_xscale('log')
         ax2.set_xlabel('sucesos acumulados $n$')
         ax2.set_ylabel(r'$\tau$ medida ($\mu$s)')
@@ -374,7 +374,7 @@ def vida_media_animada(n_max=10000, n_min=10, frames=40, tau_real=2.197,
         tau, err = t[:n].mean(), t[:n].mean() / np.sqrt(n)
         ax.set_title(f'n = {n}' + r'   $\tau$ = ' + f'{tau:.3f} $\\pm$ {err:.3f} '
                      + r'$\mu$s')
-        ax.set_xlabel(r'tiempo de desintegración $t$ ($\mu$s)')
+        ax.set_xlabel(r'tempo de desintegración $t$ ($\mu$s)')
         ax.set_ylabel('sucesos (normalizado)')
         ax.set_ylim(0, 1.15 * curva.max())
         ax.grid(alpha=0.3)
@@ -442,8 +442,8 @@ def vida_media_sin_memoria(n=200000, tau_real=2.197, edades=(1., 3.),
         t0 = edad * tau_real
         return t[t > t0] - t0
 
-    poblaciones = (('sin memoria (exponencial)', t_exp),
-                   (f'que envejece (Weibull k={k:.0f})', t_env))
+    poblaciones = (('sen memoria (exponencial)', t_exp),
+                   (f'que envellece (Weibull k={k:.0f})', t_env))
     edades_todas = (0.0,) + tuple(float(e) for e in edades)
 
     medidas = {}
@@ -468,13 +468,13 @@ def vida_media_sin_memoria(n=200000, tau_real=2.197, edades=(1., 3.),
                 r = restantes(t, edad)
                 if r.size == 0:
                     continue                 # nadie sobrevive: no hay nada que dibujar
-                etiqueta = ('muestra recién preparada' if edad == 0 else
-                            f'sobrevivieron a $t > {edad:g}\\,\\tau$')
+                etiqueta = ('mostra recén preparada' if edad == 0 else
+                            f'sobreviviron a $t > {edad:g}\\,\\tau$')
                 ax.hist(r, bins=bins, density=True,
                         histtype='step', lw=1.6, label=etiqueta)
             ax.set_yscale('log')
             ax.set_title(nombre, fontsize=10)
-            ax.set_xlabel(r'tiempo que le queda por vivir ($\mu$s)')
+            ax.set_xlabel(r'tempo que lle queda por vivir ($\mu$s)')
             ax.grid(alpha=0.3)
             ax.legend(fontsize=8)
         axes[0].set_ylabel('sucesos (normalizado)')
@@ -484,13 +484,13 @@ def vida_media_sin_memoria(n=200000, tau_real=2.197, edades=(1., 3.),
         for nombre, filas in medidas.items():
             print(f' {nombre}')
             for f in filas:
-                etq = ('muestra recién preparada' if f['edad'] == 0 else
-                       f"sobrevivieron a t > {f['edad']:g} tau")
+                etq = ('mostra recén preparada' if f['edad'] == 0 else
+                       f"sobreviviron a t > {f['edad']:g} tau")
                 if f['n'] == 0:
-                    print(f"   {etq:<28s} n = {f['n']:>7d}   no sobrevive ninguna")
+                    print(f"   {etq:<28s} n = {f['n']:>7d}   non sobrevive ningunha")
                     continue
                 print(f"   {etq:<28s} n = {f['n']:>7d}"
-                      f"   les quedan {f['media']:6.4f} +- {f['error']:6.4f}")
+                      f"   quédanlles {f['media']:6.4f} +- {f['error']:6.4f}")
             print()
 
     return dict(medidas=medidas, tiempos_exp=t_exp, tiempos_env=t_env,
@@ -498,7 +498,7 @@ def vida_media_sin_memoria(n=200000, tau_real=2.197, edades=(1., 3.),
 
 
 def canales(n=200000, tau_real=0.2903,
-            br=(('e', 0.178), ('mu', 0.174), ('hadrones', 0.648)),
+            br=(('e', 0.178), ('mu', 0.174), ('hadróns', 0.648)),
             unidad='ps', seed=None, verbose=True):
     """Muestra que **no hay una vida media por canal** de desintegración.
 
@@ -559,7 +559,7 @@ def canales(n=200000, tau_real=0.2903,
     c_inv = rng.choice(fr.size, size=n, p=fr)
     t_inv = rng.exponential(1. / gammas[c_inv])
 
-    mundos = (('real: carrera de relojes', t_real, c_real),
+    mundos = (('real: carreira de reloxos', t_real, c_real),
               ('inventado: vida media propia por canal', t_inv, c_inv))
 
     def fracciones(c):
@@ -604,7 +604,7 @@ def canales(n=200000, tau_real=0.2903,
             ax_t.grid(alpha=0.3)
             ax_t.legend(fontsize=8)
             ax_f.set_ylim(0, 1)
-            ax_f.set_xlabel(f'tiempo de desintegración ({unidad})')
+            ax_f.set_xlabel(f'tempo de desintegración ({unidad})')
             ax_f.grid(alpha=0.3)
         axes[0, 0].set_ylabel('sucesos')
         axes[1, 0].set_ylabel('fracción de cada canal')
@@ -619,7 +619,7 @@ def canales(n=200000, tau_real=0.2903,
                       f"   <t> = {f['media']:6.4f} +- {f['error']:6.4f} {unidad}"
                       f"   (1/Gamma_i = {f['vida_propia']:6.4f} {unidad})")
             for etq, fs in (('t < 0.1 tau', m['br_temprano']), ('t > 3 tau  ', m['br_tardio'])):
-                print(f'   fracciones con {etq}: '
+                print(f'   fraccións con {etq}: '
                       + '  '.join(f'{c} {x:5.3f}' for c, x in zip(nombres, fs)))
             print()
 
@@ -673,16 +673,16 @@ def espectro_beta(Q=0.782, m_e=0.511, verbose=True):
     T_2 = Q
 
     if verbose:
-        plt.plot(T, dNdT, label=r'3 cuerpos: $n \to p + e + \bar{\nu}_e$')
+        plt.plot(T, dNdT, label=r'3 corpos: $n \to p + e + \bar{\nu}_e$')
         plt.vlines(T_2, 0, 1.05, color='crimson', lw=2,
-                   label=r'2 cuerpos: $n \to p + e$')
-        plt.xlabel(r'energía cinética del electrón $T$ (MeV)')
+                   label=r'2 corpos: $n \to p + e$')
+        plt.xlabel(r'enerxía cinética do electrón $T$ (MeV)')
         plt.ylabel(r'$dN/dT$ (normalizado)')
         plt.ylim(0, 1.15)
         plt.grid(alpha=0.3)
         plt.legend()
-        print(f' 2 cuerpos: una raya en T = {T_2:5.3f} MeV')
-        print(f' 3 cuerpos: continuo entre 0 y Q = {Q:5.3f} MeV')
+        print(f' 2 corpos: unha raia en T = {T_2:5.3f} MeV')
+        print(f' 3 corpos: continuo entre 0 e Q = {Q:5.3f} MeV')
 
     return dict(T=T, espectro_3cuerpos=dNdT, T_2cuerpos=T_2)
 
@@ -763,12 +763,12 @@ def rutherford(n=200000, E_MeV=5., Z_proyectil=2, Z_blanco=79,
         plt.hist(theta_thom, bins=bins, histtype='step', lw=1.5,
                  label='Thomson (carga difusa)')
         plt.yscale('log')
-        plt.xlabel(r'ángulo de dispersión $\theta$ (grados)')
+        plt.xlabel(r'ángulo de dispersión $\theta$ (graos)')
         plt.ylabel('sucesos')
         plt.grid(alpha=0.3)
         plt.legend()
-        print(f' distancia de máximo acercamiento d = {d:5.1f} fm')
-        print(f' fracción dispersada a theta > 90 grados:')
+        print(f' distancia de máxima aproximación d = {d:5.1f} fm')
+        print(f' fracción dispersada a theta > 90 graos:')
         uno_de_cada = f'1 de cada {int(round(1/frac_r)):d}' if frac_r > 0 else 'ningún suceso'
         print(f'   Rutherford : {frac_r:9.2e}   ->  {uno_de_cada}')
         print(f'   Thomson    : {frac_t:9.2e}   ->  '
@@ -902,13 +902,13 @@ def resonancia(gammas=(0.05, 0.2), omega0=1., n_omegas=61, verbose=True):
             ax_w.plot(w, bw, color=f'C{k}', lw=1, label=f'Breit-Wigner, $\\Gamma$ = {gamma}')
             ax_w.plot(r['omegas'], r['potencia'], 'o', ms=3.5, color=f'C{k}',
                       label=f'simulación: anchura = {r["anchura"]:.3f}')
-        ax_t.set_xlabel('tiempo $t$ (unidades de $1/\\omega_0$)')
+        ax_t.set_xlabel('tempo $t$ (unidades de $1/\\omega_0$)')
         ax_t.set_ylabel('$x(t)$')
-        ax_t.set_title('libre: se apaga en un tiempo $\\sim 1/\\gamma$', fontsize=10)
+        ax_t.set_title('libre: apágase nun tempo $\\sim 1/\\gamma$', fontsize=10)
         ax_t.legend(fontsize=8, loc='upper right')
         ax_t.grid(alpha=0.3)
         ax_w.axvline(omega0, color='k', ls=':', lw=1)
-        ax_w.set_xlabel('frecuencia del forzamiento $\\omega$ (unidades de $\\omega_0$)')
+        ax_w.set_xlabel('frecuencia do forzamento $\\omega$ (unidades de $\\omega_0$)')
         ax_w.set_ylabel('potencia absorbida (normalizada)')
         ax_w.set_title('forzado: pico de anchura $\\gamma$', fontsize=10)
         ax_w.legend(fontsize=8, loc='upper left')
@@ -976,7 +976,7 @@ def resonancia_animada(gamma=0.1, omega0=1., n_omegas=25, fps=4):
         ax_t.clear()
         ax_t.plot(t, x, lw=0.8)
         ax_t.set_ylim(-1.1 * x_max, 1.1 * x_max)
-        ax_t.set_xlabel('tiempo $t$ (unidades de $1/\\omega_0$)')
+        ax_t.set_xlabel('tempo $t$ (unidades de $1/\\omega_0$)')
         ax_t.set_ylabel('$x(t)$')
         ax_t.set_title(f'forzado a $\\omega$ = {omegas[k]:.3f} $\\omega_0$', fontsize=10)
         ax_t.grid(alpha=0.3)
@@ -989,7 +989,7 @@ def resonancia_animada(gamma=0.1, omega0=1., n_omegas=25, fps=4):
         ax_w.axvline(omega0, color='k', ls=':', lw=1)
         ax_w.set_xlim(omegas[0], omegas[-1])
         ax_w.set_ylim(0, 1.15)
-        ax_w.set_xlabel('frecuencia del forzamiento $\\omega$ (unidades de $\\omega_0$)')
+        ax_w.set_xlabel('frecuencia do forzamento $\\omega$ (unidades de $\\omega_0$)')
         ax_w.set_ylabel('potencia absorbida (normalizada)')
         ax_w.legend(fontsize=8, loc='upper left')
         ax_w.grid(alpha=0.3)

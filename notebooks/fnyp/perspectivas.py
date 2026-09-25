@@ -75,7 +75,7 @@ def masa_transversa(n=200000, m_w=80.4, pt_w=15., sigma=4., seed=None,
 
     El :math:`p_T` del W **por sí solo no rompe el borde** mientras el retroceso
     esté medido, porque entonces :math:`{\\bf p}^{miss}_T = {\\bf p}^\\nu_T` y
-    :math:`m_T \\leq m_W` sigue siendo exacta: es la clave ``solo el pT del W`` de
+    :math:`m_T \\leq m_W` sigue siendo exacta: es la clave ``só o pT do W`` de
     ``fraccion``. Lo que rompe el borde es la **medida** —la resolución y, sobre
     todo, un detector que deje escapar el retroceso—. Por eso se construyen
     herméticos.
@@ -136,12 +136,12 @@ def masa_transversa(n=200000, m_w=80.4, pt_w=15., sigma=4., seed=None,
     pt_e2 = pt_e1 + rng.normal(0., sigma, pt_e1.shape)
     pt_n2 = pt_n1 + rng.normal(0., sigma, pt_n1.shape)
 
-    casos = (('ideal: W en reposo y medida perfecta', mt(pt_e0, pt_n0)),
-             (f'W con $p_T$ = {pt_w:.0f} GeV y $\\sigma(p_T)$ = {sigma:.0f} GeV',
+    casos = (('ideal: W en repouso e medida perfecta', mt(pt_e0, pt_n0)),
+             (f'W con $p_T$ = {pt_w:.0f} GeV e $\\sigma(p_T)$ = {sigma:.0f} GeV',
               mt(pt_e2, pt_n2)),
-             ('... y sin medir el retroceso hadrónico', mt(pt_e2, -pt_e2)))
+             ('... e sen medir o retroceso hadrónico', mt(pt_e2, -pt_e2)))
     fraccion = {nombre: float(np.mean(x > m_w)) for nombre, x in casos}
-    fraccion['solo el pT del W'] = float(np.mean(mt(pt_e1, pt_n1) > m_w))
+    fraccion['só o pT do W'] = float(np.mean(mt(pt_e1, pt_n1) > m_w))
 
     if verbose:
         bins = np.linspace(0., 1.6 * m_w, 120)
@@ -154,10 +154,10 @@ def masa_transversa(n=200000, m_w=80.4, pt_w=15., sigma=4., seed=None,
         plt.legend(loc='upper left')
         plt.grid(alpha=0.3)
         for nombre, x in casos:
-            print(f' {nombre:38} : maximo en mT = {_moda(x, bins):5.1f} GeV,'
-                  f' {100 * fraccion[nombre]:6.2f} % por encima de mW')
-        print(f' {"(el pT del W por si solo, sin resolucion)":38} :'
-              f' {100 * fraccion["solo el pT del W"]:30.2f} % por encima de mW')
+            print(f' {nombre:38} : máximo en mT = {_moda(x, bins):5.1f} GeV,'
+                  f' {100 * fraccion[nombre]:6.2f} % por riba de mW')
+        print(f' {"(o pT do W por si só, sen resolución)":38} :'
+              f' {100 * fraccion["só o pT do W"]:30.2f} % por riba de mW')
 
     return dict(mt_ideal=casos[0][1], mt_medida=casos[1][1],
                 mt_sin_retroceso=casos[2][1], fraccion=fraccion)
@@ -269,11 +269,11 @@ def dedx(p_min=0.1, p_max=10., Z_A=0.5, I_eV=188., resolucion=0.07,
         plt.grid(alpha=0.3, which='both')
         for par, dato in separacion.items():
             if dato is None:
-                print(f' {par:9} : no se distinguen a mas de 2 sigma')
+                print(f' {par:9} : non se distinguen a máis de 2 sigma')
                 continue
             p_lim, cruce = dato
-            aviso = '' if cruce is None else f', pero se cruzan en {cruce:5.2f} GeV'
-            print(f' {par:9} : se distinguen (> 2 sigma) hasta p ='
+            aviso = '' if cruce is None else f', pero crúzanse en {cruce:5.2f} GeV'
+            print(f' {par:9} : distínguense (> 2 sigma) ata p ='
                   f' {p_lim:5.2f} GeV{aviso}')
 
     return dict(p=p, curvas=curvas, separacion=separacion)
@@ -452,7 +452,7 @@ def kappa_espinor(verbose=True):
     if verbose:
         plt.plot(x, k, lw=2, label=r'$\kappa = \mathrm{p}/(E+m)$')
         plt.plot(x, w, lw=2, ls='--',
-                 label=r'peso de las componentes de abajo, $\kappa^2/(1+\kappa^2)$')
+                 label=r'peso das compoñentes de abaixo, $\kappa^2/(1+\kappa^2)$')
         plt.axhline(0.5, color='0.6', lw=1, ls=':')
         for etiqueta, _, _, offset in CASOS_KAPPA:
             xi, ki, _w = casos[etiqueta]
@@ -467,6 +467,6 @@ def kappa_espinor(verbose=True):
         plt.grid(alpha=0.3, which='both')
         for etiqueta, (xi, ki, wi) in casos.items():
             print(f' {etiqueta:12} : beta*gamma = p/m = {xi:9.1f}, kappa = {ki:5.3f},'
-                  f' peso abajo = {100 * wi:4.1f} %')
+                  f' peso abaixo = {100 * wi:4.1f} %')
 
     return dict(x=x, kappa=k, peso=w, casos=casos)
