@@ -52,7 +52,7 @@ alumnado poden non coincidir coas que se compilan en local.
 
 > **jupyter-book está fixado na serie 0.15.** A 2.x é unha reescritura sobre o
 > motor MyST e non le este `_config.yml` nin este `_toc.yml`. Actualizar esixe migrar
-> os dous ficheiros e as directivas `admonition` dos obradoiros.
+> os dous ficheiros e as directivas `admonition` das tarefas.
 
 ## Publicación do Book
 
