@@ -108,7 +108,7 @@ def masa_transversa(n=200000, m_w=80.4, pt_w=15., sigma=4., seed=None,
     """
     rng = np.random.default_rng(seed)
 
-    # desintegracion isotropa en el sistema del W: e y nu, espalda contra espalda
+    # desintegración isótropa en el sistema del W: e y nu, espalda contra espalda
     cos_t = rng.uniform(-1., 1., n)
     phi = rng.uniform(0., 2 * np.pi, n)
     sin_t = np.sqrt(1. - cos_t**2)
@@ -227,7 +227,7 @@ def dedx(p_min=0.1, p_max=10., Z_A=0.5, I_eV=188., resolucion=0.07,
     -------
     dict
         ``p`` (momento), ``curvas`` (dict de arrays) y ``separacion``: por cada
-        par de bandas contiguas, el momento hasta el que se distinguen a mas de
+        par de bandas contiguas, el momento hasta el que se distinguen a más de
         2 sigma y, si lo hay, el momento al que se cruzan.
     """
     rng = np.random.default_rng(seed)
@@ -241,7 +241,7 @@ def dedx(p_min=0.1, p_max=10., Z_A=0.5, I_eV=188., resolucion=0.07,
     p = np.logspace(np.log10(p_min), np.log10(p_max), 400)
     curvas = {nombre: bethe(p, m) for nombre, m in MASAS.items()}
 
-    # separacion entre bandas contiguas, en unidades de la resolucion
+    # separación entre bandas contiguas, en unidades de la resolución
     orden = sorted(MASAS, key=lambda k: MASAS[k])
     separacion = {}
     for a, b in zip(orden[:-1], orden[1:]):
@@ -252,7 +252,7 @@ def dedx(p_min=0.1, p_max=10., Z_A=0.5, I_eV=188., resolucion=0.07,
             separacion[f'{a}/{b}'] = None
             continue
         p_lim = float(p[buenos][-1])
-        # por debajo del limite las dos bandas pueden llegar a cruzarse
+        # por debajo del límite las dos bandas pueden llegar a cruzarse
         malos = np.where(~buenos & (p < p_lim))[0]
         cruce = float(p[malos[np.argmin(n_sigma[malos])]]) if len(malos) else None
         separacion[f'{a}/{b}'] = (p_lim, cruce)
