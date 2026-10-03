@@ -25,7 +25,11 @@ Parte teórica
 :func:`espinores`        los cuatro espinores :math:`u_s(p), v_s(p)` con **p** en
                          el eje z, y :math:`\\gamma^\\mu p_\\mu`
 :func:`kappa_espinor`    :math:`\\kappa = \\mathrm{p}/(E+m)` y el peso de las dos
-                         componentes de abajo -> el límite ultrarrelativista
+                         componentes de abajo frente al momento, para e y p ->
+                         el límite ultrarrelativista lo fija la masa
+:func:`hera`             :math:`|M|^2` de la corriente neutra (fotón) y de la
+                         cargada (W) frente a :math:`Q^2` -> el propagador:
+                         la débil deja de ser débil cuando :math:`Q^2 \\sim m_W^2`
 :func:`latex`, :func:`muestra`, :func:`ok`
                          cosmética: matrices y espinores escritos en LaTeX, con
                          la marca de si la comprobación se cumple
@@ -571,14 +575,37 @@ def espinores(p, m):
 # ---------------------------------------------------------------------------
 
 #: casos marcados en la figura: (etiqueta, masa [GeV], momento [GeV], offset)
-CASOS_KAPPA = ((r'$e$, 1 MeV', 0.511e-3, 1e-3, (8, -4)),
-               (r'$p$, 1 GeV', 0.938, 1., (8, -12)),
-               (r'$e$, 1 GeV', 0.511e-3, 1., (-16, -16)),
-               (r'$p$, 7 TeV', 0.938, 7e3, (-24, -28)))
+#: partículas de la figura de kappa: nombre -> masa [GeV]
+MASAS_KAPPA = {r'$e$': 0.511e-3, r'$p$': 0.938}
+
+#: casos marcados en la figura de kappa: (etiqueta, partícula, p [GeV], offset)
+CASOS_KAPPA = ((r'$e$, 1 MeV', r'$e$', 1e-3, (-44, 6)),
+               (r'$e$, 1 GeV', r'$e$', 1., (-20, 8)),
+               (r'$p$, 1 GeV', r'$p$', 1., (8, -12)),
+               (r'$p$, 7 TeV', r'$p$', 7e3, (-24, 8)))
+
+#: peso de las componentes de abajo marcado en la figura
+PESO_REF = 0.4
+
+
+def _kappa(p, m):
+    """:math:`\\kappa = \\mathrm{p}/(E+m)`, con p y m en las mismas unidades."""
+    return p / (np.sqrt(p**2 + m**2) + m)
+
+
+def _peso(k):
+    """Peso de las dos componentes de abajo, :math:`\\kappa^2/(1+\\kappa^2)`."""
+    return k**2 / (1. + k**2)
+
+
+def _kappa_de_peso(w):
+    """Inversa de :func:`_peso`: :math:`\\kappa = \\sqrt{w/(1-w)}`."""
+    w = np.clip(w, 0., 0.999)
+    return np.sqrt(w / (1. - w))
 
 
 def kappa_espinor(verbose=True):
-    """:math:`\\kappa` y el peso de las dos componentes de abajo del espinor.
+    """:math:`\\kappa` frente al momento, para el electrón y el protón.
 
     Con **p** en el eje z, :math:`u_1 = N(1, 0, \\kappa, 0)` con
     :math:`\\kappa = \\mathrm{p}/(E+m)`. El peso de las dos componentes de abajo
@@ -586,9 +613,13 @@ def kappa_espinor(verbose=True):
 
     .. math:: w = \\frac{\\kappa^2}{1 + \\kappa^2}
 
-    Ambas dependen **solo** de :math:`\\beta\\gamma = \\mathrm{p}/m`
-    (:math:`\\kappa = \\beta\\gamma/(\\gamma + 1)`), no de la partícula: en
-    reposo :math:`\\kappa = 0` y queda el espinor de Pauli; en el límite
+    Se dibuja solo :math:`\\kappa`; el eje de la derecha es el mismo leído como
+    peso :math:`w` (no es otra curva: :math:`w` es función de :math:`\\kappa`).
+
+    Las dos curvas tienen la **misma forma**, desplazada en :math:`\\log p` por
+    :math:`m_p/m_e \\simeq 1836`: ambas dependen solo de
+    :math:`\\beta\\gamma = \\mathrm{p}/m` (:math:`\\kappa = \\beta\\gamma/(\\gamma + 1)`).
+    En reposo :math:`\\kappa = 0` y queda el espinor de Pauli; en el límite
     ultrarrelativista :math:`\\kappa \\to 1` y arriba y abajo pesan igual
     (:math:`w \\to 1/2`). Ese es el régimen en el que la quiralidad se confunde
     con la helicidad, y en el que trabaja la física de partículas.
@@ -596,41 +627,123 @@ def kappa_espinor(verbose=True):
     Parameters
     ----------
     verbose : bool
-        Si es ``True``, dibuja las dos curvas y marca algunos casos.
+        Si es ``True``, dibuja las curvas, marca algunos casos y el momento en
+        el que el peso de abajo llega al 40 %.
 
     Returns
     -------
     dict
-        ``x`` (:math:`\\beta\\gamma = \\mathrm{p}/m`), ``kappa``, ``peso`` y ``casos``.
+        ``p`` (GeV), ``kappa`` y ``peso`` (dicts por partícula), ``p_ref``
+        (momento en GeV con peso 40 %, por partícula) y ``casos``.
     """
-    x = np.logspace(-2., 4., 600)                  # beta*gamma = p/m
-    k = x / (np.sqrt(1. + x**2) + 1.)              # kappa = p/(E+m)
-    w = k**2 / (1. + k**2)
+    p = np.logspace(-5., 4., 600)                  # momento [GeV]
+    kappa = {nombre: _kappa(p, m) for nombre, m in MASAS_KAPPA.items()}
+    peso = {nombre: _peso(k) for nombre, k in kappa.items()}
+
+    # peso 40 %  ->  kappa_ref  ->  beta*gamma = 2 kappa / (1 - kappa^2)
+    k_ref = _kappa_de_peso(PESO_REF)
+    bg_ref = 2. * k_ref / (1. - k_ref**2)
+    p_ref = {nombre: bg_ref * m for nombre, m in MASAS_KAPPA.items()}
 
     casos = {}
-    for etiqueta, m, p, _ in CASOS_KAPPA:
-        xi = p / m
-        ki = xi / (np.sqrt(1. + xi**2) + 1.)
-        casos[etiqueta] = (xi, ki, ki**2 / (1. + ki**2))
+    for etiqueta, nombre, pi, _ in CASOS_KAPPA:
+        m = MASAS_KAPPA[nombre]
+        ki = _kappa(pi, m)
+        casos[etiqueta] = (pi, pi / m, ki, _peso(ki))
 
     if verbose:
-        plt.plot(x, k, lw=2, label=r'$\kappa = \mathrm{p}/(E+m)$')
-        plt.plot(x, w, lw=2, ls='--',
-                 label=r'peso das compoñentes de abaixo, $\kappa^2/(1+\kappa^2)$')
-        plt.axhline(0.5, color='0.6', lw=1, ls=':')
-        for etiqueta, _, _, offset in CASOS_KAPPA:
-            xi, ki, _w = casos[etiqueta]
-            plt.plot([xi], [ki], 'o', ms=6, color='0.25')
-            plt.annotate(etiqueta, (xi, ki), textcoords='offset points',
-                         xytext=offset, fontsize=9, color='0.25')
-        plt.xscale('log')
-        plt.xlabel(r'$\beta\gamma = \mathrm{p}/m$')
-        plt.ylabel(r'$\kappa$,  peso')
-        plt.ylim(0., 1.05)
-        plt.legend(loc='upper left', fontsize=9)
-        plt.grid(alpha=0.3, which='both')
-        for etiqueta, (xi, ki, wi) in casos.items():
-            print(f' {etiqueta:12} : beta*gamma = p/m = {xi:9.1f}, kappa = {ki:5.3f},'
+        fig, ax = plt.subplots()
+        for nombre in MASAS_KAPPA:
+            linea, = ax.plot(p, kappa[nombre], lw=2, label=nombre)
+            ax.axvline(p_ref[nombre], color=linea.get_color(), lw=1, ls=':')
+        ax.axhline(k_ref, color='0.6', lw=1, ls='--',
+                   label=f'peso abaixo = {100 * PESO_REF:.0f} %')
+        for etiqueta, _, pi, offset in CASOS_KAPPA:
+            ki = casos[etiqueta][2]
+            ax.plot([pi], [ki], 'o', ms=6, color='0.25')
+            ax.annotate(etiqueta, (pi, ki), textcoords='offset points',
+                        xytext=offset, fontsize=9, color='0.25')
+        ax.set_xscale('log')
+        ax.set_xlabel('momento p (GeV)')
+        ax.set_ylabel(r'$\kappa = \mathrm{p}/(E+m)$')
+        ax.set_ylim(0., 1.02)
+        eje_w = ax.secondary_yaxis('right', functions=(_peso, _kappa_de_peso))
+        eje_w.set_ylabel(r'peso das compoñentes de abaixo, $\kappa^2/(1+\kappa^2)$')
+        eje_w.set_yticks([0., 0.1, 0.2, 0.3, 0.4, 0.45, 0.5])
+        ax.legend(loc='upper left', fontsize=9)
+        ax.grid(alpha=0.3, which='both')
+        for nombre, pr in p_ref.items():
+            print(f' {nombre.strip("$"):5} : peso abaixo = {100 * PESO_REF:.0f} % en p = {1e3 * pr:8.1f} MeV'
+                  f'  (p/m = {bg_ref:.2f})')
+        for etiqueta, (pi, xi, ki, wi) in casos.items():
+            print(f' {etiqueta.replace("$", ""):12} : p/m = {xi:9.1f}, kappa = {ki:5.3f},'
                   f' peso abaixo = {100 * wi:4.1f} %')
 
-    return dict(x=x, kappa=k, peso=w, casos=casos)
+    return dict(p=p, kappa=kappa, peso=peso, p_ref=p_ref, casos=casos)
+
+
+# ---------------------------------------------------------------------------
+# Teórica: el propagador en HERA, corriente neutra frente a cargada
+# ---------------------------------------------------------------------------
+
+#: acoplos y masa del W para :func:`hera`
+ALPHA_EM = 1. / 137.
+G_W = 0.65
+M_W = 80.4
+
+
+def hera(q2_min=10., q2_max=1e5, alpha=ALPHA_EM, g_w=G_W, m_w=M_W, verbose=True):
+    r""":math:`|M|^2` de la corriente neutra y de la cargada frente a :math:`Q^2`.
+
+    En la dispersión profunda :math:`e + p \to e + X` (NC) el electrón
+    intercambia un fotón con un quark; en :math:`e + p \to \nu + X` (CC), un
+    :math:`W`. Con dos vértices y un propagador, y :math:`Q^2 = -q^2 > 0`:
+
+    .. math::
+
+        |M_{NC}|^2 \propto \left(\frac{e^2}{Q^2}\right)^2, \qquad
+        |M_{CC}|^2 \propto \left(\frac{g_W^2/2}{Q^2 + m_W^2}\right)^2
+
+    con :math:`g_W/\sqrt{2}` el acoplo efectivo del vértice :math:`V-A` para
+    fermiones a izquierdas. Se cruzan en
+
+    .. math:: Q^2_\times = \frac{e^2 \, m_W^2}{g_W^2/2 - e^2}
+
+    Es una simplificación deliberada: sin el :math:`Z` en la NC, sin factores de
+    helicidad y sin la estructura del protón (las PDF). Sirve para ver la
+    **forma**; el cruce, solo en orden de magnitud.
+
+    Returns
+    -------
+    dict
+        ``q2`` (GeV^2), ``nc`` y ``cc`` (GeV^-4) y ``q2_cruce`` (GeV^2).
+    """
+    q2 = np.logspace(np.log10(q2_min), np.log10(q2_max), 400)
+    e2 = 4. * np.pi * alpha
+    gef2 = g_w**2 / 2.
+    nc = (e2 / q2)**2
+    cc = (gef2 / (q2 + m_w**2))**2
+    q2_cruce = e2 * m_w**2 / (gef2 - e2) if gef2 > e2 else np.inf
+
+    if verbose:
+        fig, ax = plt.subplots()
+        ax.plot(q2, nc, lw=2, color='#0072B2', ls='-',
+                label=r'NC, fotón: $(e^2/Q^2)^2$')
+        ax.plot(q2, cc, lw=2, color='#D55E00', ls='--',
+                label=r'CC, $W$: $(g_W^2/2)^2/(Q^2+m_W^2)^2$')
+        ax.axvline(m_w**2, color='0.4', lw=1, ls=':', label=r'$Q^2 = m_W^2$')
+        if np.isfinite(q2_cruce):
+            ax.plot([q2_cruce], [(e2 / q2_cruce)**2], 'o', ms=7, color='0.2')
+        ax.set_xscale('log')
+        ax.set_yscale('log')
+        ax.set_xlabel(r'$Q^2$ (GeV$^2$)')
+        ax.set_ylabel(r'(acoplamento $\times$ propagador)$^2$ (GeV$^{-4}$)')
+        ax.legend(fontsize=9)
+        ax.grid(alpha=0.3, which='both')
+        fig.tight_layout()
+        print(f' e = {np.sqrt(e2):.3f},  g_W/sqrt(2) = {np.sqrt(gef2):.3f},  m_W^2 = {m_w**2:.0f} GeV^2')
+        print(f' NC = CC en Q^2 = {q2_cruce:.0f} GeV^2  (sqrt(Q^2) = {np.sqrt(q2_cruce):.0f} GeV)')
+        for q in (q2_min, 1e3, m_w**2, q2_max):
+            print(f' Q^2 = {q:8.0f} GeV^2 :  CC/NC = {((gef2 / (q + m_w**2)) / (e2 / q))**2:.2e}')
+
+    return dict(q2=q2, nc=nc, cc=cc, q2_cruce=q2_cruce)
