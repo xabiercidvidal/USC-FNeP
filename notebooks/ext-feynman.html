@@ -1,0 +1,919 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="gl" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Extensión: Diagramas de Feynman e propagadores &#8212; Introdución á Física de Partículas - USC</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/ext-feynman';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Desintégrase o protón?" href="bols/boletin_inicio_2627.html" />
+    <link rel="prev" title="Extensión: A quiralidade" href="ext-quiral.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="gl"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.jpg" class="logo__image only-light" alt="Introdución á Física de Partículas - USC - Home"/>
+    <script>document.write(`<img src="../_static/logo.jpg" class="logo__image only-dark" alt="Introdución á Física de Partículas - USC - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introdución
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Capítulos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduccion.html">Introdución á Física de Partículas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="perspectivas.html">Perspectivas: experimental e teórica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="leptones.html">Leptóns: a man esquerda da Natureza</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Anexos: extensións</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro_extension.html">Extensión: Introdución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ext-cinematica.html">Extensión: Cinemática relativista e espazo fásico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ext-dirac.html">Extensión: A ecuación de Dirac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ext-quiral.html">Extensión: A quiralidade</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Extensión: Diagramas de Feynman e propagadores</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Anexos: boletíns</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bols/boletin_inicio_2627.html">Desintégrase o protón?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bols/boletin_I_2627.html">Partículas — boletín I</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/xabiercidvidal/USC-FNeP/main?urlpath=tree/./notebooks/ext-feynman.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/xabiercidvidal/USC-FNeP/blob/main/./notebooks/ext-feynman.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/xabiercidvidal/USC-FNeP" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/xabiercidvidal/USC-FNeP/issues/new?title=Issue%20on%20page%20%2Fnotebooks/ext-feynman.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/ext-feynman.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Extensión: Diagramas de Feynman e propagadores</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducion">Introdución</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notacion">Notación</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-propagador">1. O propagador</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-campo-con-fonte">1.1. Un campo con fonte</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-campo-ao-diagrama">1.2. Do campo ao diagrama</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mediadores-vectoriais">1.3. Mediadores vectoriais</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-alcance-o-potencial-de-yukawa">2. O alcance: o potencial de Yukawa</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unha-fonte-en-repouso">2.1. Unha fonte en repouso</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-se-le">2.2. Que se le</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rutherford-outra-vez">2.3. Rutherford, outra vez</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-polo-e-a-anchura">3. O polo e a anchura</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-mediador-real">3.1. Un mediador real</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-breit-wigner-relativista">3.2. A Breit-Wigner relativista</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z-a-esgalla">3.3. «<span class="math notranslate nohighlight">\(Z\)</span> a esgalla»</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-teoria-de-fermi-como-limite">4. A teoría de Fermi como límite</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-vertice-do-w">4.1. O vértice do <span class="math notranslate nohighlight">\(W\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-limite-de-baixa-enerxia">4.2. O límite de baixa enerxía</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numeros">4.3. Números</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliografia">Bibliografía</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="extension-diagramas-de-feynman-e-propagadores">
+<h1>Extensión: Diagramas de Feynman e propagadores<a class="headerlink" href="#extension-diagramas-de-feynman-e-propagadores" title="Permalink to this heading">#</a></h1>
+<p>Jose A. Hernando</p>
+<p><em>Departamento de Física de Partículas. Universidade de Santiago de Compostela</em></p>
+<p>Setembro 2026</p>
+<section id="introducion">
+<h2>Introdución<a class="headerlink" href="#introducion" title="Permalink to this heading">#</a></h2>
+<p>Esta extensión é o <strong>desenvolvemento matemático</strong> da sección de diagramas de Feynman de
+<a class="reference internal" href="perspectivas.html"><span class="doc std std-doc">perspectivas</span></a>, nos puntos que alí se dan sen demostrar. Responde a catro
+preguntas:</p>
+<ol class="arabic simple">
+<li><p><strong>De onde sae o propagador <span class="math notranslate nohighlight">\(1/(q^2 - m^2)\)</span>?</strong> Da ecuación do campo do mediador.</p></li>
+<li><p><strong>Por que a masa do mediador fixa o alcance?</strong> O potencial de Yukawa, e Coulomb e
+Rutherford como caso sen masa.</p></li>
+<li><p><strong>Que pasa cando o mediador se pon <em>on-shell</em>?</strong> O polo, a anchura e a Breit-Wigner
+relativista: por que un <span class="math notranslate nohighlight">\(e^+ + e\)</span> a <span class="math notranslate nohighlight">\(\sqrt{s} = m_Z\)</span> produce <span class="math notranslate nohighlight">\(Z\)</span> a esgalla.</p></li>
+<li><p><strong>Como sae a teoría de Fermi do <span class="math notranslate nohighlight">\(W\)</span>?</strong> O límite de baixa enerxía e os factores de
+<span class="math notranslate nohighlight">\(G_F/\sqrt{2} = g_W^2/8m_W^2\)</span>.</p></li>
+</ol>
+<section id="notacion">
+<h3>Notación<a class="headerlink" href="#notacion" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Unidades naturais, <span class="math notranslate nohighlight">\(\hbar = c = 1\)</span>; métrica <span class="math notranslate nohighlight">\(g_{\mu\nu} = \mathrm{diag}(1, -1, -1, -1)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(q^\mu = (q^0, {\bf q})\)</span> é o cuadrimomento transferido polo mediador; <span class="math notranslate nohighlight">\(q^2 = (q^0)^2 - {\bf q}^2\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Box \equiv \partial_\mu\partial^\mu = \partial_t^2 - \nabla^2\)</span>.</p></li>
+<li><p>Os factores <span class="math notranslate nohighlight">\(i\)</span> e os signos globais das regras de Feynman dependen do convenio; aquí
+seguimos a estrutura, non os factores de fase. [MT5]</p></li>
+</ul>
+</section>
+</section>
+<section id="o-propagador">
+<h2>1. O propagador<a class="headerlink" href="#o-propagador" title="Permalink to this heading">#</a></h2>
+<section id="un-campo-con-fonte">
+<h3>1.1. Un campo con fonte<a class="headerlink" href="#un-campo-con-fonte" title="Permalink to this heading">#</a></h3>
+<p>Tomamos o mediador máis sinxelo, un campo escalar <span class="math notranslate nohighlight">\(\phi\)</span> de masa <span class="math notranslate nohighlight">\(m\)</span>. Libre, cumpre a ecuación de
+Klein-Gordon (a táboa de ecuacións de campo de perspectivas). Se hai algo que o emite —unha
+<strong>fonte</strong> <span class="math notranslate nohighlight">\(j(x)\)</span>, que nun diagrama é o vértice—, a ecuación gaña un termo:</p>
+<div class="math notranslate nohighlight">
+\[
+(\Box + m^2)\,\phi(x) = j(x) .
+\]</div>
+<p>É a mesma estrutura que as ecuacións de Maxwell con cargas: a fonte produce o campo.</p>
+<p><strong>No espazo de momentos.</strong> Con <span class="math notranslate nohighlight">\(\phi(x) = \int \frac{\mathrm{d}^4q}{(2\pi)^4}\, e^{-iq\cdot x}\,\tilde\phi(q)\)</span>, cada derivada
+convértese nun factor, <span class="math notranslate nohighlight">\(\partial_\mu \to -iq_\mu\)</span>, e <span class="math notranslate nohighlight">\(\Box \to -q^2\)</span>. A ecuación diferencial pasa a ser
+<strong>alxébrica</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+(-q^2 + m^2)\,\tilde\phi(q) = \tilde{j}(q)
+\qquad \Rightarrow \qquad
+\boxed{
+\tilde\phi(q) = -\,\frac{1}{q^2 - m^2}\;\tilde{j}(q)
+}
+\]</div>
+<p>O campo que produce a fonte é a fonte multiplicada por <span class="math notranslate nohighlight">\(1/(q^2 - m^2)\)</span>: o <strong>propagador</strong> é a
+<strong>inversa do operador da ecuación do campo</strong>, escrita en momentos.</p>
+</section>
+<section id="do-campo-ao-diagrama">
+<h3>1.2. Do campo ao diagrama<a class="headerlink" href="#do-campo-ao-diagrama" title="Permalink to this heading">#</a></h3>
+<p>Nun diagrama de dous vértices, a fonte 1 (un fermión que emite) produce o campo do mediador, e
+ese campo actúa sobre a fonte 2 (o fermión que absorbe). A amplitude é</p>
+<div class="math notranslate nohighlight">
+\[
+M \;\propto\; \underbrace{g\,\tilde{j}_2}_{\text{vértice 2}}\;\;
+\underbrace{\frac{1}{q^2 - m^2}}_{\text{propagador}}\;\;
+\underbrace{g\,\tilde{j}_1}_{\text{vértice 1}}
+\]</div>
+<p>que é exactamente a regra de perspectivas: <strong>dous vértices e un propagador</strong>. O propagador depende
+só de <span class="math notranslate nohighlight">\(q^2\)</span> e da masa do mediador, porque é unha propiedade do campo, non de quen o emite.
+Por conservación en cada vértice, <span class="math notranslate nohighlight">\(q\)</span> é o cuadrimomento que perde a fonte 1 e gaña a 2.</p>
+<p><strong>Fóra da capa de masas.</strong> Para unha partícula real, <span class="math notranslate nohighlight">\(q^2 = m^2\)</span> e o propagador diverxe. Nun
+intercambio, <span class="math notranslate nohighlight">\(q^2\)</span> fíxano os fermións externos e en xeral <span class="math notranslate nohighlight">\(q^2 \neq m^2\)</span>: o mediador é
+<strong>virtual</strong> (<em>off-shell</em>). En dispersión, <span class="math notranslate nohighlight">\(q^2 &lt; 0\)</span>, e o denominador nunca se anula.</p>
+</section>
+<section id="mediadores-vectoriais">
+<h3>1.3. Mediadores vectoriais<a class="headerlink" href="#mediadores-vectoriais" title="Permalink to this heading">#</a></h3>
+<p>O fotón e os <span class="math notranslate nohighlight">\(W^\pm, Z\)</span> teñen espín 1. A súa ecuación con fonte é a de Maxwell (sen masa) ou a de
+Proca (con masa):</p>
+<div class="math notranslate nohighlight">
+\[
+\partial_\mu F^{\mu\nu} + m^2 A^\nu = j^\nu .
+\]</div>
+<p>Cunha corrente conservada (<span class="math notranslate nohighlight">\(\partial_\nu j^\nu = 0\)</span>, sección 4.5 de <a class="reference internal" href="ext-dirac.html"><span class="doc std std-doc">ext-dirac</span></a>) pódese
+tomar <span class="math notranslate nohighlight">\(\partial_\mu A^\mu = 0\)</span>, e a ecuación queda <span class="math notranslate nohighlight">\((\Box + m^2)\,A^\nu = j^\nu\)</span>: a de antes, compoñente a
+compoñente. En momentos,</p>
+<div class="math notranslate nohighlight">
+\[
+\tilde{A}^\nu(q) = -\,\frac{1}{q^2 - m^2}\;\tilde{j}^\nu(q) ,
+\]</div>
+<p>e o campo producido pola corrente 1 acóplase á corrente 2 como <span class="math notranslate nohighlight">\(j_2^\mu\, g_{\mu\nu}\, \tilde{A}^\nu\)</span>. De aí a
+forma de perspectivas:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{g_{\mu\nu}}{q^2 - m^2}, \qquad \text{e para o fotón,} \qquad \frac{g_{\mu\nu}}{q^2} .
+\]</div>
+<p>O <span class="math notranslate nohighlight">\(g_{\mu\nu}\)</span> contrae os índices das dúas correntes. (O propagador completo dun vector con masa
+leva ademais un termo <span class="math notranslate nohighlight">\(q_\mu q_\nu/m^2\)</span>, que se anula ao contraelo con correntes conservadas.)
+[MT5.3]</p>
+</section>
+</section>
+<section id="o-alcance-o-potencial-de-yukawa">
+<h2>2. O alcance: o potencial de Yukawa<a class="headerlink" href="#o-alcance-o-potencial-de-yukawa" title="Permalink to this heading">#</a></h2>
+<section id="unha-fonte-en-repouso">
+<h3>2.1. Unha fonte en repouso<a class="headerlink" href="#unha-fonte-en-repouso" title="Permalink to this heading">#</a></h3>
+<p>Unha fonte puntual e <strong>estática</strong>, <span class="math notranslate nohighlight">\(j = g\,\delta^3({\bf x})\)</span>, non depende do tempo: só intercambia
+momento, non enerxía, e <span class="math notranslate nohighlight">\(q^0 = 0\)</span>, <span class="math notranslate nohighlight">\(q^2 = -{\bf q}^2\)</span>. A ecuación do campo queda</p>
+<div class="math notranslate nohighlight">
+\[
+(-\nabla^2 + m^2)\,\phi({\bf x}) = g\,\delta^3({\bf x})
+\qquad \Rightarrow \qquad
+\tilde\phi({\bf q}) = \frac{g}{{\bf q}^2 + m^2} ,
+\]</div>
+<p>o propagador con <span class="math notranslate nohighlight">\(q^2 = -{\bf q}^2\)</span>. Volvendo ao espazo de posicións, con <span class="math notranslate nohighlight">\(\int \mathrm{d}\Omega\,e^{i{\bf q}\cdot{\bf r}} = 4\pi \sin(qr)/qr\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\phi(r) = g\int \frac{\mathrm{d}^3{\bf q}}{(2\pi)^3}\,\frac{e^{i{\bf q}\cdot{\bf r}}}{{\bf q}^2 + m^2}
+= \frac{g}{2\pi^2 r}\int_0^\infty \frac{q\,\sin(qr)}{q^2 + m^2}\,\mathrm{d}q
+= \boxed{\frac{g}{4\pi}\,\frac{e^{-mr}}{r}}
+\]</div>
+<p>(a última integral faise por residuos, co polo en <span class="math notranslate nohighlight">\(q = im\)</span>).</p>
+</section>
+<section id="que-se-le">
+<h3>2.2. Que se le<a class="headerlink" href="#que-se-le" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>O alcance é <span class="math notranslate nohighlight">\(1/m\)</span>.</strong> O campo cae exponencialmente a distancias maiores que <span class="math notranslate nohighlight">\(1/m\)</span> (<span class="math notranslate nohighlight">\(\hbar/mc\)</span> no
+SI). É a relación de Yukawa da <a class="reference internal" href="introduccion.html"><span class="doc std std-doc">introdución</span></a>: o pión, <span class="math notranslate nohighlight">\(m_\pi = 140\)</span> MeV, dá
+<span class="math notranslate nohighlight">\(1.4\)</span> fm, o tamaño do núcleo; o <span class="math notranslate nohighlight">\(W\)</span>, <span class="math notranslate nohighlight">\(2.5 \cdot 10^{-3}\)</span> fm, unha interacción practicamente puntual.</p></li>
+<li><p><strong>Sen masa, Coulomb.</strong> Con <span class="math notranslate nohighlight">\(m = 0\)</span> e a carga como fonte, <span class="math notranslate nohighlight">\(\phi = e/4\pi r\)</span>, e a enerxía entre dúas
+cargas é <span class="math notranslate nohighlight">\(e^2/4\pi r = \alpha/r\)</span>: o alcance infinito do electromagnetismo.</p></li>
+<li><p><strong>O propagador é o potencial no espazo de momentos.</strong> O que en mecánica cuántica é a
+aproximación de Born —a amplitude de dispersión é a transformada de Fourier do potencial,
+<span class="math notranslate nohighlight">\(\tilde{V}({\bf q})\)</span>— aquí é o propagador: <span class="math notranslate nohighlight">\(\tilde{V}({\bf q}) \propto g^2/({\bf q}^2 + m^2)\)</span>.</p></li>
+</ul>
+</section>
+<section id="rutherford-outra-vez">
+<h3>2.3. Rutherford, outra vez<a class="headerlink" href="#rutherford-outra-vez" title="Permalink to this heading">#</a></h3>
+<p>Para o fotón, <span class="math notranslate nohighlight">\(\tilde{V}({\bf q}) \propto e^2/{\bf q}^2\)</span>. Nunha dispersión elástica con momento <span class="math notranslate nohighlight">\(p\)</span> e ángulo <span class="math notranslate nohighlight">\(\theta\)</span>,
+o momento transferido é</p>
+<div class="math notranslate nohighlight">
+\[
+|{\bf q}| = 2p\,\sin\frac{\theta}{2}
+\]</div>
+<p>(o triángulo isósceles da tarefa de Rutherford), e a sección eficaz vai como o cadrado da
+amplitude:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\mathrm{d}\sigma}{\mathrm{d}\Omega} \;\propto\; \left|\frac{e^2}{{\bf q}^2}\right|^2 = \frac{e^4}{16\,p^4 \sin^4(\theta/2)} .
+\]</div>
+<p>O <span class="math notranslate nohighlight">\(1/\sin^4(\theta/2)\)</span> de Rutherford <strong>é o propagador do fotón ao cadrado</strong>. Cos factores completos
+(Born, <span class="math notranslate nohighlight">\(m\)</span> reducida), recupérase a fórmula da <a class="reference internal" href="introduccion.html"><span class="doc std std-doc">introdución</span></a>. Un mediador con
+masa cambiaría <span class="math notranslate nohighlight">\(1/{\bf q}^4\)</span> por <span class="math notranslate nohighlight">\(1/({\bf q}^2 + m^2)^2\)</span>, que non diverxe en <span class="math notranslate nohighlight">\(\theta \to 0\)</span>.</p>
+<p><em>Cuestións:</em> cal é o alcance dun mediador de <span class="math notranslate nohighlight">\(m = 1\)</span> GeV? A partir de que <span class="math notranslate nohighlight">\(|{\bf q}|\)</span> se nota a súa
+masa na sección eficaz?</p>
+</section>
+</section>
+<section id="o-polo-e-a-anchura">
+<h2>3. O polo e a anchura<a class="headerlink" href="#o-polo-e-a-anchura" title="Permalink to this heading">#</a></h2>
+<section id="un-mediador-real">
+<h3>3.1. Un mediador real<a class="headerlink" href="#un-mediador-real" title="Permalink to this heading">#</a></h3>
+<p>Nunha aniquilación, o mediador lévase toda a enerxía: <span class="math notranslate nohighlight">\(q^2 = s &gt; 0\)</span>. Cando <span class="math notranslate nohighlight">\(\sqrt{s}\)</span> se achega á
+súa masa, o propagador <span class="math notranslate nohighlight">\(1/(s - m^2)\)</span> <strong>diverxe</strong>: o mediador deixa de ser virtual e prodúcese de
+verdade. Pero unha partícula real e <strong>inestable</strong> non ten unha masa exacta.</p>
+<p><strong>De onde sae a anchura.</strong> Un estado de masa <span class="math notranslate nohighlight">\(m\)</span> en repouso evoluciona como <span class="math notranslate nohighlight">\(e^{-imt}\)</span>; se se
+desintegra con anchura <span class="math notranslate nohighlight">\(\Gamma\)</span>, a súa amplitude decae como <span class="math notranslate nohighlight">\(e^{-imt}\,e^{-\Gamma t/2}\)</span> (a probabilidade, como
+<span class="math notranslate nohighlight">\(e^{-\Gamma t}\)</span>). É como se a masa tivese unha parte imaxinaria:</p>
+<div class="math notranslate nohighlight">
+\[
+m \;\to\; m - \frac{i\,\Gamma}{2}
+\qquad \Rightarrow \qquad
+m^2 \;\to\; m^2 - i\,m\,\Gamma \quad (\Gamma \ll m) .
+\]</div>
+<p>O propagador dun mediador inestable é entón</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{
+\frac{1}{s - m^2 + i\,m\,\Gamma}
+}
+\]</div>
+<p>que xa non diverxe: en <span class="math notranslate nohighlight">\(s = m^2\)</span> vale <span class="math notranslate nohighlight">\(1/(i\,m\Gamma)\)</span>, grande pero finito.</p>
+</section>
+<section id="a-breit-wigner-relativista">
+<h3>3.2. A Breit-Wigner relativista<a class="headerlink" href="#a-breit-wigner-relativista" title="Permalink to this heading">#</a></h3>
+<p>A sección eficaz vai como o propagador ao cadrado:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma(s) \;\propto\; \frac{1}{(s - m^2)^2 + m^2\,\Gamma^2} ,
+\]</div>
+<p>a <strong>Breit-Wigner relativista</strong>. Preto do pico, <span class="math notranslate nohighlight">\(s - m^2 = (\sqrt{s} - m)(\sqrt{s} + m) \simeq 2m\,(\sqrt{s} - m)\)</span>, e</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{(s - m^2)^2 + m^2\Gamma^2} \simeq \frac{1}{4m^2}\,\frac{1}{(\sqrt{s} - m)^2 + \Gamma^2/4} ,
+\]</div>
+<p>a Breit-Wigner da <a class="reference internal" href="introduccion.html"><span class="doc std std-doc">introdución</span></a>, de anchura total a media altura <span class="math notranslate nohighlight">\(\Gamma\)</span>. A
+anchura do pico de OPAL <strong>é</strong> a anchura do propagador do <span class="math notranslate nohighlight">\(Z\)</span>.</p>
+<p><strong>O pico do <span class="math notranslate nohighlight">\(Z\)</span>.</strong> O cálculo completo de <span class="math notranslate nohighlight">\(e^+ + e \to Z \to f\bar{f}\)</span> no pico dá</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_{pico} = \frac{12\pi}{m_Z^2}\,\frac{\Gamma_{ee}\,\Gamma_{f\bar f}}{\Gamma_Z^2} .
+\]</div>
+<p>Para hadróns, con <span class="math notranslate nohighlight">\(\Gamma_{ee} = 83.9\)</span> MeV, <span class="math notranslate nohighlight">\(\Gamma_{had} = 1744\)</span> MeV e <span class="math notranslate nohighlight">\(\Gamma_Z = 2495\)</span> MeV:
+<span class="math notranslate nohighlight">\(12\pi/m_Z^2 = 4.53 \cdot 10^{-3}\)</span> <span class="math notranslate nohighlight">\(\mathrm{GeV}^{-2} = 1765\)</span> nb, por <span class="math notranslate nohighlight">\(0.0235\)</span>, <strong><span class="math notranslate nohighlight">\(41.5\)</span> nb</strong>. OPAL mide uns <span class="math notranslate nohighlight">\(30\)</span> nb no
+máximo: a diferenza é a radiación dos electróns antes de chocar, que ensancha e rebaixa o
+pico.</p>
+</section>
+<section id="z-a-esgalla">
+<h3>3.3. «<span class="math notranslate nohighlight">\(Z\)</span> a esgalla»<a class="headerlink" href="#z-a-esgalla" title="Permalink to this heading">#</a></h3>
+<p>A <span class="math notranslate nohighlight">\(\sqrt{s} = m_Z\)</span> compiten dous diagramas: o intercambio dun fotón, con <span class="math notranslate nohighlight">\(1/s\)</span>, e o dun <span class="math notranslate nohighlight">\(Z\)</span>, con
+<span class="math notranslate nohighlight">\(1/(s - m_Z^2 + i\,m_Z\Gamma_Z)\)</span>. No pico, o cociente de propagadores é</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{|1/(i\,m_Z\Gamma_Z)|}{|1/m_Z^2|} = \frac{m_Z}{\Gamma_Z} \simeq 37 ,
+\]</div>
+<p>e na sección eficaz, que vai co cadrado, máis de mil. Cos acoplamentos incluídos, en
+<span class="math notranslate nohighlight">\(e^+ + e \to \mu^+ + \mu\)</span>:</p>
+<ul class="simple">
+<li><p>só o fotón: <span class="math notranslate nohighlight">\(\sigma = 4\pi\alpha^2/3s = 0.0104\)</span> nb;</p></li>
+<li><p>no pico do <span class="math notranslate nohighlight">\(Z\)</span>: <span class="math notranslate nohighlight">\(\sigma = 41.5\ \mathrm{nb} \times \Gamma_{\mu\mu}/\Gamma_{had} \simeq 2.0\)</span> nb, <strong>douscentas veces máis</strong>.</p></li>
+</ul>
+<p>É o que resolve a tarefa «Da simetría a un número medible» de perspectivas: a estimación
+electromagnética falla por un factor 200 porque o propagador do <span class="math notranslate nohighlight">\(Z\)</span> ten o seu polo xusto aí. E
+como a anchura total suma todas as canles, incluídas as que non se ven, a forma do pico conta
+os neutrinos: <span class="math notranslate nohighlight">\(N_\nu = 3\)</span> (tarefa da introdución).</p>
+<p><em>Cuestións:</em> canto vale <span class="math notranslate nohighlight">\(m_Z/\Gamma_Z\)</span>? Que pasaría coa altura do pico se houbese unha cuarta familia
+con neutrino lixeiro?</p>
+</section>
+</section>
+<section id="a-teoria-de-fermi-como-limite">
+<h2>4. A teoría de Fermi como límite<a class="headerlink" href="#a-teoria-de-fermi-como-limite" title="Permalink to this heading">#</a></h2>
+<section id="o-vertice-do-w">
+<h3>4.1. O vértice do <span class="math notranslate nohighlight">\(W\)</span><a class="headerlink" href="#o-vertice-do-w" title="Permalink to this heading">#</a></h3>
+<p>A corrente cargada da interacción feble ten estrutura <span class="math notranslate nohighlight">\(V - A\)</span> (tema de leptóns), e o vértice
+do <span class="math notranslate nohighlight">\(W\)</span> cun par de leptóns ou de quarks achega</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{g_W}{2\sqrt{2}}\;\gamma^\mu\,(1 - \gamma^5) .
+\]</div>
+<p>O <span class="math notranslate nohighlight">\(\frac{1}{2}(1 - \gamma^5)\)</span> é o proxector de quiralidade <span class="math notranslate nohighlight">\(P_L\)</span> (sección 1.7 de <a class="reference internal" href="ext-dirac.html"><span class="doc std std-doc">ext-dirac</span></a>), e
+o <span class="math notranslate nohighlight">\(1/\sqrt{2}\)</span> vén de como se agrupan os campos <span class="math notranslate nohighlight">\(W^\pm\)</span> na teoría electrofeble: o acoplamento a cada
+corrente cargada é <span class="math notranslate nohighlight">\(g_W/\sqrt{2}\)</span>, e co proxector, <span class="math notranslate nohighlight">\(\frac{g_W}{\sqrt{2}}\cdot\frac{1}{2}(1-\gamma^5) = \frac{g_W}{2\sqrt{2}}(1-\gamma^5)\)</span>. [MT11.5]</p>
+</section>
+<section id="o-limite-de-baixa-enerxia">
+<h3>4.2. O límite de baixa enerxía<a class="headerlink" href="#o-limite-de-baixa-enerxia" title="Permalink to this heading">#</a></h3>
+<p>Na desintegración <span class="math notranslate nohighlight">\(\beta\)</span>, <span class="math notranslate nohighlight">\(q^2 \sim \mathcal{O}(\mathrm{MeV}^2) \ll m_W^2\)</span>, e o propagador vólvese unha constante:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{g_{\mu\nu}}{q^2 - m_W^2} \;\longrightarrow\; -\,\frac{g_{\mu\nu}}{m_W^2} .
+\]</div>
+<p>A amplitude, con dous vértices e o propagador, queda (salvo o signo global)</p>
+<div class="math notranslate nohighlight">
+\[
+M = \frac{g_W^2}{8\,m_W^2}\;\left[\bar{u}\,\gamma^\mu(1 - \gamma^5)\,u\right]\left[\bar{u}\,\gamma_\mu(1 - \gamma^5)\,v\right] .
+\]</div>
+<p>É un acoplamento <strong>puntual</strong> de dúas correntes <span class="math notranslate nohighlight">\(V - A\)</span>: a teoría de Fermi, que na súa forma moderna se escribe</p>
+<div class="math notranslate nohighlight">
+\[
+M = \frac{G_F}{\sqrt{2}}\;\left[\bar{u}\,\gamma^\mu(1 - \gamma^5)\,u\right]\left[\bar{u}\,\gamma_\mu(1 - \gamma^5)\,v\right] .
+\]</div>
+<p>Comparando:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{
+\frac{G_F}{\sqrt{2}} = \frac{g_W^2}{8\,m_W^2}
+}
+\]</div>
+<p>O <span class="math notranslate nohighlight">\(8 = (2\sqrt{2})^2\)</span> son os dous vértices; o <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> de <span class="math notranslate nohighlight">\(G_F/\sqrt{2}\)</span> é un convenio, que se mantén
+por razóns históricas.</p>
+</section>
+<section id="numeros">
+<h3>4.3. Números<a class="headerlink" href="#numeros" title="Permalink to this heading">#</a></h3>
+<p>Con <span class="math notranslate nohighlight">\(G_F = 1.166 \cdot 10^{-5}\)</span> <span class="math notranslate nohighlight">\(\mathrm{GeV}^{-2}\)</span> e <span class="math notranslate nohighlight">\(m_W = 80.4\)</span> GeV:</p>
+<div class="math notranslate nohighlight">
+\[
+g_W = m_W\sqrt{\frac{8\,G_F}{\sqrt{2}}} = 0.653, \qquad \alpha_W = \frac{g_W^2}{4\pi} = 0.034 \simeq \frac{1}{30} .
+\]</div>
+<p><strong>O acoplamento feble é maior que o electromagnético</strong> (<span class="math notranslate nohighlight">\(\alpha \simeq 1/137\)</span>). A febleza a baixa enerxía
+pona o propagador: <span class="math notranslate nohighlight">\(G_F \propto g_W^2/m_W^2\)</span> é pequena porque <span class="math notranslate nohighlight">\(m_W\)</span> é grande. Coa regra de Sargent
+(sección 7 de <a class="reference internal" href="ext-cinematica.html"><span class="doc std std-doc">ext-cinematica</span></a>), <span class="math notranslate nohighlight">\(\Gamma \propto G_F^2 E_0^5\)</span>: o muón dá
+<span class="math notranslate nohighlight">\(\Gamma_\mu = G_F^2\,m_\mu^5/192\pi^3\)</span> e <span class="math notranslate nohighlight">\(\tau_\mu = 2.2\,\mu\mathrm{s}\)</span>.</p>
+<p><strong>Cando deixa de valer.</strong> Cando <span class="math notranslate nohighlight">\(q^2\)</span> se achega a <span class="math notranslate nohighlight">\(m_W^2\)</span> o propagador xa non é constante, e a teoría de
+Fermi —con <span class="math notranslate nohighlight">\(G_F\)</span>, de dimensións <span class="math notranslate nohighlight">\(E^{-2}\)</span>— dá seccións eficaces que crecen como <span class="math notranslate nohighlight">\(G_F^2\,s\)</span> sen límite. O <span class="math notranslate nohighlight">\(W\)</span>
+<strong>resolve</strong> ese crecemento: por riba de <span class="math notranslate nohighlight">\(m_W\)</span> o propagador cae como <span class="math notranslate nohighlight">\(1/s\)</span>. É o exemplo clásico dunha
+<strong>teoría efectiva</strong> que deixa de valer á escala da partícula que «integrou».</p>
+<p><em>Cuestións:</em> comproba <span class="math notranslate nohighlight">\(g_W = 0.653\)</span>. A que <span class="math notranslate nohighlight">\(\sqrt{s}\)</span> o termo <span class="math notranslate nohighlight">\(q^2/m_W^2\)</span> corrixe nun <span class="math notranslate nohighlight">\(10\,\%\)</span> o propagador
+constante?</p>
+</section>
+</section>
+<section id="bibliografia">
+<h2>Bibliografía<a class="headerlink" href="#bibliografia" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>[MT] Mark Thomson, <em>Modern Particle Physics</em>, Cambridge University Press (2013): 5 (diagramas de
+Feynman, propagadores), 11.5 (o <span class="math notranslate nohighlight">\(W\)</span> e a teoría de Fermi), 16.1 (a resonancia do <span class="math notranslate nohighlight">\(Z\)</span>).</p></li>
+<li><p>[AB] Alessandro Bettini, <em>Introduction to Elementary Particle Physics</em>, Cambridge University Press:
+2.5–2.6, 4.</p></li>
+<li><p>[PDG] Particle Data Group: masas e anchuras do <span class="math notranslate nohighlight">\(Z\)</span> e do <span class="math notranslate nohighlight">\(W\)</span>; <span class="math notranslate nohighlight">\(G_F\)</span>.</p></li>
+<li><p>Relacionadas: <a class="reference internal" href="ext-dirac.html"><span class="doc std std-doc">ext-dirac</span></a> (correntes e simetría <em>gauge</em>),
+<a class="reference internal" href="ext-cinematica.html"><span class="doc std std-doc">ext-cinematica</span></a> (espazo fásico e regra de Sargent).</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ext-quiral.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Extensión: A quiralidade</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bols/boletin_inicio_2627.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Desintégrase o protón?</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducion">Introdución</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notacion">Notación</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-propagador">1. O propagador</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-campo-con-fonte">1.1. Un campo con fonte</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-campo-ao-diagrama">1.2. Do campo ao diagrama</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mediadores-vectoriais">1.3. Mediadores vectoriais</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-alcance-o-potencial-de-yukawa">2. O alcance: o potencial de Yukawa</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unha-fonte-en-repouso">2.1. Unha fonte en repouso</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-se-le">2.2. Que se le</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rutherford-outra-vez">2.3. Rutherford, outra vez</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-polo-e-a-anchura">3. O polo e a anchura</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#un-mediador-real">3.1. Un mediador real</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-breit-wigner-relativista">3.2. A Breit-Wigner relativista</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z-a-esgalla">3.3. «<span class="math notranslate nohighlight">\(Z\)</span> a esgalla»</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-teoria-de-fermi-como-limite">4. A teoría de Fermi como límite</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-vertice-do-w">4.1. O vértice do <span class="math notranslate nohighlight">\(W\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-limite-de-baixa-enerxia">4.2. O límite de baixa enerxía</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numeros">4.3. Números</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliografia">Bibliografía</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By J. Ángel Hernando Morata, Xabier Cid Vidal
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1634 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="gl" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Extensión: A ecuación de Dirac &#8212; Introdución á Física de Partículas - USC</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/ext-dirac';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Extensión: A quiralidade" href="ext-quiral.html" />
+    <link rel="prev" title="Extensión: Cinemática relativista e espazo fásico" href="ext-cinematica.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="gl"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.jpg" class="logo__image only-light" alt="Introdución á Física de Partículas - USC - Home"/>
+    <script>document.write(`<img src="../_static/logo.jpg" class="logo__image only-dark" alt="Introdución á Física de Partículas - USC - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introdución
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Capítulos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduccion.html">Introdución á Física de Partículas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="perspectivas.html">Perspectivas: experimental e teórica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="leptones.html">Leptóns: a man esquerda da Natureza</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Anexos: extensións</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro_extension.html">Extensión: Introdución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ext-cinematica.html">Extensión: Cinemática relativista e espazo fásico</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Extensión: A ecuación de Dirac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ext-quiral.html">Extensión: A quiralidade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ext-feynman.html">Extensión: Diagramas de Feynman e propagadores</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Anexos: boletíns</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bols/boletin_inicio_2627.html">Desintégrase o protón?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bols/boletin_I_2627.html">Partículas — boletín I</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/xabiercidvidal/USC-FNeP/main?urlpath=tree/./notebooks/ext-dirac.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/xabiercidvidal/USC-FNeP/blob/main/./notebooks/ext-dirac.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/xabiercidvidal/USC-FNeP" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/xabiercidvidal/USC-FNeP/issues/new?title=Issue%20on%20page%20%2Fnotebooks/ext-dirac.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/ext-dirac.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Extensión: A ecuación de Dirac</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducion">Introdución</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notacion">Notación</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-ecuacion-de-dirac">1. A ecuación de Dirac</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#punto-de-partida">1.1. Punto de partida</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-idea-de-dirac-1928">1.2. A idea de Dirac (1928)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ao-cadrado-a-ecuacion-de-einstein">1.3. Ao cadrado, a ecuación de Einstein</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#as-gamma-son-matrices-e-psi-ten-catro-componentes">1.4. As <span class="math notranslate nohighlight">\(\gamma\)</span> son matrices, e <span class="math notranslate nohighlight">\(\Psi\)</span> ten catro compoñentes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-representacion-de-pauli-dirac">1.5. A representación de Pauli-Dirac</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-son-as-matrices-gamma">1.6. Que son as matrices <span class="math notranslate nohighlight">\(\gamma\)</span>?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-quinta-matriz-gamma-5">1.7. A quinta matriz, <span class="math notranslate nohighlight">\(\gamma^5\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#as-solucions-os-espinores">2. As solucións: os espinores</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ondas-planas-e-as-ecuacions-dos-espinores">2.1. Ondas planas e as ecuacións dos espinores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#einstein-outra-vez-e-os-dous-signos-da-enerxia">2.2. Einstein outra vez, e os dous signos da enerxía</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#en-repouso-bf-p-0">2.3. En repouso, <span class="math notranslate nohighlight">\({\bf p} = 0\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#co-momento-en-z">2.4. Co momento en <span class="math notranslate nohighlight">\(z\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#co-momento-nunha-direccion-calquera">2.5. Co momento nunha dirección calquera</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enerxia-momento-e-antiparticula">2.6. Enerxía, momento e antipartícula</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformacions-de-lorentz-espin-e-helicidade">3. Transformacións de Lorentz: espín e helicidade</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-condicion-sobre-s-lambda">3.1. A condición sobre <span class="math notranslate nohighlight">\(S(\Lambda)\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transformacions-infinitesimais-os-xeradores">3.2. Transformacións infinitesimais: os xeradores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rotacion-en-z-o-espin">3.3. Rotación en <span class="math notranslate nohighlight">\(z\)</span>: o espín</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rotacion-nunha-direccion-calquera-so-indicado">3.4. Rotación nunha dirección calquera (só indicado)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boost-en-z">3.5. <em>Boost</em> en <span class="math notranslate nohighlight">\(z\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boost-nunha-direccion-calquera-so-indicado">3.6. <em>Boost</em> nunha dirección calquera (só indicado)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#helicidade">3.7. Helicidade</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#as-formas-bilineais-e-a-corrente">4. As formas bilineais e a corrente</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-adxunto-e-como-se-transforma">4.1. O adxunto e como se transforma</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-psi-psi-e-un-escalar">4.2. <span class="math notranslate nohighlight">\(\bar\Psi\Psi\)</span> é un escalar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-psi-gamma-mu-psi-e-un-cuadrivector">4.3. <span class="math notranslate nohighlight">\(\bar\Psi\gamma^\mu\Psi\)</span> é un cuadrivector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-pseudoescalar-e-o-axial">4.4. O pseudoescalar e o axial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-corrente-conservase">4.5. A corrente consérvase</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-corrente-electrica">4.6. A corrente eléctrica</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simetria-gauge-local-e-o-foton">5. A simetría <em>gauge</em> local e o fotón</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fase-global-e-fase-local">5.1. Fase global e fase local</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-derivada-covariante">5.2. A derivada covariante</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-acoplamento-minimo">5.3. O acoplamento mínimo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-campo-do-foton">5.4. O campo do fotón</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paridade-e-quiralidade">6. Paridade e quiralidade</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliografia">Bibliografía</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="extension-a-ecuacion-de-dirac">
+<h1>Extensión: A ecuación de Dirac<a class="headerlink" href="#extension-a-ecuacion-de-dirac" title="Permalink to this heading">#</a></h1>
+<p>José A. Hernando</p>
+<p><em>Departamento de Física de Partículas. Universidade de Santiago de Compostela</em></p>
+<p>Setembro 2026</p>
+<section id="introducion">
+<h2>Introdución<a class="headerlink" href="#introducion" title="Permalink to this heading">#</a></h2>
+<p>Esta extensión é o <strong>desenvolvemento matemático</strong> do que a parte teórica de
+<a class="reference internal" href="perspectivas.html"><span class="doc std std-doc">perspectivas</span></a> presenta na clase: as deducións e demostracións que alí non
+se dan. Ten seis seccións; cada unha responde a unha pregunta:</p>
+<ol class="arabic simple">
+<li><p><strong>A ecuación de Dirac.</strong> <em>De onde sae?</em> Dos operadores de enerxía e momento da mecánica
+cuántica, esixindo que aparezan linealmente e que o seu cadrado dea a ecuación de Einstein.</p></li>
+<li><p><strong>As solucións: os espinores.</strong> <em>Cales son as solucións?</em> En repouso, co momento en <span class="math notranslate nohighlight">\(z\)</span> e
+co momento nunha dirección calquera.</p></li>
+<li><p><strong>Transformacións de Lorentz: espín e helicidade.</strong> <em>Como se transforman os espinores?</em>
+Rotacións e <em>boosts</em>, en <span class="math notranslate nohighlight">\(z\)</span> e (só indicado) nunha dirección calquera; das rotacións saen
+o espín e a helicidade.</p></li>
+<li><p><strong>As formas bilineais e a corrente.</strong> <em>Que se constrúe cos espinores?</em> O escalar
+<span class="math notranslate nohighlight">\(\bar\Psi\Psi\)</span>, o cuadrivector <span class="math notranslate nohighlight">\(\bar\Psi\gamma^\mu\Psi\)</span>, o pseudoescalar e o axial, a conservación da
+corrente e a corrente eléctrica.</p></li>
+<li><p><strong>A simetría <em>gauge</em> local e o fotón.</strong> <em>De onde sae a interacción co fotón?</em> De esixir
+invariancia baixo unha fase local: a derivada covariante, o acoplamento mínimo e as ecuacións
+de Maxwell.</p></li>
+<li><p><strong>Paridade e quiralidade.</strong> <em>Que é a quiralidade?</em> Desenvolvida na súa propia extensión,
+<a class="reference internal" href="ext-quiral.html"><span class="doc std std-doc">ext-quiral</span></a> (o que usa o tema de leptóns).</p></li>
+</ol>
+<section id="notacion">
+<h3>Notación<a class="headerlink" href="#notacion" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Unidades naturais, <span class="math notranslate nohighlight">\(\hbar = c = 1\)</span>. Métrica <span class="math notranslate nohighlight">\(g_{\mu\nu} = \mathrm{diag}(1, -1, -1, -1)\)</span>.</p></li>
+<li><p>Índices gregos <span class="math notranslate nohighlight">\(\mu, \nu = 0, 1, 2, 3\)</span>; latinos <span class="math notranslate nohighlight">\(i, j, k = 1, 2, 3\)</span>. Un índice repetido súmase.</p></li>
+<li><p><span class="math notranslate nohighlight">\(x^\mu = (t, {\bf x})\)</span>, <span class="math notranslate nohighlight">\(p^\mu = (E, {\bf p})\)</span>, <span class="math notranslate nohighlight">\(p_\mu = (E, -{\bf p})\)</span>, <span class="math notranslate nohighlight">\(p_\mu x^\mu = Et - {\bf p}\cdot{\bf x}\)</span>.
+As compoñentes físicas do momento son <span class="math notranslate nohighlight">\(p^k\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\({\bf p} = \mathrm{p}\,\hat{\bf v}\)</span>: <span class="math notranslate nohighlight">\(\mathrm{p} = |{\bf p}|\)</span> é o módulo e <span class="math notranslate nohighlight">\(\hat{\bf v}\)</span> a dirección, de ángulos
+polar e azimutal <span class="math notranslate nohighlight">\(\theta, \phi\)</span>.</p></li>
+<li><p>Cuadrigradiente: <span class="math notranslate nohighlight">\(\partial_\mu = \partial/\partial x^\mu = (\partial_t, \nabla)\)</span>.</p></li>
+<li><p>O acento circunflexo indica unha <strong>dirección</strong> sobre un vector unitario (<span class="math notranslate nohighlight">\(\hat{\bf v}\)</span>, <span class="math notranslate nohighlight">\(\hat z\)</span>, <span class="math notranslate nohighlight">\(\hat{\bf n}\)</span>) e un
+<strong>operador</strong> sobre o momento: <span class="math notranslate nohighlight">\(\hat{p}^k = -i\partial_k\)</span> (seccións 3.3, 3.7 e 5.3).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\not{p} \equiv \gamma^\mu p_\mu\)</span> (lese «p barrada»).</p></li>
+<li><p>Dous números que aparecen en todas partes:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\kappa \equiv \frac{\mathrm{p}}{E+m}, \qquad N \equiv \sqrt{E+m} .
+\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(I\)</span> é a identidade (<span class="math notranslate nohighlight">\(2\times2\)</span> ou <span class="math notranslate nohighlight">\(4\times4\)</span>, segundo o contexto); <span class="math notranslate nohighlight">\(\sigma_k\)</span>, as matrices de Pauli.</p></li>
+<li><p>Espín: <span class="math notranslate nohighlight">\({\bf S} = \frac{1}{2}{\bf \Sigma}\)</span>. A transformación de Lorentz dun espinor é a matriz
+<span class="math notranslate nohighlight">\(S(\Lambda)\)</span>: <strong>non confundir</strong> unha coa outra.</p></li>
+<li><p>Rapidez dun <em>boost</em>: <span class="math notranslate nohighlight">\(\eta\)</span>, con <span class="math notranslate nohighlight">\(\cosh\eta = E/m\)</span> e <span class="math notranslate nohighlight">\(\sinh\eta = \mathrm{p}/m\)</span>.</p></li>
+<li><p>Na clase os espinores con <span class="math notranslate nohighlight">\({\bf p}\)</span> en <span class="math notranslate nohighlight">\(z\)</span> chámanse pola súa helicidade: <span class="math notranslate nohighlight">\(u_+ \equiv u_1\)</span>, <span class="math notranslate nohighlight">\(u_- \equiv u_2\)</span>
+(sección 3.7).</p></li>
+</ul>
+</section>
+</section>
+<section id="a-ecuacion-de-dirac">
+<h2>1. A ecuación de Dirac<a class="headerlink" href="#a-ecuacion-de-dirac" title="Permalink to this heading">#</a></h2>
+<section id="punto-de-partida">
+<h3>1.1. Punto de partida<a class="headerlink" href="#punto-de-partida" title="Permalink to this heading">#</a></h3>
+<p>En mecánica cuántica a enerxía e o momento son operadores:</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{H} = i\partial_t, \qquad \hat{\bf p} = -i\nabla .
+\]</div>
+<p>Se se substitúen en <span class="math notranslate nohighlight">\(E^2 = {\bf p}^2 + m^2\)</span> obtense a ecuación de <strong>Klein-Gordon</strong>,
+<span class="math notranslate nohighlight">\(-\partial_t^2\Psi = (-\nabla^2 + m^2)\Psi\)</span>. É de <strong>segunda orde</strong> no tempo, e a súa densidade de
+probabilidade pode ser negativa. [MT4.1]</p>
+</section>
+<section id="a-idea-de-dirac-1928">
+<h3>1.2. A idea de Dirac (1928)<a class="headerlink" href="#a-idea-de-dirac-1928" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>primeira orde en <span class="math notranslate nohighlight">\(\partial_t\)</span>, como a ecuación de Schrödinger;</p></li>
+<li><p>a relatividade trata <span class="math notranslate nohighlight">\(t\)</span> e <span class="math notranslate nohighlight">\({\bf x}\)</span> por igual: primeira orde tamén en <span class="math notranslate nohighlight">\(\nabla\)</span>;</p></li>
+<li><p>a ecuación de Einstein debe seguir cumpríndose.</p></li>
+</ul>
+<p>A ecuación máis xeral <strong>lineal</strong> nas derivadas é</p>
+<div class="math notranslate nohighlight">
+\[
+(i\gamma^0 \partial_t + i\gamma^k \partial_k - m) \, \Psi = 0 ,
+\]</div>
+<p>con catro coeficientes <span class="math notranslate nohighlight">\(\gamma^\mu\)</span> que non coñecemos (o de <span class="math notranslate nohighlight">\(m\)</span> tómase igual á unidade).</p>
+</section>
+<section id="ao-cadrado-a-ecuacion-de-einstein">
+<h3>1.3. Ao cadrado, a ecuación de Einstein<a class="headerlink" href="#ao-cadrado-a-ecuacion-de-einstein" title="Permalink to this heading">#</a></h3>
+<p><strong>Cos operadores</strong>, <span class="math notranslate nohighlight">\(i\partial_t \to E\)</span> e <span class="math notranslate nohighlight">\(i\partial_k \to -p^k\)</span>, a ecuación lese</p>
+<div class="math notranslate nohighlight">
+\[
+(\gamma^0 E - \gamma^k p^k) \, \Psi = m \, \Psi ,
+\qquad \text{é dicir,} \qquad (\not{p} - m)\,\Psi = 0 .
+\]</div>
+<p><strong>Aplicándoa dúas veces</strong>, <span class="math notranslate nohighlight">\((\gamma^0 E - \gamma^k p^k)^2\,\Psi = m^2\,\Psi\)</span>. Desenvolvemos sen cambiar a
+orde das <span class="math notranslate nohighlight">\(\gamma\)</span>, porque non sabemos se conmutan:</p>
+<div class="math notranslate nohighlight">
+\[
+(\gamma^0 E - \gamma^k p^k)^2 = (\gamma^0)^2 E^2 + \sum_k (\gamma^k)^2 (p^k)^2
++ \sum_{i&lt;k} \{\gamma^i, \gamma^k\}\, p^i p^k - \sum_k \{\gamma^0, \gamma^k\}\, E\, p^k .
+\]</div>
+<p><strong>Esiximos a ecuación de Einstein</strong>: para que isto sexa <span class="math notranslate nohighlight">\(E^2 - {\bf p}^2\)</span> para calquera <span class="math notranslate nohighlight">\(E\)</span> e <span class="math notranslate nohighlight">\({\bf p}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+(\gamma^0)^2 = I, \qquad (\gamma^k)^2 = -I, \qquad \{\gamma^0, \gamma^k\} = 0, \qquad
+\{\gamma^i, \gamma^k\} = 0 \;\; (i \neq k),
+\]</div>
+<p>que se resume na <strong>álxebra das <span class="math notranslate nohighlight">\(\gamma\)</span></strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{
+\{\gamma^\mu, \gamma^\nu\} = \gamma^\mu\gamma^\nu + \gamma^\nu\gamma^\mu = 2\, g^{\mu\nu}\, I
+}
+\]</div>
+</section>
+<section id="as-gamma-son-matrices-e-psi-ten-catro-componentes">
+<h3>1.4. As <span class="math notranslate nohighlight">\(\gamma\)</span> son matrices, e <span class="math notranslate nohighlight">\(\Psi\)</span> ten catro compoñentes<a class="headerlink" href="#as-gamma-son-matrices-e-psi-ten-catro-componentes" title="Permalink to this heading">#</a></h3>
+<p>Dous números non nulos non poden anticonmutar: as <span class="math notranslate nohighlight">\(\gamma^\mu\)</span> son <strong>matrices</strong>, e <span class="math notranslate nohighlight">\(\Psi\)</span> é unha
+columna sobre a que actúan. Fan falta catro matrices que anticonmuten dúas a dúas: con <span class="math notranslate nohighlight">\(2\times2\)</span>
+só hai tres (as de Pauli); teñen traza nula e autovalores <span class="math notranslate nohighlight">\(\pm1\)</span> (ou <span class="math notranslate nohighlight">\(\pm i\)</span>), logo a súa dimensión
+é par. A mínima é <span class="math notranslate nohighlight">\(4\)</span>: <span class="math notranslate nohighlight">\(\Psi\)</span> ten <strong>catro compoñentes</strong>, é un <strong>espinor de Dirac</strong>.</p>
+<p><strong>Hermiticidade.</strong> Multiplicando por <span class="math notranslate nohighlight">\(\gamma^0\)</span> obtense a forma hamiltoniana,
+<span class="math notranslate nohighlight">\(E\,\Psi = H\,\Psi\)</span> con <span class="math notranslate nohighlight">\(H = \gamma^0\gamma^k p^k + \gamma^0 m\)</span>. Como <span class="math notranslate nohighlight">\(H\)</span> debe ser hermítico (enerxías
+reais):</p>
+<div class="math notranslate nohighlight">
+\[
+(\gamma^0)^\dagger = \gamma^0, \qquad (\gamma^k)^\dagger = -\gamma^k .
+\]</div>
+</section>
+<section id="a-representacion-de-pauli-dirac">
+<h3>1.5. A representación de Pauli-Dirac<a class="headerlink" href="#a-representacion-de-pauli-dirac" title="Permalink to this heading">#</a></h3>
+<p>Só a álxebra está fixada; a física non depende da elección. A habitual, en bloques <span class="math notranslate nohighlight">\(2\times2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boxed{
+\gamma^0 = \begin{pmatrix} I &amp; 0 \\ 0 &amp; -I \end{pmatrix}, \qquad
+\gamma^k = \begin{pmatrix} 0 &amp; \sigma_k \\ -\sigma_k &amp; 0 \end{pmatrix}
+}
+\qquad
+\sigma_1 = \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}, \;
+\sigma_2 = \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix}, \;
+\sigma_3 = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}
+\end{split}\]</div>
+<p>con <span class="math notranslate nohighlight">\(\{\sigma_i, \sigma_j\} = 2\delta_{ij} I\)</span> e <span class="math notranslate nohighlight">\([\sigma_i, \sigma_j] = 2i\epsilon_{ijk}\sigma_k\)</span>. Volvendo ás derivadas:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{
+(i\gamma^\mu \partial_\mu - m)\, \Psi(x) = 0
+}
+\]</div>
+<p>[MT4.2]</p>
+</section>
+<section id="que-son-as-matrices-gamma">
+<h3>1.6. Que son as matrices <span class="math notranslate nohighlight">\(\gamma\)</span>?<a class="headerlink" href="#que-son-as-matrices-gamma" title="Permalink to this heading">#</a></h3>
+<p><strong>Como o número <span class="math notranslate nohighlight">\(i\)</span>.</strong> Con números reais, <span class="math notranslate nohighlight">\(x^2 + y^2\)</span> non se pode escribir como produto de dous
+factores lineais; fai falta un número novo con <span class="math notranslate nohighlight">\(i^2 = -1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+x^2 + y^2 = (x + iy)(x - iy) .
+\]</div>
+<p>Dirac necesita o mesmo con <span class="math notranslate nohighlight">\(E^2 - {\bf p}^2\)</span>, e ningún número serve: fan falta obxectos cuxo
+cadrado dea o signo da métrica e que <strong>anticonmuten</strong>, para cancelar os termos cruzados. En
+tres dimensións xa o coñecemos: <span class="math notranslate nohighlight">\((\vec\sigma\cdot{\bf p})^2 = {\bf p}^2\)</span>, así que <span class="math notranslate nohighlight">\(\vec\sigma\cdot{\bf p}\)</span> é a
+«raíz cadrada» de <span class="math notranslate nohighlight">\({\bf p}^2\)</span>. Dirac fai o mesmo no espazo-tempo:</p>
+<div class="math notranslate nohighlight">
+\[
+\not{p}^{\,2} = (\gamma^\mu p_\mu)^2 = p_\mu p^\mu = m^2 .
+\]</div>
+<p><strong>A métrica escrita con matrices.</strong> A álxebra <span class="math notranslate nohighlight">\(\{\gamma^\mu, \gamma^\nu\} = 2g^{\mu\nu}I\)</span> di que as
+<span class="math notranslate nohighlight">\(\gamma^\mu\)</span> se comportan como catro vectores unitarios do espazo-tempo: o temporal de cadrado
+<span class="math notranslate nohighlight">\(+1\)</span>, os espaciais de cadrado <span class="math notranslate nohighlight">\(-1\)</span>, e «ortogonais» entre si.</p>
+</section>
+<section id="a-quinta-matriz-gamma-5">
+<h3>1.7. A quinta matriz, <span class="math notranslate nohighlight">\(\gamma^5\)</span><a class="headerlink" href="#a-quinta-matriz-gamma-5" title="Permalink to this heading">#</a></h3>
+<p>Coas catro <span class="math notranslate nohighlight">\(\gamma^\mu\)</span> constrúese unha quinta:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{
+\gamma^5 \equiv i\,\gamma^0\gamma^1\gamma^2\gamma^3
+}
+\]</div>
+<p>As súas propiedades saen só da álxebra <span class="math notranslate nohighlight">\(\{\gamma^\mu, \gamma^\nu\} = 2g^{\mu\nu}I\)</span>:</p>
+<ul class="simple">
+<li><p><strong>Anticonmuta coas catro <span class="math notranslate nohighlight">\(\gamma^\mu\)</span></strong>, <span class="math notranslate nohighlight">\(\{\gamma^5, \gamma^\mu\} = 0\)</span>. Para pasar <span class="math notranslate nohighlight">\(\gamma^\mu\)</span> dun lado ao outro
+do produto hai que cruzala coas tres <span class="math notranslate nohighlight">\(\gamma\)</span> distintas (un signo menos cada unha) e con ela
+mesma (sen signo): <span class="math notranslate nohighlight">\((-1)^3 = -1\)</span>.</p></li>
+<li><p><strong>O seu cadrado é a identidade</strong>, <span class="math notranslate nohighlight">\((\gamma^5)^2 = I\)</span>. Reordenando <span class="math notranslate nohighlight">\(\gamma^0\gamma^1\gamma^2\gamma^3\,\gamma^0\gamma^1\gamma^2\gamma^3\)</span>
+ata xuntar cada <span class="math notranslate nohighlight">\(\gamma\)</span> coa súa parella saen <span class="math notranslate nohighlight">\((-1)^{3+2+1} = +1\)</span> e
+<span class="math notranslate nohighlight">\((\gamma^0)^2(\gamma^1)^2(\gamma^2)^2(\gamma^3)^2 = (+1)(-1)^3 = -1\)</span>; co <span class="math notranslate nohighlight">\(i^2 = -1\)</span> de diante, <span class="math notranslate nohighlight">\(+I\)</span>.</p></li>
+<li><p><strong>É hermítica</strong>, <span class="math notranslate nohighlight">\((\gamma^5)^\dagger = \gamma^5\)</span>. Con <span class="math notranslate nohighlight">\((\gamma^0)^\dagger = \gamma^0\)</span> e <span class="math notranslate nohighlight">\((\gamma^k)^\dagger = -\gamma^k\)</span>:
+<span class="math notranslate nohighlight">\((\gamma^5)^\dagger = -i\,(\gamma^3)^\dagger(\gamma^2)^\dagger(\gamma^1)^\dagger(\gamma^0)^\dagger = i\,\gamma^3\gamma^2\gamma^1\gamma^0\)</span>, e darlle a volta
+ao produto de catro custa seis permutacións: <span class="math notranslate nohighlight">\((-1)^6 = +1\)</span>.</p></li>
+</ul>
+<p><strong>En Pauli-Dirac.</strong> Con <span class="math notranslate nohighlight">\(\gamma^1\gamma^2 = \mathrm{diag}(-i\sigma_3, -i\sigma_3)\)</span> (porque <span class="math notranslate nohighlight">\(\sigma_1\sigma_2 = i\sigma_3\)</span>) e multiplicando
+por <span class="math notranslate nohighlight">\(\gamma^3\)</span> e <span class="math notranslate nohighlight">\(\gamma^0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\gamma^5 = \begin{pmatrix} 0 &amp; I \\ I &amp; 0 \end{pmatrix} :
+\end{split}\]</div>
+<p>intercambia o bloque de arriba co de abaixo.</p>
+<p><strong>Non cambia con Lorentz</strong>: <span class="math notranslate nohighlight">\(S^{-1}\gamma^5 S = \gamma^5\)</span> para calquera transformación <span class="math notranslate nohighlight">\(S(\Lambda)\)</span> dos
+espinores. Demóstrase na sección 3.2, cos xeradores.</p>
+<p>Con ela defínense os proxectores de <strong>quiralidade</strong>, <span class="math notranslate nohighlight">\(P_{L,R} = \frac{1}{2}(I \mp \gamma^5)\)</span>, e a corrente
+axial (sección 4.4). A quiralidade está desenvolvida en <a class="reference internal" href="ext-quiral.html"><span class="doc std std-doc">ext-quiral</span></a>. [MT4.2, MT6.4]</p>
+</section>
+</section>
+<section id="as-solucions-os-espinores">
+<h2>2. As solucións: os espinores<a class="headerlink" href="#as-solucions-os-espinores" title="Permalink to this heading">#</a></h2>
+<section id="ondas-planas-e-as-ecuacions-dos-espinores">
+<h3>2.1. Ondas planas e as ecuacións dos espinores<a class="headerlink" href="#ondas-planas-e-as-ecuacions-dos-espinores" title="Permalink to this heading">#</a></h3>
+<p>Buscamos solucións de onda plana: unha columna de catro constantes por unha fase,</p>
+<div class="math notranslate nohighlight">
+\[
+\Psi_s(x) = u_s(p)\, e^{-i p_\mu x^\mu}, \qquad \Phi_s(x) = v_s(p)\, e^{+i p_\mu x^\mu}, \qquad
+E = +\sqrt{{\bf p}^2 + m^2} .
+\]</div>
+<p>Toda a dependencia en <span class="math notranslate nohighlight">\((t, {\bf x})\)</span> está na fase; o <strong>espinor</strong> depende só de <span class="math notranslate nohighlight">\(p\)</span>. As derivadas
+actúan só sobre a fase (<span class="math notranslate nohighlight">\(i\partial_\mu \to \pm p_\mu\)</span>), e a ecuación de Dirac convértese nunha
+ecuación <strong>alxébrica</strong> para os espinores:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{
+(\not{p} - m)\, u_s(p) = 0, \qquad (\not{p} + m)\, v_s(p) = 0
+}
+\]</div>
+<p>Son as ecuacións fundamentais dos espinores. Resolvémolas en tres pasos: en repouso, co
+momento en <span class="math notranslate nohighlight">\(z\)</span> e co momento nunha dirección calquera.</p>
+</section>
+<section id="einstein-outra-vez-e-os-dous-signos-da-enerxia">
+<h3>2.2. Einstein outra vez, e os dous signos da enerxía<a class="headerlink" href="#einstein-outra-vez-e-os-dous-signos-da-enerxia" title="Permalink to this heading">#</a></h3>
+<p>A ecuación <span class="math notranslate nohighlight">\((\not{p} - m)\,w = 0\)</span> é un sistema lineal <strong>homoxéneo</strong>: só ten solución <span class="math notranslate nohighlight">\(w \neq 0\)</span> se o
+determinante se anula. Multiplicando por <span class="math notranslate nohighlight">\((\not{p} + m)\)</span> vese nunha liña:</p>
+<div class="math notranslate nohighlight">
+\[
+(\not{p} + m)(\not{p} - m)\, w = (\not{p}^{\,2} - m^2)\, w = (p^2 - m^2)\, w = 0
+\quad \Rightarrow \quad E^2 = {\bf p}^2 + m^2 .
+\]</div>
+<p>A onda plana só é solución se <span class="math notranslate nohighlight">\(E\)</span> e <span class="math notranslate nohighlight">\({\bf p}\)</span> son os dunha partícula de masa <span class="math notranslate nohighlight">\(m\)</span>. Pero a ecuación
+fixa <span class="math notranslate nohighlight">\(E^2\)</span>, non <span class="math notranslate nohighlight">\(E\)</span>: hai solucións con <span class="math notranslate nohighlight">\(E = \pm\sqrt{{\bf p}^2 + m^2}\)</span>. As de enerxía negativa
+escríbense cambiando o signo de toda a fase, de modo que nas fórmulas <span class="math notranslate nohighlight">\(E &gt; 0\)</span>: son as <span class="math notranslate nohighlight">\(\Phi_s\)</span>,
+con <span class="math notranslate nohighlight">\(v_s\)</span>.</p>
+<p><strong>Lectura limpa:</strong> como <span class="math notranslate nohighlight">\(\not{p}^{\,2} = m^2\)</span>, a matriz <span class="math notranslate nohighlight">\(\not{p}\)</span> só ten autovalores <span class="math notranslate nohighlight">\(\pm m\)</span>, cada un dúas
+veces (ten traza nula):</p>
+<div class="math notranslate nohighlight">
+\[
+\not{p}\, u = +m\, u, \qquad \not{p}\, v = -m\, v .
+\]</div>
+<p>Partícula e antipartícula son os <strong>dous subespazos</strong> da mesma matriz.</p>
+</section>
+<section id="en-repouso-bf-p-0">
+<h3>2.3. En repouso, <span class="math notranslate nohighlight">\({\bf p} = 0\)</span><a class="headerlink" href="#en-repouso-bf-p-0" title="Permalink to this heading">#</a></h3>
+<p>Con <span class="math notranslate nohighlight">\({\bf p} = 0\)</span>, <span class="math notranslate nohighlight">\(E = m\)</span> e <span class="math notranslate nohighlight">\(\not{p} = m\,\gamma^0\)</span>. As dúas ecuacións son diagonais:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\not{p} - m = m\,(\gamma^0 - I) = \begin{pmatrix} 0 &amp; 0 \\ 0 &amp; -2m\, I \end{pmatrix}, \qquad
+\not{p} + m = m\,(\gamma^0 + I) = \begin{pmatrix} 2m\, I &amp; 0 \\ 0 &amp; 0 \end{pmatrix} .
+\end{split}\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((\not{p} - m)\,u = 0\)</span> só esixe que o <strong>bloque de abaixo</strong> sexa cero: o de arriba, <span class="math notranslate nohighlight">\(\chi\)</span>, é libre.</p></li>
+<li><p><span class="math notranslate nohighlight">\((\not{p} + m)\,v = 0\)</span> esixe que o <strong>bloque de arriba</strong> sexa cero: o de abaixo, <span class="math notranslate nohighlight">\(\xi\)</span>, é libre.</p></li>
+</ul>
+<p>Dúas compoñentes libres en cada caso: os <strong>dous estados de espín</strong>, co espinor de Pauli de sempre.
+Coa normalización <span class="math notranslate nohighlight">\(u^\dagger u = 2E = 2m\)</span> (sección 2.4), <span class="math notranslate nohighlight">\(N = \sqrt{2m}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+u_1(m) = \sqrt{2m} \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}, \;\;
+u_2(m) = \sqrt{2m} \begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix}, \;\;
+v_1(m) = \sqrt{2m} \begin{pmatrix} 0 \\ 0 \\ 0 \\ 1 \end{pmatrix}, \;\;
+v_2(m) = \sqrt{2m} \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix}
+\end{split}\]</div>
+<p>A partícula vive arriba e a antipartícula abaixo: son os autoespazos de <span class="math notranslate nohighlight">\(\gamma^0\)</span> con autovalor
+<span class="math notranslate nohighlight">\(+1\)</span> e <span class="math notranslate nohighlight">\(-1\)</span>. En <span class="math notranslate nohighlight">\(v\)</span> a orde das compoñentes está cruzada para que <span class="math notranslate nohighlight">\(s = 1\)</span> sexa espín físico cara arriba
+tamén na antipartícula (sección 2.6).</p>
+<p><a id="soluciones-z"></a></p>
+</section>
+<section id="co-momento-en-z">
+<h3>2.4. Co momento en <span class="math notranslate nohighlight">\(z\)</span><a class="headerlink" href="#co-momento-en-z" title="Permalink to this heading">#</a></h3>
+<p>Tomamos <span class="math notranslate nohighlight">\({\bf p} = (0, 0, \mathrm{p})\)</span>. Con <span class="math notranslate nohighlight">\(\not{p} = \gamma^0 E - \gamma^3 \mathrm{p}\)</span> e <span class="math notranslate nohighlight">\(u = (u^a, u^b)\)</span> en bloques:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\not{p} - m =
+\begin{pmatrix} (E - m)\, I &amp; -\mathrm{p}\,\sigma_3 \\ \mathrm{p}\,\sigma_3 &amp; -(E + m)\, I \end{pmatrix} .
+\end{split}\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\gamma^0\)</span> (a enerxía) é diagonal: <strong>non mestura</strong> arriba con abaixo.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\gamma^3\)</span> (o momento) está fóra da diagonal: <strong>liga</strong> os dous bloques, con peso <span class="math notranslate nohighlight">\(\mathrm{p}\)</span>.</p></li>
+</ul>
+<p>Cada fila de bloques é unha ecuación:</p>
+<div class="math notranslate nohighlight">
+\[
+(E - m)\, u^a = \mathrm{p}\,\sigma_3\, u^b, \qquad (E + m)\, u^b = \mathrm{p}\,\sigma_3\, u^a .
+\]</div>
+<p>Da segunda, o bloque de abaixo queda <strong>fixado</strong> polo de arriba, <span class="math notranslate nohighlight">\(u^b = \kappa\,\sigma_3\,u^a\)</span>, con
+<span class="math notranslate nohighlight">\(\kappa = \mathrm{p}/(E+m)\)</span>. A primeira non engade nada: con <span class="math notranslate nohighlight">\(\sigma_3^2 = I\)</span> só esixe <span class="math notranslate nohighlight">\(E^2 = \mathrm{p}^2 + m^2\)</span>.
+Quedan <strong>dúas compoñentes libres</strong>, as de <span class="math notranslate nohighlight">\(u^a\)</span>, como en repouso. Para <span class="math notranslate nohighlight">\(v\)</span> (con <span class="math notranslate nohighlight">\(+m\)</span>) o bloque libre é
+o de abaixo, e <span class="math notranslate nohighlight">\(v^a = \kappa\,\sigma_3\,v^b\)</span>.</p>
+<p><strong>Normalización.</strong> Tómase <span class="math notranslate nohighlight">\(u^\dagger u = v^\dagger v = 2E\)</span>. A densidade <span class="math notranslate nohighlight">\(\Psi^\dagger\Psi\)</span> non é invariante:
+cun <em>boost</em> o volume contráese e a densidade crece como <span class="math notranslate nohighlight">\(E\)</span>. A única normalización válida en
+todos os sistemas é proporcional a <span class="math notranslate nohighlight">\(E\)</span>; o 2 é un convenio, o mesmo que para os bosóns. Así,
+<span class="math notranslate nohighlight">\(N^2(1 + \kappa^2) = 2E\)</span> dá <span class="math notranslate nohighlight">\(N = \sqrt{E+m}\)</span>, e os catro espinores son</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boxed{
+u_1 = N \begin{pmatrix} 1 \\ 0 \\ \kappa \\ 0 \end{pmatrix}, \;\;
+u_2 = N \begin{pmatrix} 0 \\ 1 \\ 0 \\ -\kappa \end{pmatrix}, \;\;
+v_1 = N \begin{pmatrix} 0 \\ -\kappa \\ 0 \\ 1 \end{pmatrix}, \;\;
+v_2 = N \begin{pmatrix} \kappa \\ 0 \\ 1 \\ 0 \end{pmatrix}
+}
+\qquad \kappa = \frac{\mathrm{p}}{E+m}, \;\; N = \sqrt{E+m}
+\end{split}\]</div>
+<p>Como cambian con <span class="math notranslate nohighlight">\(\kappa\)</span> (en repouso, en movemento, ultrarrelativista): ver <a class="reference internal" href="perspectivas.html"><span class="doc std std-doc">perspectivas</span></a>, <em>Que relativista é o espinor?</em></p>
+</section>
+<section id="co-momento-nunha-direccion-calquera">
+<h3>2.5. Co momento nunha dirección calquera<a class="headerlink" href="#co-momento-nunha-direccion-calquera" title="Permalink to this heading">#</a></h3>
+<p>O único cambio é <span class="math notranslate nohighlight">\(\mathrm{p}\,\sigma_3 \to \vec\sigma\cdot{\bf p}\)</span> nos bloques de fóra da diagonal:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\not{p} - m =
+\begin{pmatrix} (E - m)\, I &amp; -\vec\sigma\cdot{\bf p} \\ \vec\sigma\cdot{\bf p} &amp; -(E + m)\, I \end{pmatrix},
+\qquad
+u^b = \frac{\vec\sigma\cdot{\bf p}}{E+m}\, u^a .
+\end{split}\]</div>
+<p>A primeira ecuación volve non engadir nada porque <span class="math notranslate nohighlight">\((\vec\sigma\cdot{\bf p})^2 = {\bf p}^2\)</span>, que fai o papel de
+<span class="math notranslate nohighlight">\(\sigma_3^2 = I\)</span>. Cos bloques libres <span class="math notranslate nohighlight">\(\chi_1 = (1, 0)\)</span>, <span class="math notranslate nohighlight">\(\chi_2 = (0, 1)\)</span> e, en orde cruzada,
+<span class="math notranslate nohighlight">\(\xi_1 = (0, 1)\)</span>, <span class="math notranslate nohighlight">\(\xi_2 = (1, 0)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boxed{
+u_s(p) = N \begin{pmatrix} \chi_s \\ \dfrac{\vec\sigma\cdot{\bf p}}{E+m}\,\chi_s \end{pmatrix}, \qquad
+v_s(p) = N \begin{pmatrix} \dfrac{\vec\sigma\cdot{\bf p}}{E+m}\,\xi_s \\ \xi_s \end{pmatrix}, \qquad N = \sqrt{E+m}
+}
+\end{split}\]</div>
+<p>A normalización é a mesma: <span class="math notranslate nohighlight">\((\vec\sigma\cdot{\bf p})^2 = {\bf p}^2\)</span> dá outra vez <span class="math notranslate nohighlight">\(u^\dagger u = 2E\)</span>. Con
+<span class="math notranslate nohighlight">\({\bf p} = \mathrm{p}\,\hat{z}\)</span> recupéranse os espinores da sección 2.4, e con <span class="math notranslate nohighlight">\({\bf p} = 0\)</span> os da 2.3.</p>
+</section>
+<section id="enerxia-momento-e-antiparticula">
+<h3>2.6. Enerxía, momento e antipartícula<a class="headerlink" href="#enerxia-momento-e-antiparticula" title="Permalink to this heading">#</a></h3>
+<p>Sobre a fase, <span class="math notranslate nohighlight">\(i\partial_t\,\Phi_s = -E\,\Phi_s\)</span> e <span class="math notranslate nohighlight">\(-i\nabla\,\Phi_s = -{\bf p}\,\Phi_s\)</span>: en <span class="math notranslate nohighlight">\(\Phi_s\)</span> os operadores dan o
+signo cambiado, e a regra práctica é invertelo en todo (enerxía, momento, espín e cargas) para ler a
+antipartícula. A interpretación, en <a class="reference internal" href="perspectivas.html"><span class="doc std std-doc">perspectivas</span></a> (<em>Antipartículas</em> e <em>Feynman e Stückelberg</em>).</p>
+</section>
+</section>
+<section id="transformacions-de-lorentz-espin-e-helicidade">
+<h2>3. Transformacións de Lorentz: espín e helicidade<a class="headerlink" href="#transformacions-de-lorentz-espin-e-helicidade" title="Permalink to this heading">#</a></h2>
+<section id="a-condicion-sobre-s-lambda">
+<h3>3.1. A condición sobre <span class="math notranslate nohighlight">\(S(\Lambda)\)</span><a class="headerlink" href="#a-condicion-sobre-s-lambda" title="Permalink to this heading">#</a></h3>
+<p>Baixo unha transformación de Lorentz <span class="math notranslate nohighlight">\(\Lambda\)</span>, <span class="math notranslate nohighlight">\(x' = \Lambda x\)</span>, un cuadrivector transfórmase con <span class="math notranslate nohighlight">\(\Lambda\)</span> e
+o cuadrigradiente, que é covariante, coa inversa: <span class="math notranslate nohighlight">\(\partial'_\mu = (\Lambda^{-1})^\nu{}_\mu\,\partial_\nu\)</span>. Un
+espinor transfórmase cunha matriz complexa <span class="math notranslate nohighlight">\(4\times4\)</span>, <span class="math notranslate nohighlight">\(S(\Lambda)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\Psi'(x') = S(\Lambda)\, \Psi(x) .
+\]</div>
+<p><strong>O que esiximos:</strong> a ecuación de Dirac ten a <strong>mesma forma</strong> en todos os sistemas inerciais, coas
+<strong>mesmas</strong> <span class="math notranslate nohighlight">\(\gamma^\mu\)</span>. Se <span class="math notranslate nohighlight">\((i\gamma^\nu\partial_\nu - m)\,\Psi = 0\)</span>, debe cumprirse</p>
+<div class="math notranslate nohighlight">
+\[
+(i\gamma^\mu\partial'_\mu - m)\, S\,\Psi
+= \left[ i\,\gamma^\mu (\Lambda^{-1})^\nu{}_\mu\, \partial_\nu - m \right] S\,\Psi = 0 .
+\]</div>
+<p>Multiplicando por <span class="math notranslate nohighlight">\(S^{-1}\)</span> pola esquerda, isto coincide coa ecuación orixinal se
+<span class="math notranslate nohighlight">\(S^{-1}\gamma^\mu S\,(\Lambda^{-1})^\nu{}_\mu = \gamma^\nu\)</span>, é dicir:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{
+S^{-1}(\Lambda)\, \gamma^\mu\, S(\Lambda) = \Lambda^\mu{}_\nu\, \gamma^\nu
+}
+\]</div>
+<p>É a condición que define a <strong>representación espinorial</strong> da transformación de Lorentz: rotar as
+<span class="math notranslate nohighlight">\(\gamma\)</span> con <span class="math notranslate nohighlight">\(\Lambda\)</span> é o mesmo que conxugalas con <span class="math notranslate nohighlight">\(S\)</span>.</p>
+<p><strong>Por que as <span class="math notranslate nohighlight">\(\gamma\)</span> poden ser as mesmas en todos os sistemas?</strong> Esíxeo o principio de
+relatividade (a mesma ecuación para todos), e é posible porque o único que se lles pide ás <span class="math notranslate nohighlight">\(\gamma\)</span> é a súa
+álxebra, <span class="math notranslate nohighlight">\(\{\gamma^\mu, \gamma^\nu\} = 2g^{\mu\nu}I\)</span>, e a métrica é a mesma en todos os sistemas
+(<span class="math notranslate nohighlight">\(\Lambda^\mu{}_\alpha\Lambda^\nu{}_\beta\, g^{\alpha\beta} = g^{\mu\nu}\)</span>). Un conxunto rotado, <span class="math notranslate nohighlight">\(\Lambda^\mu{}_\nu\gamma^\nu\)</span>, cumpre
+a mesma álxebra, e polo <strong>teorema fundamental de Pauli</strong> dous conxuntos que cumpren a álxebra están
+relacionados por unha semellanza: existe <span class="math notranslate nohighlight">\(S\)</span> con <span class="math notranslate nohighlight">\(\Lambda^\mu{}_\nu\gamma^\nu = S^{-1}\gamma^\mu S\)</span>. Rotar as <span class="math notranslate nohighlight">\(\gamma\)</span>
+equivale a un cambio de base no espazo dos espinores, que se lle pasa a <span class="math notranslate nohighlight">\(\Psi\)</span>.</p>
+<p><strong>Que significa para <span class="math notranslate nohighlight">\(\not{p}\)</span>.</strong> As <span class="math notranslate nohighlight">\(\gamma^\mu\)</span> son matrices fixas, non as compoñentes dun cuadrivector.
+<span class="math notranslate nohighlight">\(\gamma^\mu v_\mu\)</span> ten o índice contraído, pero non é un número invariante: da condición,</p>
+<div class="math notranslate nohighlight">
+\[
+\gamma^\mu v'_\mu = S\, (\gamma^\nu v_\nu)\, S^{-1},
+\]</div>
+<p>transfórmase <strong>por semellanza</strong>, á vez que o espinor. Iso é a <strong>covarianza</strong> da ecuación de
+Dirac. Os números invariantes aparecen ao pechar co adxunto, <span class="math notranslate nohighlight">\(\bar\Psi = \Psi^\dagger\gamma^0\)</span>: vémolo
+na sección 4.</p>
+<p>Para a dedución detallada dos xeradores en todas as direccións, ver
+<span class="xref myst">ext-trans-Lorentz</span>.</p>
+</section>
+<section id="transformacions-infinitesimais-os-xeradores">
+<h3>3.2. Transformacións infinitesimais: os xeradores<a class="headerlink" href="#transformacions-infinitesimais-os-xeradores" title="Permalink to this heading">#</a></h3>
+<p>Buscamos <span class="math notranslate nohighlight">\(S = I + \omega\)</span>, con <span class="math notranslate nohighlight">\(\omega\)</span> pequena, que cumpra a condición para unha transformación
+infinitesimal. Como <span class="math notranslate nohighlight">\(S^{-1} = I - \omega\)</span>, a condición queda</p>
+<div class="math notranslate nohighlight">
+\[
+S^{-1}\gamma^\mu S \simeq \gamma^\mu + [\gamma^\mu, \omega] = \Lambda^\mu{}_\nu\,\gamma^\nu .
+\]</div>
+<p><strong>Rotación <span class="math notranslate nohighlight">\(\delta\phi\)</span> arredor de <span class="math notranslate nohighlight">\(z\)</span></strong> (antihoraria): <span class="math notranslate nohighlight">\(\gamma^1 \to \gamma^1 - \delta\phi\,\gamma^2\)</span>,
+<span class="math notranslate nohighlight">\(\gamma^2 \to \gamma^2 + \delta\phi\,\gamma^1\)</span>, e <span class="math notranslate nohighlight">\(\gamma^0, \gamma^3\)</span> non cambian. <span class="math notranslate nohighlight">\(\omega\)</span> debe conmutar con
+<span class="math notranslate nohighlight">\(\gamma^0\)</span> e <span class="math notranslate nohighlight">\(\gamma^3\)</span>: probamos <span class="math notranslate nohighlight">\(\omega = b\,\gamma^1\gamma^2\)</span>. Con <span class="math notranslate nohighlight">\([\gamma^1, \gamma^1\gamma^2] = -2\gamma^2\)</span> sae
+<span class="math notranslate nohighlight">\(b = \delta\phi/2\)</span>, e como <span class="math notranslate nohighlight">\(\gamma^1\gamma^2 = -i\,\Sigma_3\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+S = I - i\,\frac{\delta\phi}{2}\,\Sigma_3 = I - i\,\delta\phi\, S_3 .
+\]</div>
+<p><strong>O xerador das rotacións é o espín</strong>, <span class="math notranslate nohighlight">\(S_3 = \frac{1}{2}\Sigma_3\)</span>.</p>
+<p><strong><em>Boost</em> <span class="math notranslate nohighlight">\(\delta\eta\)</span> en <span class="math notranslate nohighlight">\(z\)</span></strong>: <span class="math notranslate nohighlight">\(\gamma^0 \to \gamma^0 + \delta\eta\,\gamma^3\)</span>, <span class="math notranslate nohighlight">\(\gamma^3 \to \gamma^3 + \delta\eta\,\gamma^0\)</span>, e
+<span class="math notranslate nohighlight">\(\gamma^1, \gamma^2\)</span> non cambian. Probamos <span class="math notranslate nohighlight">\(\omega = a\,\gamma^0\gamma^3\)</span>. Con <span class="math notranslate nohighlight">\([\gamma^0, \gamma^0\gamma^3] = 2\gamma^3\)</span> sae
+<span class="math notranslate nohighlight">\(a = \delta\eta/2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+S = I + \frac{\delta\eta}{2}\,\gamma^0\gamma^3 .
+\]</div>
+<p><strong>Transformación finita.</strong> Encadéanse moitas infinitesimais: <span class="math notranslate nohighlight">\(S\)</span> é a exponencial do xerador.
+Os ángulos aparecen <strong>divididos por dous</strong>.</p>
+<p><strong><span class="math notranslate nohighlight">\(\gamma^5\)</span> non cambia con Lorentz.</strong> <span class="math notranslate nohighlight">\(\gamma^5\)</span> conmuta cos dous xeradores: con <span class="math notranslate nohighlight">\(\Sigma_k\)</span> (diagonal por
+bloques, co mesmo bloque arriba e abaixo) e con <span class="math notranslate nohighlight">\(\gamma^0\gamma^k\)</span> (anticonmuta con cada factor). Logo
+conmuta con calquera <span class="math notranslate nohighlight">\(S(\Lambda)\)</span>, que é a súa exponencial:</p>
+<div class="math notranslate nohighlight">
+\[
+S^{-1}\,\gamma^5\, S = \gamma^5 .
+\]</div>
+<p>Usarémolo na sección 4.4.</p>
+</section>
+<section id="rotacion-en-z-o-espin">
+<h3>3.3. Rotación en <span class="math notranslate nohighlight">\(z\)</span>: o espín<a class="headerlink" href="#rotacion-en-z-o-espin" title="Permalink to this heading">#</a></h3>
+<p><strong>En <span class="math notranslate nohighlight">\(z\)</span>.</strong> Como <span class="math notranslate nohighlight">\(\Sigma_3^2 = I\)</span>, a serie da exponencial súmase:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{
+S(\phi\,\hat{z}) = e^{-i\phi\,S_3} = \cos\frac{\phi}{2}\, I - i \sin\frac{\phi}{2}\, \Sigma_3
+= \mathrm{diag}\left(e^{-i\phi/2},\, e^{+i\phi/2},\, e^{-i\phi/2},\, e^{+i\phi/2}\right)
+}
+\]</div>
+<p>A rotación non mestura os bloques de arriba e de abaixo. Sobre os espinores con <span class="math notranslate nohighlight">\({\bf p}\)</span> en <span class="math notranslate nohighlight">\(z\)</span> (unha
+rotación arredor de <span class="math notranslate nohighlight">\(z\)</span> non cambia <span class="math notranslate nohighlight">\({\bf p}\)</span>) só engade unha <strong>fase</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+S(\phi\,\hat{z})\, u_1 = e^{-i\phi/2}\, u_1, \qquad S(\phi\,\hat{z})\, u_2 = e^{+i\phi/2}\, u_2,
+\qquad \text{é dicir,} \qquad S(\phi\,\hat{z})\, u_s = e^{-i m_s \phi}\, u_s ,
+\]</div>
+<p>con <span class="math notranslate nohighlight">\(m_s = \pm\frac{1}{2}\)</span> os autovalores de <span class="math notranslate nohighlight">\(S_3\)</span>: <span class="math notranslate nohighlight">\(S_3 u_1 = +\frac12 u_1\)</span>, <span class="math notranslate nohighlight">\(S_3 u_2 = -\frac12 u_2\)</span>. Con
+<span class="math notranslate nohighlight">\(\phi = 2\pi\)</span>, <span class="math notranslate nohighlight">\(S = -I\)</span>: o espinor volve <strong>cambiado de signo</strong>; fan falta dúas voltas, <span class="math notranslate nohighlight">\(4\pi\)</span>.</p>
+<p><strong>Por que é un espín, un momento angular intrínseco?</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Contar estados.</strong> As rotacións actúan sobre as dúas compoñentes libres da sección 2.3; un
+momento angular <span class="math notranslate nohighlight">\(s\)</span> ten <span class="math notranslate nohighlight">\(2s + 1\)</span> estados, e <span class="math notranslate nohighlight">\(2s + 1 = 2\)</span> dá <span class="math notranslate nohighlight">\(s = \frac{1}{2}\)</span>.</p></li>
+<li><p><strong>Quen xera as rotacións.</strong> O xerador sobre o espinor é <span class="math notranslate nohighlight">\({\bf S} = \frac{1}{2}{\bf \Sigma}\)</span>, que
+cumpre a álxebra do momento angular, <span class="math notranslate nohighlight">\([S_i, S_j] = i\epsilon_{ijk}S_k\)</span>. É <strong>intrínseco</strong>: actúa sobre
+as compoñentes, non depende de <span class="math notranslate nohighlight">\({\bf x}\)</span>. O medio ángulo, <span class="math notranslate nohighlight">\(e^{-i m_s\phi}\)</span>, é o <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>.</p></li>
+<li><p><strong>A conservación esíxeo.</strong> O hamiltoniano de Dirac non conmuta co momento angular orbital;
+só co total: <span class="math notranslate nohighlight">\([H, {\bf L}] \neq 0\)</span>, <span class="math notranslate nohighlight">\([H, {\bf J}] = 0\)</span>, <span class="math notranslate nohighlight">\({\bf J} = {\bf L} + {\bf S}\)</span> (demostrámolo
+a continuación). [MT4.4]</p></li>
+</ol>
+<p>Na antipartícula o operador dá o signo cambiado (sección 2.6): <span class="math notranslate nohighlight">\(S_3 v_1 = -\frac{1}{2}v_1\)</span>, pero o
+espín físico de <span class="math notranslate nohighlight">\(v_1\)</span> é <span class="math notranslate nohighlight">\(+\frac{1}{2}\)</span>.</p>
+<p><strong><span class="math notranslate nohighlight">\([H, {\bf L}] \neq 0\)</span>, pero <span class="math notranslate nohighlight">\([H, {\bf J}] = 0\)</span>.</strong> O hamiltoniano da sección 1.4, co momento como
+operador, <span class="math notranslate nohighlight">\(\hat{p}^k = -i\partial_k\)</span>, é</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+H = \alpha_k\, \hat{p}^k + \gamma^0 m, \qquad
+\alpha_k \equiv \gamma^0\gamma^k = \begin{pmatrix} 0 &amp; \sigma_k \\ \sigma_k &amp; 0 \end{pmatrix} .
+\end{split}\]</div>
+<p>Usamos <span class="math notranslate nohighlight">\([x^j, \hat{p}^k] = i\,\delta_{jk}\)</span>, <span class="math notranslate nohighlight">\(L_i = \epsilon_{ijk}\, x^j \hat{p}^k\)</span> e <span class="math notranslate nohighlight">\([\sigma_i, \sigma_j] = 2i\,\epsilon_{ijk}\,\sigma_k\)</span>.</p>
+<ul>
+<li><p><strong>O orbital.</strong> <span class="math notranslate nohighlight">\(\gamma^0 m\)</span> e as <span class="math notranslate nohighlight">\(\alpha_k\)</span> son matrices constantes: conmutan con <span class="math notranslate nohighlight">\(x^j\)</span> e <span class="math notranslate nohighlight">\(\hat{p}^k\)</span>. Só
+conta o conmutador de <span class="math notranslate nohighlight">\(\hat{p}^l\)</span> con <span class="math notranslate nohighlight">\(x^j\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+  [H, L_i] = \alpha_l\, \epsilon_{ijk}\, [\hat{p}^l, x^j]\, \hat{p}^k = -i\, \epsilon_{ijk}\, \alpha_j\, \hat{p}^k
+  = -i\, (\vec\alpha \times \hat{\bf p})_i \neq 0 .
+  \]</div>
+</li>
+<li><p><strong>O espín.</strong> <span class="math notranslate nohighlight">\(S_i = \frac{1}{2}\Sigma_i\)</span> actúa só sobre as compoñentes: conmuta con <span class="math notranslate nohighlight">\(\hat{p}^k\)</span> e con
+<span class="math notranslate nohighlight">\(\gamma^0\)</span> (os dous son diagonais por bloques, co mesmo bloque arriba e abaixo). Coas <span class="math notranslate nohighlight">\(\alpha_k\)</span>,
+bloque a bloque, <span class="math notranslate nohighlight">\([\alpha_k, \Sigma_i] = 2i\,\epsilon_{kil}\,\alpha_l\)</span>, e</p>
+<div class="math notranslate nohighlight">
+\[
+  [H, S_i] = \frac{1}{2}\, \hat{p}^k\, [\alpha_k, \Sigma_i] = i\, \epsilon_{ilk}\, \alpha_l\, \hat{p}^k
+  = +i\, (\vec\alpha \times \hat{\bf p})_i .
+  \]</div>
+</li>
+</ul>
+<p>Os dous cancélanse na suma:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{
+[H, {\bf J}] = [H, {\bf L}] + [H, {\bf S}] = 0, \qquad {\bf J} = {\bf L} + {\bf S}
+}
+\]</div>
+<p><strong>Que se le:</strong></p>
+<ul class="simple">
+<li><p>Nin <span class="math notranslate nohighlight">\({\bf L}\)</span> nin <span class="math notranslate nohighlight">\({\bf S}\)</span> se conservan por separado; só a suma. O espín non se postula: fai falta para
+que se conserve o momento angular.</p></li>
+<li><p><strong>O <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> está fixado.</strong> Con <span class="math notranslate nohighlight">\({\bf S} = \lambda\,{\bf \Sigma}\)</span> sairía <span class="math notranslate nohighlight">\([H, {\bf S}] = 2\lambda\, i\,(\vec\alpha\times\hat{\bf p})\)</span>, que
+só cancela <span class="math notranslate nohighlight">\([H, {\bf L}]\)</span> se <span class="math notranslate nohighlight">\(\lambda = \frac{1}{2}\)</span>: a ecuación fixa o valor do espín.</p></li>
+<li><p><strong>Con <span class="math notranslate nohighlight">\({\bf p}\)</span> en <span class="math notranslate nohighlight">\(z\)</span></strong>, <span class="math notranslate nohighlight">\((\vec\alpha\times{\bf p})_3 = \alpha_1 p^y - \alpha_2 p^x = 0\)</span>: <span class="math notranslate nohighlight">\([H, S_3] = 0\)</span>, e <span class="math notranslate nohighlight">\(S_3\)</span> é un bo
+número cuántico das solucións da sección 2.4.</p></li>
+<li><p>Noutra dirección <span class="math notranslate nohighlight">\(S_3\)</span> non se conserva, pero a <strong>helicidade</strong> si: sección 3.7.</p></li>
+</ul>
+</section>
+<section id="rotacion-nunha-direccion-calquera-so-indicado">
+<h3>3.4. Rotación nunha dirección calquera (só indicado)<a class="headerlink" href="#rotacion-nunha-direccion-calquera-so-indicado" title="Permalink to this heading">#</a></h3>
+<p>Un ángulo <span class="math notranslate nohighlight">\(\alpha\)</span> arredor dun eixe <span class="math notranslate nohighlight">\(\hat{\bf n}\)</span>. Como <span class="math notranslate nohighlight">\((\hat{\bf n}\cdot{\bf \Sigma})^2 = I\)</span>, igual ca en <span class="math notranslate nohighlight">\(z\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{
+S(\alpha\,\hat{\bf n}) = e^{-i\alpha\,\hat{\bf n}\cdot{\bf S}} = \cos\frac{\alpha}{2}\, I - i \sin\frac{\alpha}{2}\, (\hat{\bf n}\cdot{\bf \Sigma})
+}
+\]</div>
+<p><strong>Levar o espín a unha dirección <span class="math notranslate nohighlight">\(\hat{\bf v}\)</span>.</strong> Primeiro un ángulo <span class="math notranslate nohighlight">\(\theta\)</span> arredor de <span class="math notranslate nohighlight">\(y\)</span>, despois <span class="math notranslate nohighlight">\(\phi\)</span>
+arredor de <span class="math notranslate nohighlight">\(z\)</span>: <span class="math notranslate nohighlight">\(S(R) = S(\phi\,\hat{z})\,S(\theta\,\hat{y})\)</span>, con
+<span class="math notranslate nohighlight">\(e^{-i\frac{\theta}{2}\sigma_2} = \begin{pmatrix} \cos\frac{\theta}{2} &amp; -\sin\frac{\theta}{2} \\ \sin\frac{\theta}{2} &amp; \cos\frac{\theta}{2} \end{pmatrix}\)</span>.
+Sobre os biespinores (sen demostración):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\chi_1 \;\to\; e^{-i\phi/2} \begin{pmatrix} \cos\frac{\theta}{2} \\ e^{i\phi}\sin\frac{\theta}{2} \end{pmatrix} \equiv e^{-i\phi/2}\,\chi_+(\hat{\bf v}),
+\qquad
+\chi_2 \;\to\; e^{-i\phi/2} \begin{pmatrix} -\sin\frac{\theta}{2} \\ e^{i\phi}\cos\frac{\theta}{2} \end{pmatrix} \equiv e^{-i\phi/2}\,\chi_-(\hat{\bf v}) ,
+\end{split}\]</div>
+<p>que cumpren <span class="math notranslate nohighlight">\((\hat{\bf v}\cdot\vec\sigma)\,\chi_\pm = \pm\chi_\pm\)</span>: o espín apunta agora en <span class="math notranslate nohighlight">\(\hat{\bf v}\)</span>.</p>
+<p><strong>O fermión en movemento.</strong> Aplicada a <span class="math notranslate nohighlight">\(u_\pm\)</span> con <span class="math notranslate nohighlight">\({\bf p}\)</span> en <span class="math notranslate nohighlight">\(z\)</span>, a rotación xira tamén o momento,
+<span class="math notranslate nohighlight">\(\mathrm{p}\,\hat{z} \to \mathrm{p}\,\hat{\bf v}\)</span>, e <span class="math notranslate nohighlight">\(\sigma_3 \to \hat{\bf v}\cdot\vec\sigma\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+S(R)\, u_\pm(\mathrm{p}\,\hat{z}) \propto N \begin{pmatrix} \chi_\pm(\hat{\bf v}) \\ \pm\kappa\,\chi_\pm(\hat{\bf v}) \end{pmatrix} = u_\pm(\mathrm{p}\,\hat{\bf v}) :
+\end{split}\]</div>
+<p>espín e momento xiran xuntos, e a <strong>helicidade</strong> (o espín na dirección do momento) non cambia.</p>
+</section>
+<section id="boost-en-z">
+<h3>3.5. <em>Boost</em> en <span class="math notranslate nohighlight">\(z\)</span><a class="headerlink" href="#boost-en-z" title="Permalink to this heading">#</a></h3>
+<p>Como <span class="math notranslate nohighlight">\((\gamma^0\gamma^3)^2 = I\)</span> e <span class="math notranslate nohighlight">\(\gamma^0\gamma^3 = \begin{pmatrix} 0 &amp; \sigma_3 \\ \sigma_3 &amp; 0 \end{pmatrix}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boxed{
+S(\eta\,\hat{z}) = e^{\frac{\eta}{2}\,\gamma^0\gamma^3} = \cosh\frac{\eta}{2}\, I + \sinh\frac{\eta}{2}\,\gamma^0\gamma^3
+= \begin{pmatrix} \cosh\frac{\eta}{2}\, I &amp; \sinh\frac{\eta}{2}\,\sigma_3 \\ \sinh\frac{\eta}{2}\,\sigma_3 &amp; \cosh\frac{\eta}{2}\, I \end{pmatrix}
+}
+\end{split}\]</div>
+<p>A diferenza da rotación, o <em>boost</em> <strong>mestura</strong> os bloques. Sobre o espinor en repouso,
+<span class="math notranslate nohighlight">\(u_s(m) = \sqrt{2m}\,(\chi_s, 0)\)</span>, coas fórmulas do ángulo metade
+<span class="math notranslate nohighlight">\(\sqrt{2m}\cosh\frac{\eta}{2} = \sqrt{E+m}\)</span> e <span class="math notranslate nohighlight">\(\tanh\frac{\eta}{2} = \frac{\mathrm{p}}{E+m}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+S(\eta\,\hat{z})\, u_s(m) = \sqrt{2m} \begin{pmatrix} \cosh\frac{\eta}{2}\,\chi_s \\ \sinh\frac{\eta}{2}\,\sigma_3\,\chi_s \end{pmatrix}
+= \sqrt{E+m} \begin{pmatrix} \chi_s \\ \kappa\,\sigma_3\,\chi_s \end{pmatrix} = u_s(p) .
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Recuperamos, <strong>sen resolver a ecuación</strong>, o espinor da sección 2.4. E <span class="math notranslate nohighlight">\(\kappa = \tanh\frac{\eta}{2}\)</span>: a
+tanxente da metade da rapidez.</p></li>
+<li><p><span class="math notranslate nohighlight">\(N = \sqrt{E+m}\)</span> é o que dá o <em>boost</em> partindo de <span class="math notranslate nohighlight">\(\sqrt{2m}\)</span> en repouso.</p></li>
+<li><p>O <em>boost</em> vai ao longo do eixe do espín e non cambia <span class="math notranslate nohighlight">\(S_3\)</span>: <span class="math notranslate nohighlight">\(u_1(m)\)</span> pasa a <span class="math notranslate nohighlight">\(u_+(p)\)</span>.</p></li>
+<li><p><strong>Non é unitario</strong>: <span class="math notranslate nohighlight">\(u^\dagger u\)</span> pasa de <span class="math notranslate nohighlight">\(2m\)</span> a <span class="math notranslate nohighlight">\(2E\)</span>, mentres que <span class="math notranslate nohighlight">\(\bar u u = N^2(1 - \kappa^2) = 2m\)</span> non cambia.</p></li>
+<li><p>A fase non cambia: depende de <span class="math notranslate nohighlight">\(p_\mu x^\mu\)</span>, invariante Lorentz; tras o <em>boost</em> escríbese
+<span class="math notranslate nohighlight">\(p'_\mu x'^\mu\)</span>, pero vale o mesmo.</p></li>
+</ul>
+</section>
+<section id="boost-nunha-direccion-calquera-so-indicado">
+<h3>3.6. <em>Boost</em> nunha dirección calquera (só indicado)<a class="headerlink" href="#boost-nunha-direccion-calquera-so-indicado" title="Permalink to this heading">#</a></h3>
+<p>Como <span class="math notranslate nohighlight">\(\gamma^0\gamma^k = \begin{pmatrix} 0 &amp; \sigma_k \\ \sigma_k &amp; 0 \end{pmatrix}\)</span>, abonda con cambiar
+<span class="math notranslate nohighlight">\(\sigma_3\)</span> por <span class="math notranslate nohighlight">\(\hat{\bf n}\cdot\vec\sigma\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boxed{
+S(\eta\,\hat{\bf n}) = e^{\frac{\eta}{2}\,\gamma^0(\hat{\bf n}\cdot\vec\gamma)}
+= \begin{pmatrix} \cosh\frac{\eta}{2}\, I &amp; \sinh\frac{\eta}{2}\,(\hat{\bf n}\cdot\vec\sigma) \\ \sinh\frac{\eta}{2}\,(\hat{\bf n}\cdot\vec\sigma) &amp; \cosh\frac{\eta}{2}\, I \end{pmatrix}
+}
+\end{split}\]</div>
+<p>Sobre o espinor en repouso, con calquera <span class="math notranslate nohighlight">\(\chi\)</span>, dá a solución xeral da sección 2.5 con
+<span class="math notranslate nohighlight">\({\bf p} = \mathrm{p}\,\hat{\bf n}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+S(\eta\,\hat{\bf n})\, \sqrt{2m} \begin{pmatrix} \chi \\ 0 \end{pmatrix}
+= N \begin{pmatrix} \chi \\ \kappa\,(\hat{\bf n}\cdot\vec\sigma)\,\chi \end{pmatrix}
+= N \begin{pmatrix} \chi \\ \dfrac{\vec\sigma\cdot{\bf p}}{E+m}\,\chi \end{pmatrix} .
+\end{split}\]</div>
+<p>O <em>boost</em> non toca o bloque de arriba: o espín é o que tiña en repouso. Se en repouso apunta en
+<span class="math notranslate nohighlight">\(z\)</span> e o <em>boost</em> vai noutra dirección, o resultado non é autoestado de helicidade; se xa apunta en
+<span class="math notranslate nohighlight">\(\hat{\bf n}\)</span>, <span class="math notranslate nohighlight">\(\chi = \chi_\pm(\hat{\bf n})\)</span>, o resultado é <span class="math notranslate nohighlight">\(u_\pm(\mathrm{p}\,\hat{\bf n})\)</span>.</p>
+</section>
+<section id="helicidade">
+<h3>3.7. Helicidade<a class="headerlink" href="#helicidade" title="Permalink to this heading">#</a></h3>
+<p>A <strong>helicidade</strong> é a proxección do espín sobre a dirección do momento, <span class="math notranslate nohighlight">\(\hat{\bf v} = {\bf p}/\mathrm{p}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boxed{
+h \equiv {\bf S}\cdot\hat{\bf v} = \frac{1}{2}
+\begin{pmatrix} \hat{\bf v}\cdot\vec\sigma &amp; 0 \\ 0 &amp; \hat{\bf v}\cdot\vec\sigma \end{pmatrix}
+}
+\end{split}\]</div>
+<p>Sen un eixe externo, o único eixe que ten unha partícula libre é o do seu propio momento.</p>
+<p><strong>Consérvase.</strong> Co momento como operador, e como <span class="math notranslate nohighlight">\(\gamma^0\)</span> conmuta con <span class="math notranslate nohighlight">\({\bf \Sigma}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+[H, {\bf \Sigma}\cdot\hat{\bf p}] = \hat{p}^k \hat{p}^i\, [\alpha_k, \Sigma_i]
+= 2i\,\epsilon_{kil}\,\hat{p}^k\hat{p}^i\,\alpha_l = 0
+\]</div>
+<p>(simétrico por antisimétrico): <span class="math notranslate nohighlight">\(h\)</span> conmuta con <span class="math notranslate nohighlight">\(H\)</span> co momento en <strong>calquera</strong> dirección, mentres
+que <span class="math notranslate nohighlight">\(S_3\)</span> só o fai con <span class="math notranslate nohighlight">\({\bf p}\)</span> en <span class="math notranslate nohighlight">\(z\)</span> (sección 3.3).</p>
+<p><strong>Os seus autoestados.</strong> Con <span class="math notranslate nohighlight">\({\bf p}\)</span> en <span class="math notranslate nohighlight">\(z\)</span>, <span class="math notranslate nohighlight">\(h = S_3\)</span>: <span class="math notranslate nohighlight">\(h\,u_1 = +\frac{1}{2}\,u_1\)</span> e <span class="math notranslate nohighlight">\(h\,u_2 = -\frac{1}{2}\,u_2\)</span>, e por iso
+<span class="math notranslate nohighlight">\(u_+ \equiv u_1\)</span>, <span class="math notranslate nohighlight">\(u_- \equiv u_2\)</span>. Nunha dirección calquera son os <span class="math notranslate nohighlight">\(u_\pm(\mathrm{p}\,\hat{\bf v})\)</span> da sección 3.4:
+os dous bloques, <span class="math notranslate nohighlight">\(\chi_\pm(\hat{\bf v})\)</span> e <span class="math notranslate nohighlight">\(\pm\kappa\,\chi_\pm(\hat{\bf v})\)</span>, son autoestados de <span class="math notranslate nohighlight">\(\hat{\bf v}\cdot\vec\sigma\)</span> co mesmo
+autovalor, <span class="math notranslate nohighlight">\(\pm 1\)</span>.</p>
+<p><strong>A antipartícula.</strong> O operador dá cambiados de signo o espín e o momento (sección 2.6), así que a
+helicidade física <strong>non</strong> cambia: <span class="math notranslate nohighlight">\(v_+ = v_1\)</span>, <span class="math notranslate nohighlight">\(v_- = v_2\)</span>.</p>
+<p><strong>Non é invariante Lorentz se <span class="math notranslate nohighlight">\(m \neq 0\)</span>.</strong> As rotacións e os <em>boosts</em> ao longo de <span class="math notranslate nohighlight">\({\bf p}\)</span> consérvana
+(seccións 3.4 e 3.5). Pero un observador que se mova na mesma dirección máis rápido ca a
+partícula ve o momento invertido e o espín igual: a helicidade cambia de signo. Só se <span class="math notranslate nohighlight">\(m = 0\)</span> non
+existe ese observador, e a helicidade é unha propiedade da partícula. A cantidade invariante é a
+<strong>quiralidade</strong> (<a class="reference internal" href="ext-quiral.html"><span class="doc std std-doc">ext-quiral</span></a>), que coincide coa helicidade no límite <span class="math notranslate nohighlight">\(m \to 0\)</span> (ext-quiral, sección 7). [MT4.8]</p>
+<p><em>Cuestións sobre as seccións 2 e 3:</em></p>
+<ol class="arabic simple">
+<li><p>Comproba que <span class="math notranslate nohighlight">\(S(\phi\,\hat{z})\)</span> conmuta con <span class="math notranslate nohighlight">\(\gamma^0 E - \gamma^3\mathrm{p}\)</span>. Por que tiña que ser así?</p></li>
+<li><p>Comproba a condición <span class="math notranslate nohighlight">\(S^{-1}\gamma^\mu S = \Lambda^\mu{}_\nu\gamma^\nu\)</span> para <span class="math notranslate nohighlight">\(S(\eta\,\hat{z})\)</span> finito, con
+<span class="math notranslate nohighlight">\(\Lambda^0{}_0 = \Lambda^3{}_3 = \cosh\eta\)</span> e <span class="math notranslate nohighlight">\(\Lambda^0{}_3 = \Lambda^3{}_0 = \sinh\eta\)</span>.</p></li>
+<li><p>Rota <span class="math notranslate nohighlight">\(u_1(m)\)</span> un ángulo <span class="math notranslate nohighlight">\(\theta = \pi\)</span> arredor de <span class="math notranslate nohighlight">\(y\)</span>. Que espinor obtés? E con <span class="math notranslate nohighlight">\(\theta = 2\pi\)</span>?</p></li>
+<li><p>Comproba que <span class="math notranslate nohighlight">\(S(\eta\,\hat{z})\)</span> non é unitaria, pero que <span class="math notranslate nohighlight">\(\gamma^0 S^\dagger \gamma^0 = S^{-1}\)</span>.</p></li>
+<li><p>Conmutan dous <em>boosts</em> en direccións distintas? Próbao con <span class="math notranslate nohighlight">\(S(\eta\,\hat{x})\)</span> e <span class="math notranslate nohighlight">\(S(\eta\,\hat{z})\)</span>.</p></li>
+<li><p>Comproba que <span class="math notranslate nohighlight">\(h\,u_-(\mathrm{p}\,\hat{\bf v}) = -\frac{1}{2}\,u_-(\mathrm{p}\,\hat{\bf v})\)</span>. Aplica o <em>boost</em> da sección 3.6 con
+<span class="math notranslate nohighlight">\(\hat{\bf n} = \hat x\)</span> a <span class="math notranslate nohighlight">\(u_1(m)\)</span>: é o resultado un autoestado de helicidade?</p></li>
+</ol>
+<details>
+<summary><b>Solucións</b></summary>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(S(\phi\,\hat z) = \mathrm{diag}(D, D)\)</span> con <span class="math notranslate nohighlight">\(D = \mathrm{diag}(e^{-i\phi/2}, e^{i\phi/2})\)</span>, que conmuta con <span class="math notranslate nohighlight">\(I\)</span> e con <span class="math notranslate nohighlight">\(\sigma_3\)</span>:
+conmuta con <span class="math notranslate nohighlight">\(\gamma^0\)</span> e con <span class="math notranslate nohighlight">\(\gamma^3\)</span>, e polo tanto con <span class="math notranslate nohighlight">\(\not{p}\)</span>. Tiña que ser así: a rotación arredor de
+<span class="math notranslate nohighlight">\(z\)</span> non cambia <span class="math notranslate nohighlight">\({\bf p} = \mathrm{p}\,\hat z\)</span>, e debe levar solucións con ese momento a solucións co mesmo.</p></li>
+<li><p>Con <span class="math notranslate nohighlight">\(B = \gamma^0\gamma^3\)</span>, <span class="math notranslate nohighlight">\(B^2 = I\)</span>, <span class="math notranslate nohighlight">\(S = c + sB\)</span> e <span class="math notranslate nohighlight">\(S^{-1} = c - sB\)</span> (<span class="math notranslate nohighlight">\(c = \cosh\frac{\eta}{2}\)</span>, <span class="math notranslate nohighlight">\(s = \sinh\frac{\eta}{2}\)</span>).
+<span class="math notranslate nohighlight">\(B\)</span> anticonmuta con <span class="math notranslate nohighlight">\(\gamma^0\)</span> e con <span class="math notranslate nohighlight">\(\gamma^3\)</span>, así que <span class="math notranslate nohighlight">\(S^{-1}\gamma^0 S = (c - sB)^2\gamma^0 = (\cosh\eta - \sinh\eta\,B)\,\gamma^0
+= \cosh\eta\,\gamma^0 + \sinh\eta\,\gamma^3\)</span>, e do mesmo xeito <span class="math notranslate nohighlight">\(S^{-1}\gamma^3 S = \cosh\eta\,\gamma^3 + \sinh\eta\,\gamma^0\)</span>.
+<span class="math notranslate nohighlight">\(\gamma^1\)</span> e <span class="math notranslate nohighlight">\(\gamma^2\)</span> conmutan con <span class="math notranslate nohighlight">\(B\)</span> e non cambian.</p></li>
+<li><p>Con <span class="math notranslate nohighlight">\(\theta = \pi\)</span>, <span class="math notranslate nohighlight">\(\chi_1 = (1, 0) \to (\cos\frac{\pi}{2}, \sin\frac{\pi}{2}) = (0, 1)\)</span>: <span class="math notranslate nohighlight">\(u_1(m) \to u_2(m)\)</span>, o espín invértese.
+Con <span class="math notranslate nohighlight">\(\theta = 2\pi\)</span>, <span class="math notranslate nohighlight">\((1, 0) \to (-1, 0)\)</span>: <span class="math notranslate nohighlight">\(u_1(m) \to -u_1(m)\)</span>, como con calquera volta completa.</p></li>
+<li><p><span class="math notranslate nohighlight">\(S\)</span> é hermítica, e <span class="math notranslate nohighlight">\(S^\dagger S = S^2 = S(2\eta\,\hat z) \neq I\)</span>: non é unitaria. Como <span class="math notranslate nohighlight">\(\gamma^0\)</span> anticonmuta con
+<span class="math notranslate nohighlight">\(B\)</span>, <span class="math notranslate nohighlight">\(\gamma^0 S^\dagger\gamma^0 = \gamma^0 S\gamma^0 = c - sB = S^{-1}\)</span>.</p></li>
+<li><p>Non. <span class="math notranslate nohighlight">\(B_x = \gamma^0\gamma^1\)</span> e <span class="math notranslate nohighlight">\(B_z = \gamma^0\gamma^3\)</span> anticonmutan, e <span class="math notranslate nohighlight">\([S(\eta\hat x), S(\eta\hat z)] = 2s^2 B_x B_z
+= -2s^2\gamma^1\gamma^3 \neq 0\)</span>, que é proporcional a <span class="math notranslate nohighlight">\(\Sigma_2\)</span>, un xerador de <strong>rotacións</strong>. Dous <em>boosts</em> en
+direccións distintas equivalen a un <em>boost</em> máis unha rotación (a rotación de Wigner, da que sae a
+precesión de Thomas).</p></li>
+<li><p><span class="math notranslate nohighlight">\(u_- = N(\chi_-, -\kappa\chi_-)\)</span> e <span class="math notranslate nohighlight">\(h = \frac{1}{2}\mathrm{diag}(\hat{\bf v}\cdot\vec\sigma, \hat{\bf v}\cdot\vec\sigma)\)</span> dá
+<span class="math notranslate nohighlight">\(\frac{1}{2}N(-\chi_-, +\kappa\chi_-) = -\frac{1}{2}u_-\)</span>. Co <em>boost</em> en <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(u = N\,((1, 0), \kappa\,(0, 1))\)</span>, e
+<span class="math notranslate nohighlight">\(\sigma_1 (1, 0) = (0, 1) \neq \pm(1, 0)\)</span>: <strong>non</strong> é autoestado de <span class="math notranslate nohighlight">\(h = \frac{1}{2}\Sigma_1\)</span>. É a mestura, a partes
+iguais, das dúas helicidades: o espín apunta en <span class="math notranslate nohighlight">\(z\)</span> e o momento en <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+</ol>
+</details></section>
+</section>
+<section id="as-formas-bilineais-e-a-corrente">
+<h2>4. As formas bilineais e a corrente<a class="headerlink" href="#as-formas-bilineais-e-a-corrente" title="Permalink to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(M_{fi}\)</span> é un invariante Lorentz, e constrúese con espinores. Os espinores non o son:
+transfórmanse con <span class="math notranslate nohighlight">\(S(\Lambda)\)</span>. Esta sección demostra que <span class="math notranslate nohighlight">\(\bar\Psi\Psi\)</span> é un <strong>escalar</strong> e
+<span class="math notranslate nohighlight">\(\bar\Psi\gamma^\mu\Psi\)</span> un <strong>cuadrivector</strong> (e o mesmo con <span class="math notranslate nohighlight">\(\gamma^5\)</span>), que a corrente <strong>se conserva</strong>, e como se le como
+<strong>corrente eléctrica</strong>.</p>
+<section id="o-adxunto-e-como-se-transforma">
+<h3>4.1. O adxunto e como se transforma<a class="headerlink" href="#o-adxunto-e-como-se-transforma" title="Permalink to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(\Psi^\dagger\Psi\)</span> non serve: <span class="math notranslate nohighlight">\(\Psi'^\dagger\Psi' = \Psi^\dagger S^\dagger S\,\Psi\)</span>, e <span class="math notranslate nohighlight">\(S\)</span> non é unitaria para os <em>boosts</em>
+(en repouso <span class="math notranslate nohighlight">\(u^\dagger u = 2m\)</span>; en movemento, <span class="math notranslate nohighlight">\(2E\)</span>). O que si se cumpre, para calquera <span class="math notranslate nohighlight">\(S(\Lambda)\)</span>, é</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{
+\gamma^0\, S^\dagger\, \gamma^0 = S^{-1}
+}
+\]</div>
+<ul class="simple">
+<li><p><strong>Rotación.</strong> <span class="math notranslate nohighlight">\(S(\phi\,\hat{z}) = \cos\frac{\phi}{2}\,I - i\sin\frac{\phi}{2}\,\Sigma_3\)</span>. <span class="math notranslate nohighlight">\(\Sigma_3\)</span> é hermítica e diagonal
+por bloques, así que conmuta con <span class="math notranslate nohighlight">\(\gamma^0\)</span> e <span class="math notranslate nohighlight">\(S^\dagger = \cos\frac{\phi}{2}\,I + i\sin\frac{\phi}{2}\,\Sigma_3 = S^{-1}\)</span>
+(é unitaria). Entón <span class="math notranslate nohighlight">\(\gamma^0 S^\dagger \gamma^0 = S^\dagger (\gamma^0)^2 = S^{-1}\)</span>.</p></li>
+<li><p><strong><em>Boost</em>.</strong> <span class="math notranslate nohighlight">\(S(\eta\,\hat{z}) = \cosh\frac{\eta}{2}\,I + \sinh\frac{\eta}{2}\,\gamma^0\gamma^3\)</span>. Como
+<span class="math notranslate nohighlight">\((\gamma^0\gamma^3)^\dagger = \gamma^{3\dagger}\gamma^{0\dagger} = -\gamma^3\gamma^0 = \gamma^0\gamma^3\)</span>, é hermítica: <span class="math notranslate nohighlight">\(S^\dagger = S\)</span> (<strong>non</strong> é
+unitaria). Pero <span class="math notranslate nohighlight">\(\gamma^0\)</span> anticonmuta con <span class="math notranslate nohighlight">\(\gamma^0\gamma^3\)</span>, e
+<span class="math notranslate nohighlight">\(\gamma^0 S^\dagger \gamma^0 = \cosh\frac{\eta}{2}\,I - \sinh\frac{\eta}{2}\,\gamma^0\gamma^3 = S(-\eta\,\hat{z}) = S^{-1}\)</span>.</p></li>
+</ul>
+<p>Noutra dirección é igual (<span class="math notranslate nohighlight">\(\Sigma_k\)</span> e <span class="math notranslate nohighlight">\(\gamma^0\gamma^k\)</span> teñen as mesmas propiedades), e calquera
+transformación é un produto de rotacións e <em>boosts</em>. Con isto, o <strong>adxunto</strong>
+<span class="math notranslate nohighlight">\(\bar\Psi \equiv \Psi^\dagger\gamma^0\)</span> transfórmase coa inversa:</p>
+<div class="math notranslate nohighlight">
+\[
+\bar\Psi' = \Psi^\dagger S^\dagger \gamma^0 = \Psi^\dagger\gamma^0\,(\gamma^0 S^\dagger \gamma^0) = \bar\Psi\, S^{-1} .
+\]</div>
+<p>(Metemos <span class="math notranslate nohighlight">\((\gamma^0)^2 = I\)</span> entre <span class="math notranslate nohighlight">\(\Psi^\dagger\)</span> e <span class="math notranslate nohighlight">\(S^\dagger\)</span>.)</p>
+</section>
+<section id="bar-psi-psi-e-un-escalar">
+<h3>4.2. <span class="math notranslate nohighlight">\(\bar\Psi\Psi\)</span> é un escalar<a class="headerlink" href="#bar-psi-psi-e-un-escalar" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+\bar\Psi'\Psi' = \bar\Psi\, S^{-1} S\, \Psi = \bar\Psi\Psi
+\qquad \Rightarrow \qquad
+\boxed{\bar\Psi\Psi \;\text{ é invariante Lorentz}}
+\]</div>
+<p>A fase cancélase (<span class="math notranslate nohighlight">\(e^{+ip_\mu x^\mu}e^{-ip_\mu x^\mu} = 1\)</span>), así que para as ondas planas abonda cos espinores.
+<strong>Comprobación</strong> con <span class="math notranslate nohighlight">\(u_1\)</span> en <span class="math notranslate nohighlight">\(z\)</span>: <span class="math notranslate nohighlight">\(\bar u_1 = u_1^\dagger\gamma^0 = N\,(1, 0, -\kappa, 0)\)</span>, e</p>
+<div class="math notranslate nohighlight">
+\[
+\bar u_1 u_1 = N^2(1 - \kappa^2) = (E+m) - \frac{\mathrm{p}^2}{E+m} = \frac{(E+m)^2 - \mathrm{p}^2}{E+m} = 2m ,
+\]</div>
+<p>o mesmo que en repouso, <span class="math notranslate nohighlight">\(\bar u_1(m)\, u_1(m) = 2m\)</span>. En cambio <span class="math notranslate nohighlight">\(u_1^\dagger u_1 = N^2(1 + \kappa^2) = 2E\)</span>. A
+diferenza é o signo menos do bloque de abaixo, que pon <span class="math notranslate nohighlight">\(\gamma^0\)</span>. Cun espinor xenérico,
+<span class="math notranslate nohighlight">\(\bar u_s u_s = N^2\left(1 - \frac{{\bf p}^2}{(E+m)^2}\right) = 2m\)</span>, e para a antipartícula <span class="math notranslate nohighlight">\(\bar v_s v_s = -2m\)</span>.</p>
+</section>
+<section id="bar-psi-gamma-mu-psi-e-un-cuadrivector">
+<h3>4.3. <span class="math notranslate nohighlight">\(\bar\Psi\gamma^\mu\Psi\)</span> é un cuadrivector<a class="headerlink" href="#bar-psi-gamma-mu-psi-e-un-cuadrivector" title="Permalink to this heading">#</a></h3>
+<p>Coa condición da sección 3.1, <span class="math notranslate nohighlight">\(S^{-1}\gamma^\mu S = \Lambda^\mu{}_\nu\gamma^\nu\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\bar\Psi'\gamma^\mu\Psi' = \bar\Psi\, S^{-1}\gamma^\mu S\, \Psi = \Lambda^\mu{}_\nu\, \bar\Psi\gamma^\nu\Psi
+\qquad \Rightarrow \qquad
+\boxed{j^\mu \equiv \bar\Psi\gamma^\mu\Psi \;\text{ é un cuadrivector}}
+\]</div>
+<p>As <span class="math notranslate nohighlight">\(\gamma^\mu\)</span> non cambian; o que se transforma son os espinores, e o resultado é o dun
+cuadrivector.</p>
+<p><strong>Comprobación</strong> co <em>boost</em> en <span class="math notranslate nohighlight">\(z\)</span>. En repouso, <span class="math notranslate nohighlight">\(\bar u\gamma^0 u = u^\dagger u = 2m\)</span> e
+<span class="math notranslate nohighlight">\(\bar u\gamma^k u = u^\dagger\gamma^0\gamma^k u = 0\)</span> (<span class="math notranslate nohighlight">\(\gamma^0\gamma^k\)</span> só ten bloques fóra da diagonal, e o de
+abaixo é cero): <span class="math notranslate nohighlight">\(j^\mu = (2m, 0, 0, 0)\)</span>. O <em>boost</em> de rapidez <span class="math notranslate nohighlight">\(\eta\)</span> lévaa a</p>
+<div class="math notranslate nohighlight">
+\[
+\Lambda^\mu{}_\nu\, j^\nu = (2m\cosh\eta, 0, 0, 2m\sinh\eta) = (2E, 0, 0, 2\mathrm{p}) = 2p^\mu ,
+\]</div>
+<p>que é o que dá o cálculo directo con <span class="math notranslate nohighlight">\(u_s(p)\)</span> (tarefa de perspectivas): <span class="math notranslate nohighlight">\(j^0 = N^2(1 + \kappa^2) = 2E\)</span> e
+<span class="math notranslate nohighlight">\(j^3 = 2N^2\kappa = 2\mathrm{p}\)</span>. Cun momento calquera, <span class="math notranslate nohighlight">\(\bar u_s\gamma^\mu u_s = 2p^\mu\)</span>.</p>
+</section>
+<section id="o-pseudoescalar-e-o-axial">
+<h3>4.4. O pseudoescalar e o axial<a class="headerlink" href="#o-pseudoescalar-e-o-axial" title="Permalink to this heading">#</a></h3>
+<p>Como <span class="math notranslate nohighlight">\(\gamma^5\)</span> conmuta con <span class="math notranslate nohighlight">\(S\)</span> (sección 3.2), metendo <span class="math notranslate nohighlight">\(S S^{-1} = I\)</span> onde faga falta:</p>
+<div class="math notranslate nohighlight">
+\[
+\bar\Psi'\gamma^5\Psi' = \bar\Psi\, S^{-1}\gamma^5 S\, \Psi = \bar\Psi\gamma^5\Psi,
+\qquad
+\bar\Psi'\gamma^\mu\gamma^5\Psi' = \bar\Psi\, (S^{-1}\gamma^\mu S)(S^{-1}\gamma^5 S)\, \Psi = \Lambda^\mu{}_\nu\, \bar\Psi\gamma^\nu\gamma^5\Psi .
+\]</div>
+<p><span class="math notranslate nohighlight">\(\bar\Psi\gamma^5\Psi\)</span> é invariante e <span class="math notranslate nohighlight">\(\bar\Psi\gamma^\mu\gamma^5\Psi\)</span> un cuadrivector, como S e V. O que os distingue
+deles é a <strong>paridade</strong> (o <em>pseudo</em> e o <em>axial</em>), que se ve no tema de leptóns.</p>
+<p><strong>Valores para <span class="math notranslate nohighlight">\(u_\pm\)</span> con <span class="math notranslate nohighlight">\({\bf p}\)</span> en <span class="math notranslate nohighlight">\(z\)</span></strong> (o caso <span class="math notranslate nohighlight">\(f = i\)</span>). En Pauli-Dirac,
+<span class="math notranslate nohighlight">\(\gamma^0\gamma^5 = \begin{pmatrix} 0 &amp; I \\ -I &amp; 0 \end{pmatrix}\)</span> e <span class="math notranslate nohighlight">\(\gamma^0\gamma^k\gamma^5 = \Sigma_k\)</span>. Con <span class="math notranslate nohighlight">\(u = (u^a, u^b)\)</span>:</p>
+<ul class="simple">
+<li><p><strong>Pseudoescalar</strong>: <span class="math notranslate nohighlight">\(\bar u\gamma^5 u = u^{a\dagger}u^b - u^{b\dagger}u^a = 0\)</span>, porque <span class="math notranslate nohighlight">\(\kappa\)</span> é real. Anúlase
+para unha partícula libre; só sobrevive nunha transición, <span class="math notranslate nohighlight">\(\bar u_f\gamma^5 u_i\)</span>.</p></li>
+<li><p><strong>Axial, parte temporal</strong>: <span class="math notranslate nohighlight">\(\bar u\gamma^0\gamma^5 u = u^\dagger\gamma^5 u = 2\,\mathrm{Re}(u^{a\dagger}u^b) = \pm 2N^2\kappa = \pm 2\mathrm{p}\)</span>.</p></li>
+<li><p><strong>Axial, parte espacial</strong>: <span class="math notranslate nohighlight">\(\bar u\gamma^k\gamma^5 u = u^\dagger\Sigma_k u\)</span>. Só <span class="math notranslate nohighlight">\(\Sigma_3\)</span> sobrevive, e
+<span class="math notranslate nohighlight">\(u_\pm^\dagger\Sigma_3 u_\pm = \pm N^2(1 + \kappa^2) = \pm 2E\)</span>.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\bar u_\pm\gamma^\mu\gamma^5 u_\pm = \pm 2\,(\mathrm{p}, 0, 0, E) = \pm 2m\, s^\mu,
+\qquad s^\mu = \left(\frac{\mathrm{p}}{m}, 0, 0, \frac{E}{m}\right) .
+\]</div>
+<p><span class="math notranslate nohighlight">\(s^\mu\)</span> é o <strong>cuadrivector de espín</strong>: o <em>boost</em> de <span class="math notranslate nohighlight">\((0, 0, 0, 1)\)</span>, o espín en <span class="math notranslate nohighlight">\(z\)</span> en repouso, porque
+<span class="math notranslate nohighlight">\(\Lambda\,(0, 0, 0, 1) = (\sinh\eta, 0, 0, \cosh\eta)\)</span>. Cumpre <span class="math notranslate nohighlight">\(s_\mu p^\mu = 0\)</span> e <span class="math notranslate nohighlight">\(s_\mu s^\mu = -1\)</span>. A corrente
+axial leva o espín, e por iso cambia de signo entre <span class="math notranslate nohighlight">\(u_+\)</span> e <span class="math notranslate nohighlight">\(u_-\)</span>; a vectorial, <span class="math notranslate nohighlight">\(2p^\mu\)</span>, non.</p>
+</section>
+<section id="a-corrente-conservase">
+<h3>4.5. A corrente consérvase<a class="headerlink" href="#a-corrente-conservase" title="Permalink to this heading">#</a></h3>
+<p><strong>A ecuación do adxunto.</strong> Tomando o hermítico conxugado de <span class="math notranslate nohighlight">\(i\gamma^\mu\partial_\mu\Psi - m\Psi = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+-i\,\partial_\mu\Psi^\dagger\,\gamma^{\mu\dagger} - m\,\Psi^\dagger = 0 .
+\]</div>
+<p>Multiplicando por <span class="math notranslate nohighlight">\(\gamma^0\)</span> pola dereita e usando <span class="math notranslate nohighlight">\(\gamma^{\mu\dagger}\gamma^0 = \gamma^0\gamma^\mu\)</span> (é dicir,
+<span class="math notranslate nohighlight">\(\gamma^0\gamma^{\mu\dagger}\gamma^0 = \gamma^\mu\)</span>, que se comproba coas matrices de Pauli-Dirac):</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{
+i\,\partial_\mu\bar\Psi\,\gamma^\mu + m\,\bar\Psi = 0
+}
+\]</div>
+<p><strong>A conservación.</strong> Derivando o produto e usando as dúas ecuacións,
+<span class="math notranslate nohighlight">\(\gamma^\mu\partial_\mu\Psi = -im\,\Psi\)</span> e <span class="math notranslate nohighlight">\(\partial_\mu\bar\Psi\,\gamma^\mu = +im\,\bar\Psi\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\partial_\mu j^\mu = (\partial_\mu\bar\Psi)\,\gamma^\mu\Psi + \bar\Psi\gamma^\mu(\partial_\mu\Psi)
+= im\,\bar\Psi\Psi - im\,\bar\Psi\Psi = 0 .
+\]</div>
+<p>Con <span class="math notranslate nohighlight">\(j^\mu = (\rho, {\bf j})\)</span>, é a <strong>ecuación de continuidade</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\partial_t\rho + \nabla\cdot{\bf j} = 0, \qquad \rho = j^0 = \Psi^\dagger\Psi \geq 0 .
+\]</div>
+<p>Integrando nun volume, o que diminúe dentro é o que sae pola superficie, e
+<span class="math notranslate nohighlight">\(Q = \int \rho\,\mathrm{d}^3x\)</span> consérvase. A diferenza de Klein-Gordon (sección 1.1), a densidade é
+<strong>sempre positiva</strong>: era un dos obxectivos de Dirac.</p>
+</section>
+<section id="a-corrente-electrica">
+<h3>4.6. A corrente eléctrica<a class="headerlink" href="#a-corrente-electrica" title="Permalink to this heading">#</a></h3>
+<p>Multiplicada pola carga <span class="math notranslate nohighlight">\(q\)</span> do fermión (<span class="math notranslate nohighlight">\(q = -e\)</span> para o electrón), a corrente conservada é a
+<strong>corrente eléctrica</strong>, e a súa conservación é a da carga:</p>
+<div class="math notranslate nohighlight">
+\[
+j^\mu_{em} = q\,\bar\Psi\gamma^\mu\Psi = (q\rho,\, q\,{\bf j}) .
+\]</div>
+<p>Para a onda plana, <span class="math notranslate nohighlight">\(j^\mu = 2p^\mu\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\rho = 2E, \qquad {\bf j} = 2{\bf p} = \rho\,\frac{{\bf p}}{E} = \rho\,{\bf v} ,
+\]</div>
+<p>densidade por velocidade, como unha corrente clásica. Hai <span class="math notranslate nohighlight">\(2E\)</span> partículas por unidade de volume (a
+normalización) movéndose con <span class="math notranslate nohighlight">\({\bf v} = {\bf p}/E\)</span>.</p>
+<p><strong>A antipartícula.</strong> <span class="math notranslate nohighlight">\(\bar v_s\gamma^\mu v_s = 2p^\mu\)</span> tamén, pero a súa carga é a oposta: a súa corrente
+eléctrica é <span class="math notranslate nohighlight">\(-q\,2p^\mu\)</span>. Na teoría dunha partícula iso dáo a regra de Feynman-Stückelberg
+(inverter as cargas en <span class="math notranslate nohighlight">\(\Phi_s\)</span>); en QFT sae directamente.</p>
+<p>É a esta corrente á que se acopla o fotón, como <strong>corrente por campo</strong>, <span class="math notranslate nohighlight">\(q\,j^\mu A_\mu\)</span>: a
+simetría <em>gauge</em> de <a class="reference internal" href="perspectivas.html"><span class="doc std std-doc">perspectivas</span></a>. [MT4.3, MT4.5.1]</p>
+<p><em>Cuestións sobre a sección 4:</em></p>
+<ol class="arabic simple">
+<li><p>Comproba <span class="math notranslate nohighlight">\(\gamma^0\gamma^{\mu\dagger}\gamma^0 = \gamma^\mu\)</span> para <span class="math notranslate nohighlight">\(\mu = 0\)</span> e <span class="math notranslate nohighlight">\(\mu = 1\)</span> coas matrices de Pauli-Dirac.</p></li>
+<li><p>Calcula <span class="math notranslate nohighlight">\(\bar v_1 v_1\)</span> con <span class="math notranslate nohighlight">\(v_1 = N\,(0, -\kappa, 0, 1)\)</span>. Que signo ten? E <span class="math notranslate nohighlight">\(v_1^\dagger v_1\)</span>?</p></li>
+<li><p>Comproba <span class="math notranslate nohighlight">\(\gamma^0\gamma^k\gamma^5 = \Sigma_k\)</span> en Pauli-Dirac e calcula <span class="math notranslate nohighlight">\(\bar u_-\gamma^\mu\gamma^5 u_-\)</span>.</p></li>
+<li><p>Calcula <span class="math notranslate nohighlight">\(\bar u_1\gamma^\mu u_1\)</span> con <span class="math notranslate nohighlight">\(u_1(p)\)</span> e comproba que é <span class="math notranslate nohighlight">\(2p^\mu\)</span> sen usar o <em>boost</em>.</p></li>
+<li><p>Por que a corrente de Klein-Gordon pode ter densidade negativa e a de Dirac non?</p></li>
+</ol>
+<details>
+<summary><b>Solucións</b></summary>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\mu = 0\)</span>: <span class="math notranslate nohighlight">\(\gamma^0\gamma^{0\dagger}\gamma^0 = (\gamma^0)^3 = \gamma^0\)</span>. <span class="math notranslate nohighlight">\(\mu = 1\)</span>: <span class="math notranslate nohighlight">\(\gamma^{1\dagger} = -\gamma^1\)</span> e
+<span class="math notranslate nohighlight">\(\gamma^0\gamma^1\gamma^0 = -\gamma^1\)</span>, logo <span class="math notranslate nohighlight">\(\gamma^0\gamma^{1\dagger}\gamma^0 = \gamma^1\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\bar v_1 = v_1^\dagger\gamma^0 = N(0, -\kappa, 0, -1)\)</span> e <span class="math notranslate nohighlight">\(\bar v_1 v_1 = N^2(\kappa^2 - 1) = -2m\)</span>: <strong>negativo</strong>, o da
+antipartícula. En cambio <span class="math notranslate nohighlight">\(v_1^\dagger v_1 = N^2(1 + \kappa^2) = 2E &gt; 0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\gamma^0\gamma^k = \begin{pmatrix} 0 &amp; \sigma_k \\ \sigma_k &amp; 0 \end{pmatrix}\)</span> por <span class="math notranslate nohighlight">\(\gamma^5 = \begin{pmatrix} 0 &amp; I \\ I &amp; 0 \end{pmatrix}\)</span> dá
+<span class="math notranslate nohighlight">\(\mathrm{diag}(\sigma_k, \sigma_k) = \Sigma_k\)</span>. Con <span class="math notranslate nohighlight">\(u_- = N(0, 1, 0, -\kappa)\)</span>: parte temporal
+<span class="math notranslate nohighlight">\(2\,\mathrm{Re}(u^{a\dagger}u^b) = -2N^2\kappa = -2\mathrm{p}\)</span>, e espacial <span class="math notranslate nohighlight">\(u_-^\dagger\Sigma_3 u_- = -N^2(1 + \kappa^2) = -2E\)</span>:
+<span class="math notranslate nohighlight">\(\bar u_-\gamma^\mu\gamma^5 u_- = -2(\mathrm{p}, 0, 0, E) = -2m\,s^\mu\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(j^0 = u_1^\dagger u_1 = N^2(1 + \kappa^2) = 2E\)</span>. <span class="math notranslate nohighlight">\(j^k = u^{a\dagger}\sigma_k u^b + u^{b\dagger}\sigma_k u^a\)</span> con
+<span class="math notranslate nohighlight">\(u^a = N(1, 0)\)</span> e <span class="math notranslate nohighlight">\(u^b = N\kappa(1, 0)\)</span>: con <span class="math notranslate nohighlight">\(\sigma_1\)</span> e <span class="math notranslate nohighlight">\(\sigma_2\)</span> sae <span class="math notranslate nohighlight">\(0\)</span>, e con <span class="math notranslate nohighlight">\(\sigma_3\)</span>, <span class="math notranslate nohighlight">\(j^3 = 2N^2\kappa = 2\mathrm{p}\)</span>.
+Así, <span class="math notranslate nohighlight">\(j^\mu = 2(E, 0, 0, \mathrm{p}) = 2p^\mu\)</span>.</p></li>
+<li><p>En Klein-Gordon a ecuación é de segunda orde en <span class="math notranslate nohighlight">\(t\)</span> e a densidade conservada leva a derivada
+temporal, <span class="math notranslate nohighlight">\(\rho = i(\phi^*\partial_t\phi - \phi\,\partial_t\phi^*)\)</span>, que vale <span class="math notranslate nohighlight">\(2E|\phi|^2\)</span>: é negativa para as solucións
+con <span class="math notranslate nohighlight">\(E &lt; 0\)</span>. En Dirac, de primeira orde, <span class="math notranslate nohighlight">\(\rho = \Psi^\dagger\Psi = \sum_a |\Psi_a|^2 \geq 0\)</span> sempre. (O
+problema da enerxía negativa reaparece no signo da carga, e resólveo a QFT.)</p></li>
+</ol>
+</details></section>
+</section>
+<section id="a-simetria-gauge-local-e-o-foton">
+<h2>5. A simetría <em>gauge</em> local e o fotón<a class="headerlink" href="#a-simetria-gauge-local-e-o-foton" title="Permalink to this heading">#</a></h2>
+<p>En <a class="reference internal" href="perspectivas.html"><span class="doc std std-doc">perspectivas</span></a> afírmase que a interacción do fermión co fotón <strong>sae</strong>
+de esixir que a física non cambie cunha fase local. Aquí está a demostración.</p>
+<section id="fase-global-e-fase-local">
+<h3>5.1. Fase global e fase local<a class="headerlink" href="#fase-global-e-fase-local" title="Permalink to this heading">#</a></h3>
+<p><strong>Global.</strong> Cunha fase constante, <span class="math notranslate nohighlight">\(\Psi' = e^{iq\theta}\,\Psi\)</span>, a ecuación de Dirac non cambia: a fase sae
+da derivada e cancélase. Tampouco cambian os bilineais, <span class="math notranslate nohighlight">\(\bar\Psi' = \bar\Psi\,e^{-iq\theta}\)</span>, e
+<span class="math notranslate nohighlight">\(\bar\Psi'\Gamma\Psi' = \bar\Psi\Gamma\Psi\)</span>. A fase global de <span class="math notranslate nohighlight">\(\Psi\)</span> non é observable.</p>
+<p><strong>Local.</strong> Cunha fase que depende do punto, <span class="math notranslate nohighlight">\(\theta = \theta(x)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+\Psi'(x) = e^{iq\theta(x)}\,\Psi(x),
+\]</div>
+<p>a derivada actúa tamén sobre a fase, <span class="math notranslate nohighlight">\(\partial_\mu\Psi' = e^{iq\theta}\left(\partial_\mu\Psi + iq\,(\partial_\mu\theta)\,\Psi\right)\)</span>, e
+sobra un termo:</p>
+<div class="math notranslate nohighlight">
+\[
+(i\gamma^\mu\partial_\mu - m)\,\Psi' = e^{iq\theta}\left[(i\gamma^\mu\partial_\mu - m)\,\Psi - q\,\gamma^\mu(\partial_\mu\theta)\,\Psi\right]
+= -q\,e^{iq\theta}\,\gamma^\mu(\partial_\mu\theta)\,\Psi \neq 0 .
+\]</div>
+<p>Se <span class="math notranslate nohighlight">\(\Psi\)</span> é solución, <span class="math notranslate nohighlight">\(\Psi'\)</span> xa non o é: a ecuación libre <strong>non</strong> é invariante baixo unha fase local.</p>
+</section>
+<section id="a-derivada-covariante">
+<h3>5.2. A derivada covariante<a class="headerlink" href="#a-derivada-covariante" title="Permalink to this heading">#</a></h3>
+<p>Para absorber o termo que sobra fai falta un campo vectorial, <span class="math notranslate nohighlight">\(A_\mu(x)\)</span>, que se transforme á vez
+que <span class="math notranslate nohighlight">\(\Psi\)</span> e compense <span class="math notranslate nohighlight">\(\partial_\mu\theta\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{
+D_\mu \equiv \partial_\mu + iq\,A_\mu(x), \qquad
+\Psi' = e^{iq\theta}\,\Psi, \qquad A'_\mu = A_\mu - \partial_\mu\theta
+}
+\]</div>
+<p><strong>A demostración.</strong> Cos campos transformados:</p>
+<div class="math notranslate nohighlight">
+\[
+D'_\mu\Psi' = \left(\partial_\mu + iq\,A'_\mu\right) e^{iq\theta}\,\Psi
+= e^{iq\theta}\left(\partial_\mu\Psi + iq\,(\partial_\mu\theta)\,\Psi + iq\,A_\mu\Psi - iq\,(\partial_\mu\theta)\,\Psi\right)
+= e^{iq\theta}\,D_\mu\Psi .
+\]</div>
+<p><span class="math notranslate nohighlight">\(D_\mu\Psi\)</span> transfórmase <strong>como <span class="math notranslate nohighlight">\(\Psi\)</span></strong>, coa mesma fase: de aí o nome de <em>covariante</em>. Entón</p>
+<div class="math notranslate nohighlight">
+\[
+(i\gamma^\mu D'_\mu - m)\,\Psi' = e^{iq\theta}\,(i\gamma^\mu D_\mu - m)\,\Psi = 0 ,
+\]</div>
+<p>e a ecuación <span class="math notranslate nohighlight">\((i\gamma^\mu D_\mu - m)\,\Psi = 0\)</span> é <strong>invariante</strong> baixo a fase local. Desenvolvendo <span class="math notranslate nohighlight">\(D_\mu\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+(i\gamma^\mu\partial_\mu - m)\,\Psi = q\,\gamma^\mu A_\mu\,\Psi :
+\]</div>
+<p>o fermión libre á esquerda e, á dereita, o termo <strong>novo</strong>: a interacción con <span class="math notranslate nohighlight">\(A_\mu\)</span>, con
+intensidade <span class="math notranslate nohighlight">\(q\)</span>. A mesma <span class="math notranslate nohighlight">\(A_\mu\)</span> serve para todos os fermións, cada un coa súa carga: por iso o
+acoplamento é <strong>universal</strong>.</p>
+</section>
+<section id="o-acoplamento-minimo">
+<h3>5.3. O acoplamento mínimo<a class="headerlink" href="#o-acoplamento-minimo" title="Permalink to this heading">#</a></h3>
+<p>Con <span class="math notranslate nohighlight">\(i\partial_\mu \leftrightarrow p_\mu\)</span>, a derivada covariante é <span class="math notranslate nohighlight">\(iD_\mu = i\partial_\mu - qA_\mu \leftrightarrow p_\mu - qA_\mu\)</span>. Con
+<span class="math notranslate nohighlight">\(A^\mu = (\phi, {\bf A})\)</span>, é dicir, <span class="math notranslate nohighlight">\(A_\mu = (\phi, -{\bf A})\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+E \;\to\; E - q\phi, \qquad {\bf p} \;\to\; {\bf p} - q{\bf A} ,
+\]</div>
+<p>a <strong>substitución mínima</strong> do electromagnetismo clásico. En forma hamiltoniana (multiplicando por <span class="math notranslate nohighlight">\(\gamma^0\)</span>,
+como na sección 1.4, con <span class="math notranslate nohighlight">\(\alpha_k = \gamma^0\gamma^k\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+i\partial_t\Psi = \left[\vec\alpha\cdot(\hat{\bf p} - q{\bf A}) + \gamma^0 m + q\phi\right]\Psi ,
+\]</div>
+<p>o análogo relativista de <span class="math notranslate nohighlight">\(H = ({\bf p} - q{\bf A})^2/2m + q\phi\)</span>. A simetría local non engadiu nada que non
+soubésemos do electromagnetismo: <strong>dedúxoo</strong>.</p>
+</section>
+<section id="o-campo-do-foton">
+<h3>5.4. O campo do fotón<a class="headerlink" href="#o-campo-do-foton" title="Permalink to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(A_\mu\)</span> é un campo coa súa propia ecuación, que tamén debe ser invariante baixo
+<span class="math notranslate nohighlight">\(A_\mu \to A_\mu - \partial_\mu\theta\)</span>.</p>
+<p><strong>O tensor de campo é invariante.</strong> Con <span class="math notranslate nohighlight">\(F_{\mu\nu} \equiv \partial_\mu A_\nu - \partial_\nu A_\mu\)</span> (as súas compoñentes son
+<span class="math notranslate nohighlight">\({\bf E}\)</span> e <span class="math notranslate nohighlight">\({\bf B}\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+F'_{\mu\nu} = F_{\mu\nu} - \partial_\mu\partial_\nu\theta + \partial_\nu\partial_\mu\theta = F_{\mu\nu} .
+\]</div>
+<p>Os campos eléctrico e magnético non cambian: o que cambia, <span class="math notranslate nohighlight">\(A_\mu\)</span>, non é observable.</p>
+<p><strong>As ecuacións de Maxwell</strong>, coa corrente do fermión como fonte,</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{
+\partial_\mu F^{\mu\nu} = q\,\bar\Psi\gamma^\nu\Psi
+}
+\]</div>
+<p>son invariantes: <span class="math notranslate nohighlight">\(F^{\mu\nu}\)</span> non cambia, e a corrente tampouco (<span class="math notranslate nohighlight">\(\bar\Psi'\gamma^\nu\Psi' = \bar\Psi\gamma^\nu\Psi\)</span>). Sen fonte, é
+a ecuación do fotón libre da táboa de perspectivas.</p>
+<p><strong>A conservación é obrigatoria.</strong> Derivando outra vez, <span class="math notranslate nohighlight">\(\partial_\nu\partial_\mu F^{\mu\nu} = 0\)</span>, porque <span class="math notranslate nohighlight">\(F^{\mu\nu}\)</span> é
+antisimétrico e <span class="math notranslate nohighlight">\(\partial_\nu\partial_\mu\)</span> simétrico. Logo <span class="math notranslate nohighlight">\(\partial_\nu\,(q\,\bar\Psi\gamma^\nu\Psi) = 0\)</span>: Maxwell só é consistente
+se a corrente se conserva, e a de Dirac consérvase (sección 4.5). A carga que se conserva é a
+da simetría.</p>
+<p><strong>O fotón non ten masa.</strong> Unha masa engadiría un termo <span class="math notranslate nohighlight">\(m_\gamma^2 A^\nu\)</span> á ecuación,
+<span class="math notranslate nohighlight">\(\partial_\mu F^{\mu\nu} + m_\gamma^2 A^\nu = q\,\bar\Psi\gamma^\nu\Psi\)</span>. Baixo a transformación cambia en
+<span class="math notranslate nohighlight">\(-m_\gamma^2\,\partial^\nu\theta\)</span>, que non se compensa con nada: a simetría local esixe <span class="math notranslate nohighlight">\(m_\gamma = 0\)</span>. [MT10.1]</p>
+<p><em>Cuestións sobre a sección 5:</em></p>
+<ol class="arabic simple">
+<li><p>Comproba que con <span class="math notranslate nohighlight">\(A'_\mu = A_\mu + \partial_\mu\theta\)</span> (o outro signo) <span class="math notranslate nohighlight">\(D_\mu\Psi\)</span> <strong>non</strong> se transforma como <span class="math notranslate nohighlight">\(\Psi\)</span>.</p></li>
+<li><p>Comproba que <span class="math notranslate nohighlight">\(\bar\Psi'\gamma^\mu\Psi' = \bar\Psi\gamma^\mu\Psi\)</span> coa fase local. E <span class="math notranslate nohighlight">\(\bar\Psi'\gamma^\mu\partial_\nu\Psi'\)</span>?</p></li>
+<li><p>Deduce a forma hamiltoniana da sección 5.3 a partir de <span class="math notranslate nohighlight">\((i\gamma^\mu D_\mu - m)\,\Psi = 0\)</span>.</p></li>
+<li><p>Un protón e un electrón no mesmo campo <span class="math notranslate nohighlight">\(A_\mu\)</span>: como se transforman os seus campos baixo a mesma
+<span class="math notranslate nohighlight">\(\theta(x)\)</span>? Impide a simetría que as súas cargas fosen <span class="math notranslate nohighlight">\(+e\)</span> e <span class="math notranslate nohighlight">\(-1.0001\,e\)</span>? Que di o experimento?</p></li>
+<li><p>Escribe <span class="math notranslate nohighlight">\(F^{0k}\)</span> e <span class="math notranslate nohighlight">\(F^{ij}\)</span> en función de <span class="math notranslate nohighlight">\({\bf E} = -\nabla\phi - \partial_t{\bf A}\)</span> e <span class="math notranslate nohighlight">\({\bf B} = \nabla\times{\bf A}\)</span>, e comproba que
+<span class="math notranslate nohighlight">\(\partial_\mu F^{\mu 0} = q\,\bar\Psi\gamma^0\Psi\)</span> é a lei de Gauss, <span class="math notranslate nohighlight">\(\nabla\cdot{\bf E} = \rho\)</span>.</p></li>
+</ol>
+<details>
+<summary><b>Solucións</b></summary>
+<ol class="arabic simple">
+<li><p>Con <span class="math notranslate nohighlight">\(A'_\mu = A_\mu + \partial_\mu\theta\)</span>, <span class="math notranslate nohighlight">\(D'_\mu\Psi' = e^{iq\theta}\left(D_\mu\Psi + 2iq\,(\partial_\mu\theta)\,\Psi\right) \neq e^{iq\theta}D_\mu\Psi\)</span>:
+o termo da fase súmase en vez de cancelarse.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\bar\Psi' = \bar\Psi\,e^{-iq\theta(x)}\)</span>, e en <span class="math notranslate nohighlight">\(\bar\Psi'\gamma^\mu\Psi'\)</span> as dúas fases cancélanse punto a punto: é
+invariante. <span class="math notranslate nohighlight">\(\bar\Psi'\gamma^\mu\partial_\nu\Psi' = \bar\Psi\gamma^\mu\partial_\nu\Psi + iq\,(\partial_\nu\theta)\,\bar\Psi\gamma^\mu\Psi\)</span> <strong>non</strong> o é; con
+<span class="math notranslate nohighlight">\(D_\nu\)</span> en lugar de <span class="math notranslate nohighlight">\(\partial_\nu\)</span>, si.</p></li>
+<li><p>Separando <span class="math notranslate nohighlight">\(\mu = 0\)</span> e <span class="math notranslate nohighlight">\(\mu = k\)</span> e multiplicando por <span class="math notranslate nohighlight">\(\gamma^0\)</span>:
+<span class="math notranslate nohighlight">\(i\partial_t\Psi - q\phi\,\Psi + i\alpha_k\partial_k\Psi - q\,\alpha_k A_k\Psi - \gamma^0 m\,\Psi = 0\)</span>. Con <span class="math notranslate nohighlight">\(\partial_k = i\hat p^k\)</span> e
+<span class="math notranslate nohighlight">\(A_k = -A^k\)</span>: <span class="math notranslate nohighlight">\(i\partial_t\Psi = \left[\vec\alpha\cdot(\hat{\bf p} - q{\bf A}) + \gamma^0 m + q\phi\right]\Psi\)</span>.</p></li>
+<li><p>Coa mesma <span class="math notranslate nohighlight">\(\theta(x)\)</span>, <span class="math notranslate nohighlight">\(\Psi_p \to e^{iq_p\theta}\Psi_p\)</span>, <span class="math notranslate nohighlight">\(\Psi_e \to e^{iq_e\theta}\Psi_e\)</span> e <span class="math notranslate nohighlight">\(A_\mu \to A_\mu - \partial_\mu\theta\)</span>.
+A simetría funciona con <strong>calquera</strong> par de cargas: non explica que estean cuantizadas. A experiencia
+(a neutralidade de átomos e moléculas) dá <span class="math notranslate nohighlight">\(|q_p + q_e| \lesssim 10^{-21}\,e\)</span>; a explicación hai que
+buscala fóra desta simetría.</p></li>
+<li><p>Con <span class="math notranslate nohighlight">\(\partial^k = -\partial_k\)</span>: <span class="math notranslate nohighlight">\(F^{0k} = \partial_t A^k + \partial_k\phi = -E^k\)</span> e <span class="math notranslate nohighlight">\(F^{ij} = -\epsilon_{ijk}B^k\)</span>. Entón
+<span class="math notranslate nohighlight">\(\partial_\mu F^{\mu 0} = \partial_k F^{k0} = \nabla\cdot{\bf E}\)</span>, e a ecuación dá <span class="math notranslate nohighlight">\(\nabla\cdot{\bf E} = q\,\Psi^\dagger\Psi\)</span>, a
+densidade de carga: a lei de Gauss.</p></li>
+</ol>
+</details></section>
+</section>
+<section id="paridade-e-quiralidade">
+<h2>6. Paridade e quiralidade<a class="headerlink" href="#paridade-e-quiralidade" title="Permalink to this heading">#</a></h2>
+<p>A paridade nos espinores, os proxectores de quiralidade, a base quiral, os espinores de Weyl e a
+relación entre helicidade e quiralidade teñen agora a súa propia extensión: <a class="reference internal" href="ext-quiral.html"><span class="doc std std-doc">ext-quiral</span></a>.</p>
+</section>
+<section id="bibliografia">
+<h2>Bibliografía<a class="headerlink" href="#bibliografia" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>[MT4] Mark Thomson, <em>Modern Particle Physics</em>, Cambridge University Press (2013), capítulos 4 e 6 (quiralidade, sección 6.4); simetría <em>gauge</em>, sección 10.1.</p></li>
+<li><p>[AB] Alessandro Bettini, <em>Introduction to Elementary Particle Physics</em>, Cambridge University Press.</p></li>
+<li><p>Dedución dos xeradores en todas as direccións: <span class="xref myst">ext-trans-Lorentz</span>.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ext-cinematica.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Extensión: Cinemática relativista e espazo fásico</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ext-quiral.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Extensión: A quiralidade</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducion">Introdución</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notacion">Notación</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-ecuacion-de-dirac">1. A ecuación de Dirac</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#punto-de-partida">1.1. Punto de partida</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-idea-de-dirac-1928">1.2. A idea de Dirac (1928)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ao-cadrado-a-ecuacion-de-einstein">1.3. Ao cadrado, a ecuación de Einstein</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#as-gamma-son-matrices-e-psi-ten-catro-componentes">1.4. As <span class="math notranslate nohighlight">\(\gamma\)</span> son matrices, e <span class="math notranslate nohighlight">\(\Psi\)</span> ten catro compoñentes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-representacion-de-pauli-dirac">1.5. A representación de Pauli-Dirac</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-son-as-matrices-gamma">1.6. Que son as matrices <span class="math notranslate nohighlight">\(\gamma\)</span>?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-quinta-matriz-gamma-5">1.7. A quinta matriz, <span class="math notranslate nohighlight">\(\gamma^5\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#as-solucions-os-espinores">2. As solucións: os espinores</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ondas-planas-e-as-ecuacions-dos-espinores">2.1. Ondas planas e as ecuacións dos espinores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#einstein-outra-vez-e-os-dous-signos-da-enerxia">2.2. Einstein outra vez, e os dous signos da enerxía</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#en-repouso-bf-p-0">2.3. En repouso, <span class="math notranslate nohighlight">\({\bf p} = 0\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#co-momento-en-z">2.4. Co momento en <span class="math notranslate nohighlight">\(z\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#co-momento-nunha-direccion-calquera">2.5. Co momento nunha dirección calquera</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enerxia-momento-e-antiparticula">2.6. Enerxía, momento e antipartícula</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformacions-de-lorentz-espin-e-helicidade">3. Transformacións de Lorentz: espín e helicidade</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-condicion-sobre-s-lambda">3.1. A condición sobre <span class="math notranslate nohighlight">\(S(\Lambda)\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transformacions-infinitesimais-os-xeradores">3.2. Transformacións infinitesimais: os xeradores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rotacion-en-z-o-espin">3.3. Rotación en <span class="math notranslate nohighlight">\(z\)</span>: o espín</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rotacion-nunha-direccion-calquera-so-indicado">3.4. Rotación nunha dirección calquera (só indicado)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boost-en-z">3.5. <em>Boost</em> en <span class="math notranslate nohighlight">\(z\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boost-nunha-direccion-calquera-so-indicado">3.6. <em>Boost</em> nunha dirección calquera (só indicado)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#helicidade">3.7. Helicidade</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#as-formas-bilineais-e-a-corrente">4. As formas bilineais e a corrente</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-adxunto-e-como-se-transforma">4.1. O adxunto e como se transforma</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-psi-psi-e-un-escalar">4.2. <span class="math notranslate nohighlight">\(\bar\Psi\Psi\)</span> é un escalar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-psi-gamma-mu-psi-e-un-cuadrivector">4.3. <span class="math notranslate nohighlight">\(\bar\Psi\gamma^\mu\Psi\)</span> é un cuadrivector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-pseudoescalar-e-o-axial">4.4. O pseudoescalar e o axial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-corrente-conservase">4.5. A corrente consérvase</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-corrente-electrica">4.6. A corrente eléctrica</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simetria-gauge-local-e-o-foton">5. A simetría <em>gauge</em> local e o fotón</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fase-global-e-fase-local">5.1. Fase global e fase local</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-derivada-covariante">5.2. A derivada covariante</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-acoplamento-minimo">5.3. O acoplamento mínimo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-campo-do-foton">5.4. O campo do fotón</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paridade-e-quiralidade">6. Paridade e quiralidade</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliografia">Bibliografía</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By J. Ángel Hernando Morata, Xabier Cid Vidal
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
